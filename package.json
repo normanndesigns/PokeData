@@ -1,0 +1,19 @@
+{
+  "name": "pokeinfo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [
+    "Pokemon",
+    "Information",
+    "lookup"
+  ],
+  "author": "Normann",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^4.0.2"
+  }
+}

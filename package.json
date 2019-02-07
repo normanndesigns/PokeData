@@ -15,5 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "electron": "^4.0.2"
+  },
+  "dependencies": {
+    "node-vibrant": "^3.2.0-alpha"
   }
 }

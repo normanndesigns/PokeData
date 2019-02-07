@@ -1,3 +1,9 @@
+.none{
+	display: none;
+}
+.flex{
+	display: flex;
+}
 .global-wrapper{
 	width: 100vw;
 	min-height: 100vh;
@@ -43,15 +49,14 @@
 	width: 100%;
     height: calc(100% - 25px);
     display: flex;
-    align-items: center;
-    justify-content: center;
+	flex-direction: column;
 }
 .search-wrapper form{
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-	width: 75%;
+    width: 75%;
 }
 .search-wrapper form label{
 	width: 100%;
@@ -63,4 +68,37 @@
 .search-wrapper form input{
 	width: 60%;
 	padding: 5px;
+}
+.center-wrapper{
+	width: 100vw;
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	position: relative;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+.search-wrapper ul{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 75%;
+	top: 65px;
+	position: absolute;
+}
+.search-wrapper ul a li{
+	box-sizing: border-box;
+	padding: 5px;
+	display: block;
+    background-color: #222427;
+}
+.search-wrapper ul a li:hover{
+    background-color: #202225;
+}
+.search-wrapper ul a{
+	color: #ffffff;
+	width: 60%;
+	text-decoration: none;
+	
 }

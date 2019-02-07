@@ -13,12 +13,22 @@
               </ul>
             </div>
             <div class="search-wrapper">
-              <form>
-                <label for="search">Search Pokemon</label>
-                <input type="text" id="search" placeholder="Search:">
-              </form>
+              <div class="center-wrapper">
+                <form>
+                  <label for="search">Search Pokemon</label>
+                  <input type="text" id="search" placeholder="Search:" class="navigate">
+                </form>
+                <ul>
+                    <a href="../public/Pokemon.html" class="none navigate" id="result1"><li id="Showresult1"></li></a>
+                    <a href="../public/Pokemon.html" class="none navigate" id="result2"><li id="Showresult2"></li></a>
+                    <a href="../public/Pokemon.html" class="none navigate" id="result3"><li id="Showresult3"></li></a>
+                    <a href="../public/Pokemon.html" class="none navigate" id="result4"><li id="Showresult4"></li></a>
+                    <a href="../public/Pokemon.html" class="none navigate" id="result5"><li id="Showresult5"></li></a>
+                </ul>
+              </div>
             </div>
     </div>
+    <script src="../public/assets/js/spatial_navigation.js"></script>
     <script src="../public/assets/js/script.js"></script>
   </body>
 </html>

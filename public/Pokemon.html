@@ -8,17 +8,30 @@
 </head>
 
 <body>
-    <div class="global-wrapper">
-        <div class="toolbar" style="-webkit-app-region: drag">
+    <div class="global-wrapper" id="global-wrapper">
+        <div class="toolbar" id="toolbar" style="-webkit-app-region: drag">
             <ul>
                 <li id="minimizeBTN"></li>
                 <li id="maximizeBTN"></li>
                 <li id="closeBTN"></li>
             </ul>
         </div>
+        <div class="main-wrapper" id="pokemonImage">
+                <a class="arrow" title="Previous" href="index.html"></a>
+            <div class="column35100">
+                    <div class="column10050"></div>
+                    <div class="column10050"></div>
+                </div>
+            <div class="column65100">
+                <div class="information-wrapper">
+                    <div class="header">
+                        <h2 id="name"><span id="DexID"></span></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="../public/assets/js/spatial_navigation.js"></script>
     <script src="../public/assets/js/pokemonscript.js"></script>
 </body>
-
 </html>

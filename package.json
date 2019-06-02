@@ -17,6 +17,6 @@
     "electron": "^4.0.2"
   },
   "dependencies": {
-    "node-vibrant": "^3.2.0-alpha"
+    "img-color": "^1.0.2"
   }
 }

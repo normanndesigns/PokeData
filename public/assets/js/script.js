@@ -1,5 +1,6 @@
 const {remote} = require('electron'); 
 const fs = require('electron').remote.require('fs')
+const path = require('electron').remote.require('path')
 var PokemonFile = fs.readFileSync('public/assets/data/Data.json', 'utf8')
 var PokemonData = JSON.parse(PokemonFile);
 var ColorFile = fs.readFileSync('public/assets/data/ColorData.json', 'utf8')
@@ -9,7 +10,7 @@ var PokemonDataKeys = Object.keys(PokemonData);
 var close = document.getElementById('closeBTN').addEventListener('click', closeWindow)
 var minimize = document.getElementById('minimizeBTN').addEventListener('click', minimizeWindow)
 var maximize = document.getElementById('maximizeBTN').addEventListener('click', maximizeWindow)
-//document.getElementById('search').addEventListener('keyup', search)
+document.getElementById('search').addEventListener('keyup', search)
 
 window.addEventListener('load', function() {
     SpatialNavigation.init();
@@ -29,7 +30,7 @@ function FlexNone(display, object){
 }   
 fs.readdir(__dirname + "/assets/media/", (err, files) => {
     for(i = 0; i < files.length; i++){
-        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'))
+        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
     }
 })
 
@@ -46,11 +47,20 @@ function maximizeWindow(){
     window.maximize();
 }
 
-function createListEntry(src, dom){
+function createListEntry(src, dom, file){
+    div = document.createElement("div");
+    div.className = 'pokemon'
     image = document.createElement("img");
-    image.class = 'pokemon'
     image.src = src;
-    dom.appendChild(image)
+    text = document.createElement('p');
+    text.innerHTML = removeExtension(file);
+    div.appendChild(image)
+    div.appendChild(text)
+    dom.appendChild(div)
+}
+
+function removeExtension(file){
+    return file.split('.')[0]
 }
 
 function search(){

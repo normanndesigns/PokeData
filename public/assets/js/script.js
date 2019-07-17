@@ -1,7 +1,9 @@
 const {remote} = require('electron'); 
 const fs = require('electron').remote.require('fs')
-var loadedFile = fs.readFileSync('public/assets/data/Data.json', 'utf8')
-var PokemonData = JSON.parse(loadedFile);
+var PokemonFile = fs.readFileSync('public/assets/data/Data.json', 'utf8')
+var PokemonData = JSON.parse(PokemonFile);
+var ColorFile = fs.readFileSync('public/assets/data/ColorData.json', 'utf8')
+var ColorData = JSON.parse(ColorFile);
 
 var PokemonDataKeys = Object.keys(PokemonData);
 var close = document.getElementById('closeBTN').addEventListener('click', closeWindow)
@@ -60,7 +62,7 @@ function search(){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1]
-            document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1]
+            document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1] + "&color=" + ColorData[tempArray[i - 1]]['Color'][0]
             FlexNone('show', document.getElementById('result' + i))
         }
     }

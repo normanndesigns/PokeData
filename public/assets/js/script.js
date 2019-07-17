@@ -9,7 +9,7 @@ var PokemonDataKeys = Object.keys(PokemonData);
 var close = document.getElementById('closeBTN').addEventListener('click', closeWindow)
 var minimize = document.getElementById('minimizeBTN').addEventListener('click', minimizeWindow)
 var maximize = document.getElementById('maximizeBTN').addEventListener('click', maximizeWindow)
-document.getElementById('search').addEventListener('keyup', search)
+//document.getElementById('search').addEventListener('keyup', search)
 
 window.addEventListener('load', function() {
     SpatialNavigation.init();
@@ -27,7 +27,11 @@ function FlexNone(display, object){
         object.className = 'block';
     }
 }   
-
+fs.readdir(__dirname + "/assets/media/", (err, files) => {
+    for(i = 0; i < files.length; i++){
+        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'))
+    }
+})
 
 function closeWindow(){
     var window = remote.getCurrentWindow();
@@ -40,6 +44,13 @@ function minimizeWindow(){
 function maximizeWindow(){
     var window = remote.getCurrentWindow();
     window.maximize();
+}
+
+function createListEntry(src, dom){
+    image = document.createElement("img");
+    image.class = 'pokemon'
+    image.src = src;
+    dom.appendChild(image)
 }
 
 function search(){

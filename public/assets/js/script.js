@@ -39,6 +39,8 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
 })
 
 document.getElementById('backBTN').addEventListener('click', () => {
+    document.getElementById('search').value = "";
+    search();
     FlexNone('hide', document.getElementById('pokemonImage'))
     FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
 })
@@ -100,7 +102,6 @@ function search(){
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1]
             document.getElementById('imageresult' + i).src = "assets/media/" + tempArray[i - 1] + ".png"
-            //document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1] + "&color=" + ColorData[tempArray[i - 1]]['Color'][0]
             FlexNone('show', document.getElementById('result' + i))
         }
     }

@@ -150,6 +150,22 @@
 	flex-direction: column;
 	width: 80%;
 }
+.search-results li{
+	width: 100%;
+	color: black;
+	font-size: 15px;
+	padding: 5px;
+	box-sizing: border-box;
+}
+.search-results a{
+	text-decoration: none;
+}
+.search-results a:focus{
+	background-color: lightgrey;
+}
+.search-results a:hover{
+	background-color: lightgrey;
+}
 /*   Search   */
 /*   Pokedex   */
 .pokedex-wrapper{

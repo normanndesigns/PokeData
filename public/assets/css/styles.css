@@ -115,6 +115,9 @@
 }
 /*   Eyes   */
 /*   Search   */
+#search{
+	text-transform: capitalize;
+}
 .search-wrapper{
 	width: 100%;
 	height: calc(100vh - 220px);
@@ -150,8 +153,12 @@
 	flex-direction: column;
 	width: 80%;
 }
+.search-results img{
+	height: 25px;
+	padding: 0px 5px 0px 5px;
+}
 .search-results li{
-	width: 100%;
+	width: calc(100% - 35px);
 	color: black;
 	font-size: 15px;
 	padding: 5px;
@@ -159,6 +166,8 @@
 }
 .search-results a{
 	text-decoration: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 .search-results a:focus{
 	background-color: lightgrey;

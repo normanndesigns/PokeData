@@ -66,7 +66,6 @@ function removeExtension(file){
 function search(){
     tempArray = []
     searchValue = document.getElementById('search').value
-    
     PokemonDataKeys.forEach(function(element, index){
         if(element.includes(searchValue)){
             tempArray.push(element)
@@ -83,6 +82,7 @@ function search(){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1]
+            document.getElementById('imageresult' + i).src = "assets/media/" + tempArray[i - 1] + ".png"
             document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1] + "&color=" + ColorData[tempArray[i - 1]]['Color'][0]
             FlexNone('show', document.getElementById('result' + i))
         }

@@ -10,7 +10,7 @@
 	display: none !important; 
 }
 .flex{
-	display: flex;
+	display: flex !important; 
 }
 .global-wrapper{
 	position: absolute;
@@ -158,21 +158,21 @@
 	padding: 0px 5px 0px 5px;
 }
 .search-results li{
-	width: calc(100% - 35px);
+	width: calc(100%);
 	color: black;
 	font-size: 15px;
 	padding: 5px;
 	box-sizing: border-box;
 }
-.search-results a{
+.search-results li{
 	text-decoration: none;
 	display: flex;
 	flex-wrap: wrap;
 }
-.search-results a:focus{
+.search-results li:focus{
 	background-color: lightgrey;
 }
-.search-results a:hover{
+.search-results li:hover{
 	background-color: lightgrey;
 }
 /*   Search   */
@@ -223,3 +223,31 @@
 	width: 100px;
 }
 /*   Pokemon   */
+#pokemonImage{
+	width: 100%;
+	height: calc(100vh - 220px);
+	z-index: 5;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 35vw;
+	background-position-x: calc(100%);
+	background-position-y: calc(100%);
+}
+#backBTN{
+	width: 30px;
+	height: 30px;
+	border: 1px solid black;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 15px;
+	background-image: url('../static/back-arrow.svg');
+	background-size: 60%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#backBTN:hover{
+	filter: invert(100%);
+	cursor: pointer;
+}

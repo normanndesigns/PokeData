@@ -15,24 +15,41 @@ document.getElementById('search').addEventListener('keyup', search)
 window.addEventListener('load', function() {
     SpatialNavigation.init();
     SpatialNavigation.add({
-        selector: 'a, .navigate'
+        selector: 'li, .navigate'
     });
     SpatialNavigation.makeFocusable();
     SpatialNavigation.focus();
 });
 
-function FlexNone(display, object){
-    if(display == 'hide'){
-        object.className = 'none';
-    }else if(display == 'show'){
-        object.className = 'block';
-    }
-}   
 fs.readdir(__dirname + "/assets/media/", (err, files) => {
     for(i = 0; i < files.length; i++){
         createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
     }
 })
+
+document.getElementById('searchResults').addEventListener('click', (e) => {
+    if(e.target !== document.getElementById('searchResults')){
+        if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
+            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
+            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[3].innerHTML + '.png)'
+            FlexNone('show', document.getElementById('pokemonImage'))
+            FlexNone('hide', document.getElementById('searchWrapper'), 'search-wrapper')
+        }
+    }
+})
+
+document.getElementById('backBTN').addEventListener('click', () => {
+    FlexNone('hide', document.getElementById('pokemonImage'))
+    FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
+})
+
+function FlexNone(display, object, extraClasses = ""){
+    if(display == 'hide'){
+        object.className = 'none ' + extraClasses;
+    }else if(display == 'show'){
+        object.className = 'flex ' + extraClasses;
+    }
+}   
 
 function closeWindow(){
     var window = remote.getCurrentWindow();
@@ -83,7 +100,7 @@ function search(){
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1]
             document.getElementById('imageresult' + i).src = "assets/media/" + tempArray[i - 1] + ".png"
-            document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1] + "&color=" + ColorData[tempArray[i - 1]]['Color'][0]
+            //document.getElementById('result' + i).href = "../public/Pokemon.html?pokemon=" + tempArray[i - 1] + "&color=" + ColorData[tempArray[i - 1]]['Color'][0]
             FlexNone('show', document.getElementById('result' + i))
         }
     }

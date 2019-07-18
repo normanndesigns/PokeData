@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>PokeData</title>
-  <link rel="stylesheet" type="text/css" href="../public/assets/css/reset.css">
-  <link rel="stylesheet" type="text/css" href="../public/assets/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 
 <body>
@@ -29,38 +29,41 @@
       </ul>
     </div>
     <div class="pokedex-wrapper none" id="mainWrapper"></div>
-    <div class="search-wrapper">
+    <div class="search-wrapper" id="searchWrapper">
       <div class="center-wrapper">
         <form>
           <label for="search">Search Pokemon</label>
           <input type="text" id="search" placeholder="Search:" class="navigate">
-          <ul class="search-results">
-              <a href="../public/Pokemon.html" class="none navigate" id="result1">
-                <img src="" id="imageresult1">
-                <li id="Showresult1"></li>
-              </a>
-              <a href="../public/Pokemon.html" class="none navigate" id="result2">
-                <img src="" id="imageresult2">
-                <li id="Showresult2"></li>
-              </a>
-              <a href="../public/Pokemon.html" class="none navigate" id="result3">
-                <img src="" id="imageresult3">
-                <li id="Showresult3"></li>
-              </a>
-              <a href="../public/Pokemon.html" class="none navigate" id="result4">
-                <img src="" id="imageresult4">
-                <li id="Showresult4"></li>
-              </a>
-              <a href="../public/Pokemon.html" class="none navigate" id="result5">
-                <img src="" id="imageresult5">
-                <li id="Showresult5"></li>
-              </a>
-            </ul>
+          <ul class="search-results" id="searchResults">
+            <li class="none navigate" id="result1">
+              <img src="" id="imageresult1">
+              <div id="Showresult1"></div>
+            </li>
+            <li class="none navigate" id="result2">
+              <img src="" id="imageresult2">
+              <div id="Showresult2"></div>
+            </li>
+            <li class="none navigate" id="result3">
+              <img src="" id="imageresult3">
+              <div id="Showresult3"></div>
+            </li>
+            <li class="none navigate" id="result4">
+              <img src="" id="imageresult4">
+              <div id="Showresult4"></div>
+            </li>
+            <li class="none navigate" id="result5">
+              <img src="" id="imageresult5">
+              <div id="Showresult5"></div>
+            </li>
+          </ul>
         </form>
       </div>
     </div>
-    <script src="../public/assets/js/spatial_navigation.js"></script>
-    <script src="../public/assets/js/script.js"></script>
+    <div class="none" id="pokemonImage">
+      <div id="backBTN"></div>
+    </div>
+    <script src="assets/js/spatial_navigation.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>

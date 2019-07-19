@@ -260,6 +260,10 @@
 	background-color: #E6E9EC;
 	cursor: pointer;
 }
+.pokemon:focus{
+	background-color: #E6E9EC;
+	cursor: pointer;
+}
 .pokemon img{
 	width: 100px;
 }

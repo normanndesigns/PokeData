@@ -36,7 +36,7 @@ function maximizeWindow(){
 
 function createListEntry(src, dom, file){
     div = document.createElement("li");
-    div.className = 'pokemon'
+    div.className = 'pokemon navigate'
     image = document.createElement("img");
     image.src = src;
     text = document.createElement('p');
@@ -140,5 +140,26 @@ document.getElementById('mainWrapper').addEventListener('click', (e) => {
         document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.innerHTML.charAt(0).toUpperCase() + e.target.innerHTML.slice(1)]['Color'][0];
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.innerHTML + '.png)';
         ShowHideWrapper('show', 'hide', 'hide')
+    }
+})
+
+document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        if(e.target.tagName === "LI"){
+            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
+            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)'
+            ShowHideWrapper('show', 'hide', 'hide')
+        }
+        else if(e.target.tagName === "IMG"){
+            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
+            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].innerHTML + '.png)';
+            ShowHideWrapper('show', 'hide', 'hide')
+        }
+        else if(e.target.tagName === "P"){
+            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.innerHTML.charAt(0).toUpperCase() + e.target.innerHTML.slice(1)]['Color'][0];
+            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.innerHTML + '.png)';
+            ShowHideWrapper('show', 'hide', 'hide')
+        }   
     }
 })

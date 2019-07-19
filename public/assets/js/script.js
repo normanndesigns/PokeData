@@ -27,6 +27,19 @@ fs.readdir(__dirname + "/assets/media/", (err, files) => {
     }
 })
 
+document.getElementById('searchBTN').addEventListener('click', () => {
+    emptySearch()
+    FlexNone('hide', document.getElementById('pokemonImage'))
+    FlexNone('hide', document.getElementById('mainWrapper'), 'pokedex-wrapper')
+    FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
+})
+document.getElementById('pokedexBTN').addEventListener('click', () => {
+    emptySearch()
+    FlexNone('hide', document.getElementById('pokemonImage'))
+    FlexNone('hide', document.getElementById('searchWrapper'), 'search-wrapper')
+    FlexNone('show', document.getElementById('mainWrapper'), 'pokedex-wrapper')
+})
+
 document.getElementById('searchResults').addEventListener('click', (e) => {
     if(e.target !== document.getElementById('searchResults')){
         if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
@@ -39,8 +52,7 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
 })
 
 document.getElementById('backBTN').addEventListener('click', () => {
-    document.getElementById('search').value = "";
-    search();
+    emptySearch()
     FlexNone('hide', document.getElementById('pokemonImage'))
     FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
 })
@@ -80,6 +92,11 @@ function createListEntry(src, dom, file){
 
 function removeExtension(file){
     return file.split('.')[0]
+}
+
+function emptySearch(){
+    document.getElementById('search').value = "";
+    search();
 }
 
 function search(){

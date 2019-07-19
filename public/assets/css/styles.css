@@ -114,6 +114,47 @@
 	top: 37.5px;
 }
 /*   Eyes   */
+/*   Menu   */
+.menu{
+	position: fixed;
+	right: 40px;
+	top: 210px;
+	z-index: 10;
+}
+.menu ul{
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+.menu ul li{
+	width: 25px;
+	height: 25px;
+}
+.menu ul li:first-of-type{
+	background-image: url('../static/search.svg');
+	background-size: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 5px;
+}
+.menu ul li:first-of-type:hover{
+	animation: fadein 0.5s;
+	background-image: url('../static/search.svg');
+}
+.menu ul li:nth-last-of-type(1){
+	background-image: url('../static/pokeball-BW.svg');
+	background-size: 25px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.menu ul li:nth-last-of-type(1):hover{
+	animation: fadein 0.5s;
+	background-image: url('../static/pokeball.svg');
+}
+.menu ul li:hover{
+	cursor: pointer;
+}
+/*   Menu   */
 /*   Search   */
 #search{
 	text-transform: capitalize;
@@ -250,4 +291,9 @@
 #backBTN:hover{
 	filter: invert(100%);
 	cursor: pointer;
+}
+/*   Keyframes   */
+@keyframes fadein {
+    from { opacity: 0.7; }
+    to   { opacity: 1; }
 }

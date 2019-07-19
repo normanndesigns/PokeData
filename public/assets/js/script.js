@@ -12,50 +12,6 @@ var minimize = document.getElementById('minimizeBTN').addEventListener('click', 
 var maximize = document.getElementById('maximizeBTN').addEventListener('click', maximizeWindow)
 document.getElementById('search').addEventListener('keyup', search)
 
-window.addEventListener('load', function() {
-    SpatialNavigation.init();
-    SpatialNavigation.add({
-        selector: 'li, .navigate'
-    });
-    SpatialNavigation.makeFocusable();
-    SpatialNavigation.focus();
-});
-
-fs.readdir(__dirname + "/assets/media/", (err, files) => {
-    for(i = 0; i < files.length; i++){
-        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
-    }
-})
-
-document.getElementById('searchBTN').addEventListener('click', () => {
-    emptySearch()
-    FlexNone('hide', document.getElementById('pokemonImage'))
-    FlexNone('hide', document.getElementById('mainWrapper'), 'pokedex-wrapper')
-    FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
-})
-document.getElementById('pokedexBTN').addEventListener('click', () => {
-    emptySearch()
-    FlexNone('hide', document.getElementById('pokemonImage'))
-    FlexNone('hide', document.getElementById('searchWrapper'), 'search-wrapper')
-    FlexNone('show', document.getElementById('mainWrapper'), 'pokedex-wrapper')
-})
-
-document.getElementById('searchResults').addEventListener('click', (e) => {
-    if(e.target !== document.getElementById('searchResults')){
-        if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
-            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
-            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[3].innerHTML + '.png)'
-            FlexNone('show', document.getElementById('pokemonImage'))
-            FlexNone('hide', document.getElementById('searchWrapper'), 'search-wrapper')
-        }
-    }
-})
-
-document.getElementById('backBTN').addEventListener('click', () => {
-    emptySearch()
-    FlexNone('hide', document.getElementById('pokemonImage'))
-    FlexNone('show', document.getElementById('searchWrapper'), 'search-wrapper')
-})
 
 function FlexNone(display, object, extraClasses = ""){
     if(display == 'hide'){
@@ -79,7 +35,7 @@ function maximizeWindow(){
 }
 
 function createListEntry(src, dom, file){
-    div = document.createElement("div");
+    div = document.createElement("li");
     div.className = 'pokemon'
     image = document.createElement("img");
     image.src = src;
@@ -97,6 +53,12 @@ function removeExtension(file){
 function emptySearch(){
     document.getElementById('search').value = "";
     search();
+}
+
+function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper){
+    FlexNone(pokemonImage, document.getElementById('pokemonImage'))
+    FlexNone(mainWrapper, document.getElementById('mainWrapper'), 'pokedex-wrapper')
+    FlexNone(searchWrapper, document.getElementById('searchWrapper'), 'search-wrapper')
 }
 
 function search(){
@@ -123,3 +85,60 @@ function search(){
         }
     }
 }
+
+window.addEventListener('load', function() {
+    SpatialNavigation.init();
+    SpatialNavigation.add({
+        selector: 'li, .navigate'
+    });
+    SpatialNavigation.makeFocusable();
+    SpatialNavigation.focus();
+});
+
+fs.readdir(__dirname + "/assets/media/", (err, files) => {
+    for(i = 0; i < files.length; i++){
+        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
+    }
+})
+
+document.getElementById('searchBTN').addEventListener('click', () => {
+    emptySearch()
+    ShowHideWrapper('hide', 'hide', 'show')
+})
+document.getElementById('pokedexBTN').addEventListener('click', () => {
+    emptySearch()
+    ShowHideWrapper('hide', 'show', 'hide')
+})
+
+document.getElementById('searchResults').addEventListener('click', (e) => {
+    if(e.target !== document.getElementById('searchResults')){
+        if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
+            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
+            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[3].innerHTML + '.png)'
+            ShowHideWrapper('show', 'hide', 'hide')
+        }
+    }
+})
+
+document.getElementById('backBTN').addEventListener('click', () => {
+    emptySearch()
+    ShowHideWrapper('hide', 'hide', 'show')
+})
+
+document.getElementById('mainWrapper').addEventListener('click', (e) => {
+    if(e.target.tagName === "LI"){
+        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
+        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)'
+        ShowHideWrapper('show', 'hide', 'hide')
+    }
+    else if(e.target.tagName === "IMG"){
+        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
+        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].innerHTML + '.png)';
+        ShowHideWrapper('show', 'hide', 'hide')
+    }
+    else if(e.target.tagName === "P"){
+        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.innerHTML.charAt(0).toUpperCase() + e.target.innerHTML.slice(1)]['Color'][0];
+        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.innerHTML + '.png)';
+        ShowHideWrapper('show', 'hide', 'hide')
+    }
+})

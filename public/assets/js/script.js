@@ -119,6 +119,18 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
         }
     }
 })
+document.getElementById('searchResults').addEventListener('keypress', (e) => {
+    var key = e.which || e.keyCode;
+    if (key === 13) {
+        if(e.target !== document.getElementById('searchResults')){
+            if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
+                document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[3].innerHTML + '.png)'
+                ShowHideWrapper('show', 'hide', 'hide')
+            }
+        }
+    }
+})
 
 document.getElementById('backBTN').addEventListener('click', () => {
     emptySearch()

@@ -210,6 +210,9 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+.search-results li div{
+	padding: 5px;
+}
 .search-results li:focus{
 	background-color: lightgrey;
 }
@@ -275,8 +278,8 @@
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 35vw;
-	background-position-x: calc(100%);
-	background-position-y: calc(100%);
+	background-position-x: calc(95%);
+	background-position-y: calc(95%);
 }
 #backBTN{
 	width: 30px;

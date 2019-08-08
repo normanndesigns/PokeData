@@ -31,7 +31,14 @@ function minimizeWindow(){
 }
 function maximizeWindow(){
     var window = remote.getCurrentWindow();
-    window.maximize();
+    if(screen.availWidth === window.getSize()[0] && screen.availHeight === window.getSize()[1]){
+        //window.setPosition(Position[0], Position[1])
+        window.setSize(Size[0], Size[1]);
+    }else{
+        Position = [window.getPosition[0], window.getPosition[1]]
+        Size = [window.getSize()[0], window.getSize()[1]]
+        window.maximize();
+    }
 }
 
 function createListEntry(src, dom, file){

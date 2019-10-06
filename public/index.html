@@ -67,9 +67,19 @@
     </div>
     <div class="none" id="pokemonImage">
       <div id="backBTN"></div>
-      <div>
-        <h2>#001</h2>
-        <h3>Bulbasaur</h3>
+      <div class="pokemon-name">
+        <h2 id="pokemon-name-en"></h2>
+        <h3 id="pokemon-name-jp"></h3>
+      </div>
+      <div class="pokemon-stats">
+        <ul>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">HP:</div><span id="HP-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-HP" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Attack:</div><span id="Attack-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Attack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Defense:</div><span id="Defense-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Defense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Atk:</div><span id="SpATK-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpAttack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Def:</div><span id="SpDEF-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpDefense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Speed:</div><span id="Speed-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Speed" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+        </ul>
       </div>
     </div>
     <script src="assets/js/spatial_navigation.js"></script>

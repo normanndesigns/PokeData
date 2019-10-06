@@ -39,6 +39,17 @@ function maximizeWindow(){
         window.maximize();
     }
 }
+function BaseStatsColors(size){
+    if(size <= 25){
+        return "#F34444";
+    }else if(25 < size && size <= 75){
+        return "#FF7F0F";
+    }else if(75 < size && size <= 150){
+        return "#A0E515";
+    }else if(size > 150){
+        return "#00C2B8";
+    }
+}
 
 function createListEntry(src, dom, file){
     div = document.createElement("li");
@@ -61,6 +72,30 @@ function removeExtension(file){
 function emptySearch(){
     document.getElementById('search').value = "";
     search();
+}
+
+function displayPokemonData(pokemonName){
+    for(i = 0; i < document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper").length; i++){
+        document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper")[i].style.color = ColorData[pokemonName]['Color'][1];
+        if(i <= 5){
+            document.querySelectorAll(".pokemon-stats-bar")[i].style.backgroundColor = ColorData[pokemonName]['Color'][1];
+        }
+    }
+    document.getElementById('pokemon-name-en').innerHTML = pokemonName;
+    document.getElementById('pokemon-name-jp').innerHTML = PokemonData[pokemonName].NameJP;
+    document.getElementById('HP-stat').innerHTML = PokemonData[pokemonName]['Base stats'].HP[0];
+    document.getElementById('Attack-stat').innerHTML = PokemonData[pokemonName]['Base stats'].Attack[0];
+    document.getElementById('Defense-stat').innerHTML = PokemonData[pokemonName]['Base stats'].Defense[0];
+    document.getElementById('SpATK-stat').innerHTML = PokemonData[pokemonName]['Base stats'].SpAttack[0];
+    document.getElementById('SpDEF-stat').innerHTML = PokemonData[pokemonName]['Base stats'].SpDefense[0];
+    document.getElementById('Speed-stat').innerHTML = PokemonData[pokemonName]['Base stats'].Speed[0];
+        
+    document.getElementById('pokemon-stats-progress-HP').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].HP[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].HP[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].HP[0]));
+    document.getElementById('pokemon-stats-progress-Attack').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].Attack[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].Attack[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].Attack[0]));
+    document.getElementById('pokemon-stats-progress-Defense').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].Defense[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].Defense[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].Defense[0]));
+    document.getElementById('pokemon-stats-progress-SpAttack').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].SpAttack[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].SpAttack[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].SpAttack[0]));
+    document.getElementById('pokemon-stats-progress-SpDefense').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].SpDefense[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].SpDefense[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].SpDefense[0]));
+    document.getElementById('pokemon-stats-progress-Speed').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].Speed[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].Speed[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].Speed[0]));
 }
 
 function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper){
@@ -123,14 +158,17 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
     if(e.target !== document.getElementById('searchResults')){
         if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
             if(e.target.tagName === 'DIV'){
+                displayPokemonData(e.target.parentNode.childNodes[3].innerHTML)
                 document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0];
-            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + '.png)'
                 ShowHideWrapper('show', 'hide', 'hide')
             }else if(e.target.tagName === 'IMG'){
+                displayPokemonData(e.target.parentNode.childNodes[3].innerHTML);
                 document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0];
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.alt + '.png)'
                 ShowHideWrapper('show', 'hide', 'hide')
             }else{
+                displayPokemonData(e.target.childNodes[3].innerHTML)
                 document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + '.png)'
                 ShowHideWrapper('show', 'hide', 'hide')
@@ -144,6 +182,7 @@ document.getElementById('searchResults').addEventListener('keypress', (e) => {
     if (key === 13) {
         if(e.target !== document.getElementById('searchResults')){
             if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
+                displayPokemonData(e.target.childNodes[3].innerHTML)
                 document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + '.png)'
                 ShowHideWrapper('show', 'hide', 'hide')
@@ -159,16 +198,19 @@ document.getElementById('backBTN').addEventListener('click', () => {
 
 document.getElementById('mainWrapper').addEventListener('click', (e) => {
     if(e.target.tagName === "LI"){
+        displayPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))
         document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + '.png)'
         ShowHideWrapper('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "IMG"){
+        displayPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))
         document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)';
         ShowHideWrapper('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "P"){
+        displayPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))
         document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)';
         ShowHideWrapper('show', 'hide', 'hide')
@@ -179,6 +221,7 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
     var key = e.which || e.keyCode;
     if (key === 13) {
         if(e.target.tagName === "LI"){
+            displayPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))
             document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
             document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)'
             ShowHideWrapper('show', 'hide', 'hide')

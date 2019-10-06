@@ -271,7 +271,45 @@
 	width: 100px;
 }
 /*   Pokemon   */
+.pokemon-name{
+	color: #648770;
+    font-weight: bolder;
+    margin: 60px 0px 0px 60px;
+    font-size: 60px;
+}
+.pokemon-stats{
+	margin: 0px 0px 60px 60px;
+}
+.pokemon-stats ul{
+	width: 450px;
+}
+.pokemon-stats ul li{
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	margin-bottom: 10px;
+}
+.stats-text-wrapper{
+	height: 18px;
+    display: flex;
+	justify-content: space-between;
+	width: 115px;
+}
+.pokemon-stats-type{
+	width: 100px;
+}
+.pokemon-stats-bar{
+	width: 275px;
+    margin-left: 25px;
+    border-radius: 50px;
+}
+.pokemon-stats-bar-progress{
+	border-radius: 50px;
+	height: 18px;
+}
 #pokemonImage{
+	flex-direction: column;
+	justify-content: space-between;
 	width: 100%;
 	height: calc(100vh - 220px);
 	z-index: 5;
@@ -282,14 +320,14 @@
 	background-position-y: calc(95%);
 }
 #backBTN{
+	display: none;
+	position: sticky;
+	top: 15px;
+	left: 15px;
 	width: 30px;
 	height: 30px;
 	border: 1px solid black;
 	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 15px;
 	background-image: url('../static/back-arrow.svg');
 	background-size: 60%;
 	background-repeat: no-repeat;

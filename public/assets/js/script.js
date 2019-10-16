@@ -39,6 +39,67 @@ function maximizeWindow(){
         window.maximize();
     }
 }
+function pokemonType(type){
+    switch(type) {
+        case "Normal":
+          return "#AAA878";
+          
+        case "Fire":
+          return "#F07F31";
+          
+        case "Water":
+          return "#6890F0";
+          
+        case "Grass":
+          return "#78C84F";
+          
+        case "Electric":
+          return "#F8D030";
+          
+        case "Ice":
+          return "#9AD7D8";
+          
+        case "Fighting":
+          return "#C03028";
+          
+        case "Poison":
+          return "#A140A1";
+          
+        case "Ground":
+          return "#E0C069";
+          
+        case "Flying":
+          return "#A98FF0";
+          
+        case "Psychic":
+          return "#F95788";
+          
+        case "Bug":
+          return "#A9B821";
+          
+        case "Rock":
+          return "#B7A038";
+          
+        case "Ghost":
+          return "#705798";
+          
+        case "Dragon":
+          return "#7038F9";
+          
+        case "Dark":
+          return "#715748";
+          
+        case "Steel":
+          return "#B8B8D0";
+          
+        case "Fairy":
+          return "#F7C9E3";
+          
+        default:
+          return "#AAA878";
+    }
+}
+
 function BaseStatsColors(size){
     if(size <= 25){
         return "#F34444";
@@ -51,36 +112,61 @@ function BaseStatsColors(size){
     }
 }
 
+function createType(dom, type){
+    div = document.createElement("div");
+    div.style.backgroundColor = pokemonType(type);
+    div.innerHTML = type;
+    div.className = "Pokemon-type-objects";
+    dom.appendChild(div);
+}
 function createListEntry(src, dom, file){
-    div = document.createElement("li");
-    div.className = 'pokemon navigate'
+    li = document.createElement("li");
+    li.className = 'pokemon navigate'
     image = document.createElement("img");
     image.src = src;
     image.alt = removeExtension(file);
     text = document.createElement('p');
     PokemonNameWOD = file.split('-')[1]
     text.innerHTML = removeExtension(PokemonNameWOD);
-    div.appendChild(image)
-    div.appendChild(text)
-    dom.appendChild(div)
+    li.appendChild(image)
+    li.appendChild(text)
+    dom.appendChild(li)
 }
-
+function removeTypes(dom){
+    while (dom.hasChildNodes()) {
+        dom.removeChild(dom.firstChild);
+    }
+}
 function removeExtension(file){
     return file.split('.')[0]
 }
-
 function emptySearch(){
     document.getElementById('search').value = "";
     search();
 }
 
 function displayPokemonData(pokemonName){
-    for(i = 0; i < document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper").length; i++){
-        document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper")[i].style.color = ColorData[pokemonName]['Color'][1];
+    for(i = 0; i < document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper, .stats-titles, .info-names").length; i++){
+        document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper, .stats-titles, .info-names")[i].style.color = ColorData[pokemonName]['Color'][1];
         if(i <= 5){
             document.querySelectorAll(".pokemon-stats-bar")[i].style.backgroundColor = ColorData[pokemonName]['Color'][1];
         }
     }
+    removeTypes(document.getElementById('pokemon-type-wrapper'));
+    for(i = 0; i < PokemonData[pokemonName]["Types"][pokemonName].length; i++){
+        createType(document.getElementById('pokemon-type-wrapper'), PokemonData[pokemonName]["Types"][pokemonName][i])
+    }
+    document.getElementById('pokemon-nationalnr').innerHTML = PokemonData[pokemonName]['DexID'];
+    document.getElementById('pokemon-species').innerHTML = PokemonData[pokemonName]['Category'];
+    document.getElementById('pokemon-height').innerHTML = PokemonData[pokemonName]['Height'][pokemonName].join(", ");
+    document.getElementById('pokemon-weight').innerHTML = PokemonData[pokemonName]['Weight'][pokemonName].join(", ");
+    pokemonAbilities = PokemonData[pokemonName]['PokemonAbilities'][pokemonName].join(", ");
+    document.getElementById('pokemon-abilities').innerHTML = pokemonAbilities.replace('Hidden Ability', "(HA)");
+
+    document.getElementById('pokemon-ev-yield').innerHTML = PokemonData[pokemonName]['EVYeild'].join(", ");
+    document.getElementById('pokemon-catch-rate').innerHTML = PokemonData[pokemonName]['CatchRate'];
+    document.getElementById('pokemon-base-friendship').innerHTML = PokemonData[pokemonName]['BaseFriendship'];
+
     document.getElementById('pokemon-name-en').innerHTML = pokemonName;
     document.getElementById('pokemon-name-jp').innerHTML = PokemonData[pokemonName].NameJP;
     document.getElementById('HP-stat').innerHTML = PokemonData[pokemonName]['Base stats'].HP[0];
@@ -160,7 +246,7 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
             if(e.target.tagName === 'DIV'){
                 displayPokemonData(e.target.parentNode.childNodes[3].innerHTML)
                 document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0];
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + '.png)';
                 ShowHideWrapper('show', 'hide', 'hide')
             }else if(e.target.tagName === 'IMG'){
                 displayPokemonData(e.target.parentNode.childNodes[3].innerHTML);

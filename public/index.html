@@ -66,20 +66,46 @@
       </div>
     </div>
     <div class="none" id="pokemonImage">
-      <div id="backBTN"></div>
-      <div class="pokemon-name">
-        <h2 id="pokemon-name-en"></h2>
-        <h3 id="pokemon-name-jp"></h3>
-      </div>
-      <div class="pokemon-stats">
+      <div class="pokemonInfoWrapper">
+        <div id="backBTN"></div>
+        <div class="pokemon-name">
+          <h2 id="pokemon-name-en"></h2>
+          <h2 id="pokemon-name-jp"></h2>
+        </div>
+        <!--<h3 class="stats-titles">Type</h3>-->
+        <div class="pokemon-type flex" id="pokemon-type-wrapper">
+          
+        </div>
+
+        <h3 class="stats-titles">Pokédex data</h3>
         <ul>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">HP:</div><span id="HP-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-HP" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Attack:</div><span id="Attack-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Attack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Defense:</div><span id="Defense-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Defense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Atk:</div><span id="SpATK-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpAttack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Def:</div><span id="SpDEF-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpDefense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
-          <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Speed:</div><span id="Speed-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Speed" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          <li class="info-names"><h5>National №: </h5><span id="pokemon-nationalnr"></span></li>
+          <li class="info-names"><h5>Species: </h5><span id="pokemon-species"></span></li>
+          <li class="info-names"><h5>Height: </h5><span id="pokemon-height"></span></li>
+          <li class="info-names"><h5>Weight: </h5><span id="pokemon-weight"></span></li>
+          <li class="info-names"><h5>Abilities: </h5><span id="pokemon-abilities"></span></li>
         </ul>
+
+        <h3 class="stats-titles">Training</h3>
+        <ul>
+          <li class="info-names"><h5>EV yield: </h5><span id="pokemon-ev-yield"></span></li>
+          <li class="info-names"><h5>Catch rate: </h5><span id="pokemon-catch-rate"></span></li>
+          <li class="info-names"><h5>Base Friendship: </h5><span id="pokemon-base-friendship"></span></li>
+          <!--<li class="info-names"><h5>Base Exp.: </h5><span id="pokemon-base-exp"></span></li>-->
+          <!--<li class="info-names"><h5>Growth Rate	: </h5><span id="pokemon-growth-rate"></span></li>-->
+        </ul>
+
+        <h3 class="stats-titles">Base stats</h3>
+        <div class="pokemon-stats">
+          <ul>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">HP:</div><span id="HP-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-HP" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Attack:</div><span id="Attack-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Attack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Defense:</div><span id="Defense-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Defense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Atk:</div><span id="SpATK-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpAttack" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Sp. Def:</div><span id="SpDEF-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-SpDefense" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+            <li class="pokemon-stats-wrapper"><div class="stats-text-wrapper"><div class="pokemon-stats-type">Speed:</div><span id="Speed-stat">100</span></div><div class="pokemon-stats-bar"><div id="pokemon-stats-progress-Speed" class="pokemon-stats-bar-progress" style="background-color: #23CD5E;"></div></div></li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="assets/js/spatial_navigation.js"></script>

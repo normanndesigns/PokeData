@@ -370,6 +370,45 @@ h3{
 h5 span{
 	padding-left: 10px;
 }
+#evolutionWrapper{
+	margin-left: 60px;
+}
+#evolutionWrapper ul{
+    display: flex;
+}
+#evolutionWrapper ul ul{
+    display: flex;
+	flex-direction: column;
+}
+#evolutionWrapper ul li{
+	width: 100px;
+	display: flex;
+    align-items: center;
+}
+#evolutionWrapper ul li div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+#evolutionWrapper ul li div img{
+	max-width: 100px
+}
+#evolutionWrapper ul li div p{
+	text-align: center;
+	margin-top: 5px;
+}
+.betweenArrowsWrapper{
+	width: 75px;
+	justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.betweenArrows{
+	width: 35px;
+}
+.betweenArrowsWrapper:not(:first-of-type):last-of-type{
+	display: none;
+}
 #backBTN{
 	display: none;
 	position: sticky;

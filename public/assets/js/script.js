@@ -39,7 +39,42 @@ function maximizeWindow(){
         window.maximize();
     }
 }
-function pokemonType(type){
+
+function displayPokemonEvolutions(pokemonName, domElement){
+    var firstLayerLI = [], secondLayerLI = [];
+    emptyOutHTMLTag(domElement);
+    if(PokemonData[pokemonName].hasOwnProperty('Evolutions')){
+        for(i = 0; i < PokemonData[pokemonName]['Evolutions']['Evolutions'].length; i++){
+            if(Array.isArray(PokemonData[pokemonName]['Evolutions']['Evolutions'][i])){
+                for(j = 0; j < PokemonData[pokemonName]['Evolutions']['Evolutions'][i].length; j++){
+                    if(Array.isArray(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j])){
+                        var thirdLayerLI = []
+                        for(k = 0; k < PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length; k++){
+                            if(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length === k+1){
+                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
+                                thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div>")
+                            }else{
+                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
+                                thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>")
+                            }
+                        }
+                        secondLayerLI[j] = "<li>" + thirdLayerLI.join("") + "</li>";
+                    }else{
+                        var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + ".png");
+                        secondLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "</p></div></li>")
+                    }
+                }
+                firstLayerLI[i] = "<ul>" + secondLayerLI.join("") + "</ul>";
+            }else{
+                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + ".png");
+                firstLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "</p></div></li><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>");
+            }
+        }
+        domElement.appendChild(document.createRange().createContextualFragment("<ul>" + firstLayerLI.join("") + "</ul>"));
+    }
+    
+}
+function pokemonTypeSelector(type){
     switch(type) {
         case "Normal":
           return "#AAA878";
@@ -112,35 +147,39 @@ function BaseStatsColors(size){
     }
 }
 
-function createType(dom, type){
+function createTypeElement(dom, type){
     div = document.createElement("div");
-    div.style.backgroundColor = pokemonType(type);
+    div.style.backgroundColor = pokemonTypeSelector(type);
     div.innerHTML = type;
     div.className = "Pokemon-type-objects";
     dom.appendChild(div);
 }
-function createListEntry(src, dom, file){
+function createPokedexEntry(src, dom, file){
     li = document.createElement("li");
     li.className = 'pokemon navigate'
     image = document.createElement("img");
     image.src = src;
-    image.alt = removeExtension(file);
+    image.alt = removeFileExtension(file);
     text = document.createElement('p');
     PokemonNameWOD = file.split('-')[1]
-    text.innerHTML = removeExtension(PokemonNameWOD);
+    if(removeFileExtension(PokemonNameWOD) == "TypeNull"){
+        text.innerHTML = "Type: Null"
+    }else{
+        text.innerHTML = removeFileExtension(PokemonNameWOD);
+    }
     li.appendChild(image)
     li.appendChild(text)
     dom.appendChild(li)
 }
-function removeTypes(dom){
+function emptyOutHTMLTag(dom){
     while (dom.hasChildNodes()) {
         dom.removeChild(dom.firstChild);
     }
 }
-function removeExtension(file){
+function removeFileExtension(file){
     return file.split('.')[0]
 }
-function emptySearch(){
+function emptySearchField(){
     document.getElementById('search').value = "";
     search();
 }
@@ -152,9 +191,9 @@ function displayPokemonData(pokemonName){
             document.querySelectorAll(".pokemon-stats-bar")[i].style.backgroundColor = ColorData[pokemonName]['Color'][1];
         }
     }
-    removeTypes(document.getElementById('pokemon-type-wrapper'));
+    emptyOutHTMLTag(document.getElementById('pokemon-type-wrapper'));
     for(i = 0; i < PokemonData[pokemonName]["Types"][pokemonName].length; i++){
-        createType(document.getElementById('pokemon-type-wrapper'), PokemonData[pokemonName]["Types"][pokemonName][i])
+        createTypeElement(document.getElementById('pokemon-type-wrapper'), PokemonData[pokemonName]["Types"][pokemonName][i])
     }
     document.getElementById('pokemon-nationalnr').innerHTML = PokemonData[pokemonName]['DexID'];
     document.getElementById('pokemon-species').innerHTML = PokemonData[pokemonName]['Category'];
@@ -182,9 +221,10 @@ function displayPokemonData(pokemonName){
     document.getElementById('pokemon-stats-progress-SpAttack').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].SpAttack[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].SpAttack[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].SpAttack[0]));
     document.getElementById('pokemon-stats-progress-SpDefense').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].SpDefense[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].SpDefense[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].SpDefense[0]));
     document.getElementById('pokemon-stats-progress-Speed').setAttribute("style", "width:" + ((PokemonData[pokemonName]['Base stats'].Speed[0] <= 20) ? "20px;"  : PokemonData[pokemonName]['Base stats'].Speed[0] + "px;") + "background-color:" + BaseStatsColors(PokemonData[pokemonName]['Base stats'].Speed[0]));
+    displayPokemonEvolutions(pokemonName, document.getElementById('evolutionWrapper'))
 }
 
-function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper){
+function ShowAndHidePokemonPage(pokemonImage, mainWrapper, searchWrapper){
     FlexNone(pokemonImage, document.getElementById('pokemonImage'))
     FlexNone(mainWrapper, document.getElementById('mainWrapper'), 'pokedex-wrapper')
     FlexNone(searchWrapper, document.getElementById('searchWrapper'), 'search-wrapper')
@@ -208,9 +248,9 @@ function search(){
         else if(typeof tempArray[i - 1] === 'undefined'){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
-            document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1];
-            document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1] + ".png";
-            document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1];
+            document.getElementById('Showresult' + i).innerHTML = ((tempArray[i - 1] == "Type: Null") ? "Type: Null" : tempArray[i - 1]);
+            document.getElementById('imageresult' + i).src = ((tempArray[i - 1] == "Type: Null") ? "assets/media/772-TypeNull.png" : "assets/media/" + PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1] + ".png");
+            document.getElementById('imageresult' + i).alt = ((tempArray[i - 1] == "Type: Null") ? "Type: Null" : PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1]);    
             FlexNone('show', document.getElementById('result' + i))
         }
     }
@@ -227,37 +267,37 @@ window.addEventListener('load', function() {
 
 fs.readdir(__dirname + "/assets/media/", (err, files) => {
     for(i = 0; i < files.length; i++){
-        createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
+        createPokedexEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
     }
 })
 
 document.getElementById('searchBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show')
+    emptySearchField()
+    ShowAndHidePokemonPage('hide', 'hide', 'show')
 })
 document.getElementById('pokedexBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'show', 'hide')
+    emptySearchField()
+    ShowAndHidePokemonPage('hide', 'show', 'hide')
 })
 
 document.getElementById('searchResults').addEventListener('click', (e) => {
     if(e.target !== document.getElementById('searchResults')){
         if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
             if(e.target.tagName === 'DIV'){
-                displayPokemonData(e.target.parentNode.childNodes[3].innerHTML)
-                document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0];
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + '.png)';
-                ShowHideWrapper('show', 'hide', 'hide')
+                displayPokemonData(((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[3].innerHTML))
+                document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0]);
+                document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "url(assets/media/772-TypeNull.png)" : "url(assets/media/" + e.target.parentNode.childNodes[1].alt + ".png)");
+                ShowAndHidePokemonPage('show', 'hide', 'hide')     
             }else if(e.target.tagName === 'IMG'){
-                displayPokemonData(e.target.parentNode.childNodes[3].innerHTML);
-                document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0];
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.alt + '.png)'
-                ShowHideWrapper('show', 'hide', 'hide')
+                displayPokemonData(((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[3].innerHTML))
+                document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[3].innerHTML]['Color'][0]);
+                document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "url(assets/media/772-TypeNull.png)" : "url(assets/media/" + e.target.alt + ".png)");
+                ShowAndHidePokemonPage('show', 'hide', 'hide')
             }else{
-                displayPokemonData(e.target.childNodes[3].innerHTML)
-                document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + '.png)'
-                ShowHideWrapper('show', 'hide', 'hide')
+                displayPokemonData(((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "Type: Null" : e.target.childNodes[3].innerHTML))
+                document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[3].innerHTML]['Color'][0]);
+                document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[3].innerHTML == "Type: Null") ? "url(assets/media/772-TypeNull.png)" : "url(assets/media/" + e.target.childNodes[1].alt + ".png)");
+                ShowAndHidePokemonPage('show', 'hide', 'hide')
             }
             
         }
@@ -268,38 +308,39 @@ document.getElementById('searchResults').addEventListener('keypress', (e) => {
     if (key === 13) {
         if(e.target !== document.getElementById('searchResults')){
             if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
-                displayPokemonData(e.target.childNodes[3].innerHTML)
-                document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[3].innerHTML]['Color'][0];
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + '.png)'
-                ShowHideWrapper('show', 'hide', 'hide')
+                displayPokemonData(((e.target.childNodes[3].innerHTML == "Type: Null") ? "Type: Null" : e.target.childNodes[3].innerHTML))
+                document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[3].innerHTML == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[3].innerHTML]['Color'][0]);
+                document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[3].innerHTML == "Type: Null") ? "url(assets/media/772-TypeNull.png)" : 'url(assets/media/' + e.target.childNodes[1].alt + '.png)');
+                ShowAndHidePokemonPage('show', 'hide', 'hide')
             }
         }
     }
 })
 
 document.getElementById('backBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show')
+    emptySearchField()
+    ShowAndHidePokemonPage('hide', 'hide', 'show')
 })
 
 document.getElementById('mainWrapper').addEventListener('click', (e) => {
     if(e.target.tagName === "LI"){
-        displayPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))
-        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + '.png)'
-        ShowHideWrapper('show', 'hide', 'hide')
+        console.log()
+        displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.childNodes[0].alt + '.png)');
+        ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "IMG"){
-        displayPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))
-        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)';
-        ShowHideWrapper('show', 'hide', 'hide')
+        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
+        ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "P"){
-        displayPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))
-        document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0];
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)';
-        ShowHideWrapper('show', 'hide', 'hide')
+        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
+        ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
 })
 
@@ -307,10 +348,10 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
     var key = e.which || e.keyCode;
     if (key === 13) {
         if(e.target.tagName === "LI"){
-            displayPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))
-            document.getElementById('pokemonImage').style.backgroundColor = ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0];
-            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)'
-            ShowHideWrapper('show', 'hide', 'hide')
+            displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
+            document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+            document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)');
+            ShowAndHidePokemonPage('show', 'hide', 'hide')
         }
     }
 })

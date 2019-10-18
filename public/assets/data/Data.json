@@ -558,7 +558,7 @@
         "NameJPEN": "Cocoon",
         "Category": "Cocoon Pok\u00e9mon",
         "Types": {
-            "Kakuna": ["Bug", "Poisen"]
+            "Kakuna": ["Bug", "Poison"]
         },
         "PokemonAbilities": {
             "Kakuna": ["Shed Skin"]
@@ -3107,6 +3107,10 @@
         "Evolutions":{
             "Evolutions": ["Geodude", "Graveler", "Golem"],
             "EvolveBy": ["Level 25", "Trade"]
+        },
+        "Alolan":{
+            "Evolutions": ["Geodude", "Graveler", "Golem"],
+            "EvolveBy": ["Level 25", "Trade"]
         }
     },
     "Graveler": {
@@ -3148,6 +3152,10 @@
         "Evolutions":{
             "Evolutions": ["Geodude", "Graveler", "Golem"],
             "EvolveBy": ["Level 25", "Trade"]
+        },
+        "Alolan":{
+            "Evolutions": ["Geodude", "Graveler", "Golem"],
+            "EvolveBy": ["Level 25", "Trade"]
         }
     },
     "Golem": {
@@ -3187,6 +3195,10 @@
             "Speed": ["45", "85", "207"]
         },
         "Evolutions":{
+            "Evolutions": ["Geodude", "Graveler", "Golem"],
+            "EvolveBy": ["Level 25", "Trade"]
+        },
+        "Alolan":{
             "Evolutions": ["Geodude", "Graveler", "Golem"],
             "EvolveBy": ["Level 25", "Trade"]
         }
@@ -3729,7 +3741,7 @@
         },
         "Alolan":{
             "Evolutions": ["Grimer", "Muk"],
-            "EvolveBy": ["Level 38 (In the Alola region)"]
+            "EvolveBy": ["Level 38"]
         }
     },
     "Shellder": {
@@ -3824,7 +3836,7 @@
         "NameJPEN": "Ghos",
         "Category": "Gas Pok\u00e9mon",
         "Types": {
-            "Gastly": ["Ghost", "Poisen"]
+            "Gastly": ["Ghost", "Poison"]
         },
         "PokemonAbilities": {
             "Gastly": ["Levitate"]
@@ -3865,7 +3877,7 @@
         "NameJPEN": "Ghost",
         "Category": "Gas Pok\u00e9mon",
         "Types": {
-            "Haunter": ["Ghost", "Poisen"]
+            "Haunter": ["Ghost", "Poison"]
         },
         "PokemonAbilities": {
             "Haunter": ["Levitate"]
@@ -4265,8 +4277,12 @@
             "Speed": ["40", "76", "196"]
         },
         "Evolutions":{
-            "Evolutions": ["Exeggcute", ["Exeggutor","Alolan Exeggutor"]],
-            "EvolveBy": [["Leaf Stone", "Leaf Stone (In the Alola region)"]]
+            "Evolutions": ["Exeggcute", "Exeggutor"],
+            "EvolveBy": ["Leaf Stone"]
+        }, 
+        "Alolan":{
+            "Evolutions": ["Exeggcute", "Exeggutor"],
+            "EvolveBy": ["Leaf Stone (In the Alola region)"]
         }
     },
     "Exeggutor": {
@@ -4308,6 +4324,10 @@
         "Evolutions":{
             "Evolutions": ["Exeggcute", ["Exeggutor","Alolan Exeggutor"]],
             "EvolveBy": [["Leaf Stone", "Leaf Stone (In the Alola region)"]]
+        }, 
+        "Alolan":{
+            "Evolutions": ["Exeggcute", "Exeggutor"],
+            "EvolveBy": ["Leaf Stone (In the Alola region)"]
         }
     },
     "Cubone": {
@@ -4347,8 +4367,12 @@
             "Speed": ["35", "67", "185"]
         },
         "Evolutions":{
-            "Evolutions": ["Cubone", ["Marowak","Alola Marowak"]],
-            "EvolveBy": [["Level 28", "Level 28 (night)"]]
+            "Evolutions": ["Cubone", "Marowak"],
+            "EvolveBy": ["Level 28"]
+        }, 
+        "Alolan":{
+            "Evolutions": ["Cubone", "Marowak"],
+            "EvolveBy": ["Level 28 (night)"]
         }
     },
     "Marowak": {
@@ -4388,8 +4412,12 @@
             "Speed": ["45", "85", "207"]
         },
         "Evolutions":{
-            "Evolutions": ["Cubone", ["Marowak","Alola Marowak"]],
-            "EvolveBy": [["Level 28", "Level 28 (night)"]]
+            "Evolutions": ["Cubone", "Marowak"],
+            "EvolveBy": ["Level 28"]
+        }, 
+        "Alolan":{
+            "Evolutions": ["Cubone", "Marowak"],
+            "EvolveBy": ["Level 28 (night)"]
         }
     },
     "Hitmonlee": {
@@ -4525,7 +4553,7 @@
         "NameJPEN": "Dogars",
         "Category": "Poison Gas Pok\u00e9mon",
         "Types": {
-            "Koffing": ["Poisen"]
+            "Koffing": ["Poison"]
         },
         "PokemonAbilities": {
             "Koffing": ["Levitate"]
@@ -4566,7 +4594,7 @@
         "NameJPEN": "Matadogas",
         "Category": "Poison Gas Pok\u00e9mon",
         "Types": {
-            "Weezing": ["Poisen"]
+            "Weezing": ["Poison"]
         },
         "PokemonAbilities": {
             "Weezing": ["Levitate"]

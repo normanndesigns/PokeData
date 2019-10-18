@@ -51,28 +51,27 @@ function displayPokemonEvolutions(pokemonName, domElement){
                         var thirdLayerLI = []
                         for(k = 0; k < PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length; k++){
                             if(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length === k+1){
-                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
+                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k])) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
                                 thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div>")
                             }else{
-                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
+                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == name) ? image : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
                                 thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>")
                             }
                         }
                         secondLayerLI[j] = "<li>" + thirdLayerLI.join("") + "</li>";
                     }else{
-                        var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + ".png");
+                        var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + ".png"));
                         secondLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "</p></div></li>")
                     }
                 }
                 firstLayerLI[i] = "<ul>" + secondLayerLI.join("") + "</ul>";
             }else{
-                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i] == "Type: Null") ? "772-TypeNull.png" : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + ".png");
+                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i])) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + ".png");
                 firstLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "</p></div></li><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>");
             }
         }
-        domElement.appendChild(document.createRange().createContextualFragment("<ul>" + firstLayerLI.join("") + "</ul>"));
+        domElement.appendChild(document.createRange().createContextualFragment("<h3 class='stats-titles' style='margin-left: 0px; color:" + ColorData[pokemonName]['Color'][1] + "'>Evolution line</h3><ul>" + firstLayerLI.join("") + "</ul>"));
     }
-    
 }
 function pokemonTypeSelector(type){
     switch(type) {
@@ -146,7 +145,20 @@ function BaseStatsColors(size){
         return "#00C2B8";
     }
 }
-
+function nameException(Pokemon){
+    if(Pokemon == "Type: Null"){
+        return "Type: Null";
+    }else if(Pokemon == "Farfetch'd"){
+        return "Farfetch'd";
+    }
+}
+function imageException(Pokemon){
+    if(Pokemon == "Type: Null"){
+        return "772-TypeNull.png";
+    }else if(Pokemon == "Farfetch'd"){
+        return "083-Farfetch'd.png";
+    }
+}
 function createTypeElement(dom, type){
     div = document.createElement("div");
     div.style.backgroundColor = pokemonTypeSelector(type);
@@ -324,22 +336,21 @@ document.getElementById('backBTN').addEventListener('click', () => {
 
 document.getElementById('mainWrapper').addEventListener('click', (e) => {
     if(e.target.tagName === "LI"){
-        console.log()
-        displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
-        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
-        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.childNodes[0].alt + '.png)');
+        displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)) : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? ColorData[nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? 'url("assets/media/' + imageException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)) + '")' : 'url(assets/media/' + e.target.childNodes[0].alt + '.png)');
         ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "IMG"){
-        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
-        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
-        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
+        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)) : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? ColorData[nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? 'url("assets/media/' + imageException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))+ '")' : 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
         ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
     else if(e.target.tagName === "P"){
-        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
-        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
-        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
+        displayPokemonData(((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)) : e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)))
+        document.getElementById('pokemonImage').style.backgroundColor = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? ColorData[nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))]['Color'][0] : ColorData[e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+        document.getElementById('pokemonImage').style.backgroundImage = ((e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1) == nameException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1))) ? 'url("assets/media/' + imageException(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1)) + '")': 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + '.png)');
         ShowAndHidePokemonPage('show', 'hide', 'hide')
     }
 })
@@ -348,9 +359,9 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
     var key = e.which || e.keyCode;
     if (key === 13) {
         if(e.target.tagName === "LI"){
-            displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? "Type: Null" : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
-            document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
-            document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == "Type: Null") ? 'url(assets/media/url(assets/media/772-TypeNull.png)' : 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)');
+            displayPokemonData(((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)) : e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)))
+            document.getElementById('pokemonImage').style.backgroundColor = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? ColorData[nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))]['Color'][0] : ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0]);
+            document.getElementById('pokemonImage').style.backgroundImage = ((e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1) == nameException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1))) ? 'url("assets/media/' + imageException(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)) + '")' : 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)');
             ShowAndHidePokemonPage('show', 'hide', 'hide')
         }
     }

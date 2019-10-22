@@ -331,7 +331,11 @@ document.getElementById('backBTN').addEventListener('click', () => {
     ShowAndHidePokemonPage('hide', 'hide', 'show')
 })
 
-document.getElementById('mainWrapper').addEventListener('click', (e) => {setBackgroundColorOfPokemonPage(e.target.getAttribute('data-pokemon'))})
+document.getElementById('mainWrapper').addEventListener('click', (e) => {
+    if(e.target != document.getElementById('mainWrapper')){
+        setBackgroundColorOfPokemonPage(e.target.getAttribute('data-pokemon'));
+    }
+})
 
 document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
     var key = e.which || e.keyCode;

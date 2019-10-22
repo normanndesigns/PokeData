@@ -6034,7 +6034,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Megastones": [""],
@@ -6071,7 +6071,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Megastones": [""],
@@ -6108,7 +6108,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Megastones": [""],
@@ -6276,7 +6276,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Megastones": ["Mewtwonite X", "Mewtwonite Y"],
@@ -6313,7 +6313,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Megastones": [""],
@@ -8325,7 +8325,7 @@
         },
         "CatchRate": "225 (29.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "10280 - 10536 stepsEgg not obtainable",
+        "StepsToHatch": "10280 - 10536 steps. Egg not obtainable",
         "BaseFriendship": "70",
         "EVYeild": ["0HP", "1Atk", "0Def", "1Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -9971,7 +9971,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "1Sp.Atk", "0Sp.Def", "2Speed"],
         "Base stats": {
@@ -10007,7 +10007,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["1HP", "2Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -10043,7 +10043,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "1Def", "0Sp.Atk", "2Sp.Def", "0Speed"],
         "Base stats": {
@@ -10203,7 +10203,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -10239,7 +10239,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -10275,7 +10275,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15353,7 +15353,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "3Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15389,7 +15389,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -15425,7 +15425,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "2Def", "0Sp.Atk", "1Sp.Def", "0Speed"],
         "Base stats": {
@@ -15464,7 +15464,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "90",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -15503,7 +15503,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "90",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15540,7 +15540,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15577,7 +15577,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15617,7 +15617,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "2Atk", "0Def", "1Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15653,7 +15653,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -15689,7 +15689,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "0Def", "1Sp.Atk", "0Sp.Def", "1Speed"],
         "Base stats": {
@@ -19462,7 +19462,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "140",
         "EVYeild": ["0HP", "0Atk", "2Def", "0Sp.Atk", "1Sp.Def", "0Speed"],
         "Base stats": {
@@ -19498,7 +19498,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "140",
         "EVYeild": ["0HP", "1Atk", "0Def", "1Sp.Atk", "1Sp.Def", "0Speed"],
         "Base stats": {
@@ -19534,7 +19534,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "140",
         "EVYeild": ["0HP", "2Atk", "0Def", "1Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19570,7 +19570,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19606,7 +19606,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19642,7 +19642,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "2570 - 2826 stepsEgg not obtainable",
+        "StepsToHatch": "2570 - 2826 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19678,7 +19678,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19714,7 +19714,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19750,7 +19750,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -19858,7 +19858,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "2Sp.Atk", "0Sp.Def", "1Speed"],
         "Base stats": {
@@ -19896,7 +19896,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19932,7 +19932,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -19968,7 +19968,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25676,7 +25676,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "3Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25712,7 +25712,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25748,7 +25748,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -25786,7 +25786,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "90",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25824,7 +25824,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "90",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25860,7 +25860,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25896,7 +25896,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25934,7 +25934,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "90",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -25972,7 +25972,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["1HP", "1Atk", "0Def", "1Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -26008,7 +26008,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "20560 - 20816 stepsEgg not obtainable",
+        "StepsToHatch": "20560 - 20816 steps. Egg not obtainable",
         "BaseFriendship": "35",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -26044,7 +26044,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["0HP", "0Atk", "0Def", "1Sp.Atk", "1Sp.Def", "1Speed"],
         "Base stats": {
@@ -26080,7 +26080,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "0Def", "1Sp.Atk", "0Sp.Def", "1Speed"],
         "Base stats": {
@@ -28743,7 +28743,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -28779,7 +28779,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -28817,7 +28817,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -28857,7 +28857,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "6425 - 6681 stepsEgg not obtainable",
+        "StepsToHatch": "6425 - 6681 steps. Egg not obtainable",
         "BaseFriendship": "70",
         "EVYeild": ["0HP", "0Atk", "1Def", "0Sp.Atk", "2Sp.Def", "0Speed"],
         "Base stats": {
@@ -28895,7 +28895,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -28931,7 +28931,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "100",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -30951,7 +30951,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["2HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -30991,7 +30991,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31583,7 +31583,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["1HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31623,7 +31623,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "1Def", "0Sp.Atk", "1Sp.Def", "0Speed"],
         "Base stats": {
@@ -31663,7 +31663,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31703,7 +31703,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31743,7 +31743,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "3Sp.Def", "0Speed"],
         "Base stats": {
@@ -31779,7 +31779,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "2Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31815,7 +31815,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "3Speed"],
         "Base stats": {
@@ -31851,7 +31851,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31887,7 +31887,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "1Def", "1Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31923,7 +31923,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31959,7 +31959,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["3HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -31998,7 +31998,7 @@
         },
         "CatchRate": "255 (33.3%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "0Def", "2Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32034,7 +32034,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32070,7 +32070,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "2Atk", "0Def", "0Sp.Atk", "0Sp.Def", "1Speed"],
         "Base stats": {
@@ -32106,7 +32106,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "1Speed"],
         "Base stats": {
@@ -32146,7 +32146,7 @@
         },
         "CatchRate": "45 (5.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32186,7 +32186,7 @@
         },
         "CatchRate": "30 (3.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "3Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32222,7 +32222,7 @@
         },
         "CatchRate": "30 (3.9%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "3Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32258,7 +32258,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "0Atk", "0Def", "0Sp.Atk", "0Sp.Def", "3Speed"],
         "Base stats": {
@@ -32294,7 +32294,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "0",
         "EVYeild": ["0HP", "1Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {
@@ -32334,7 +32334,7 @@
         },
         "CatchRate": "3 (0.4%)",
         "EggGroups": ["Undiscovered"],
-        "StepsToHatch": "30840 - 31096 stepsEgg not obtainable",
+        "StepsToHatch": "30840 - 31096 steps. Egg not obtainable",
         "BaseFriendship": "Unknown",
         "EVYeild": ["0HP", "3Atk", "0Def", "0Sp.Atk", "0Sp.Def", "0Speed"],
         "Base stats": {

@@ -223,10 +223,16 @@ function displayPokemonData(pokemonName){
     document.getElementById('pokemon-species').innerHTML = PokemonData[pokemonName]['Category'];
     document.getElementById('pokemon-height').innerHTML = PokemonData[pokemonName]['Height'][pokemonName].join(", ");
     document.getElementById('pokemon-weight').innerHTML = PokemonData[pokemonName]['Weight'][pokemonName].join(", ");
-    pokemonAbilities = PokemonData[pokemonName]['PokemonAbilities'][pokemonName].join(", ");
+    abilitiesKeys = Object.keys(PokemonData[pokemonName]['PokemonAbilities'])
+    pokemonAbilities = PokemonData[pokemonName]['PokemonAbilities'][abilitiesKeys[0]].join(", ");
     document.getElementById('pokemon-abilities').innerHTML = pokemonAbilities.replace('Hidden Ability', "(HA)");
-
-    document.getElementById('pokemon-ev-yield').innerHTML = PokemonData[pokemonName]['EVYeild'].join(", ");
+    tempEVYield = [];
+    for(i = 0; i < PokemonData[pokemonName]['EVYeild'].length; i++){
+        if(!PokemonData[pokemonName]['EVYeild'][i].includes(0)){
+            tempEVYield.push([PokemonData[pokemonName]['EVYeild'][i].slice(0, 1), ' ', PokemonData[pokemonName]['EVYeild'][i].slice(1)].join(''))
+        }
+    }
+    document.getElementById('pokemon-ev-yield').innerHTML = tempEVYield.join(", ");
     document.getElementById('pokemon-catch-rate').innerHTML = PokemonData[pokemonName]['CatchRate'];
     document.getElementById('pokemon-base-friendship').innerHTML = PokemonData[pokemonName]['BaseFriendship'];
 

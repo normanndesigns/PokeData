@@ -385,6 +385,9 @@ h5 span{
 	display: flex;
     align-items: center;
 }
+#evolutionWrapper ul li:hover{
+	cursor: pointer;
+}
 #evolutionWrapper ul li div{
     display: flex;
     flex-direction: column;

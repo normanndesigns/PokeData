@@ -51,23 +51,23 @@ function displayPokemonEvolutions(pokemonName, domElement){
                         var thirdLayerLI = []
                         for(k = 0; k < PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length; k++){
                             if(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j].length === k+1){
-                                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k])) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
-                                thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div>")
+                                var imageName = ((imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k])) != null ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
+                                thirdLayerLI.push("<div data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "' style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "' src='assets/media/" + imageName + "'><p data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "'>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div>")
                             }else{
                                 var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] == name) ? image : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + ".png");
-                                thirdLayerLI.push("<div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>")
+                                thirdLayerLI.push("<div data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "' style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "' src='assets/media/" + imageName + "'><p data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "'>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j][k] + "<p></div><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>")
                             }
                         }
                         secondLayerLI[j] = "<li>" + thirdLayerLI.join("") + "</li>";
                     }else{
-                        var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + ".png"));
-                        secondLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "</p></div></li>")
+                        var imageName = ((imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) != null ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + ".png"));
+                        secondLayerLI.push("<li data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "'><div data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "' style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "' src='assets/media/" + imageName + "'><p data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "'>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i][j] + "</p></div></li>")
                     }
                 }
                 firstLayerLI[i] = "<ul>" + secondLayerLI.join("") + "</ul>";
             }else{
-                var imageName = ((PokemonData[pokemonName]['Evolutions']['Evolutions'][i] == nameException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i])) ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + ".png");
-                firstLayerLI.push("<li><div style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img src='assets/media/" + imageName + "'><p>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "</p></div></li><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>");
+                var imageName = ((imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i])) != null ? imageException(PokemonData[pokemonName]['Evolutions']['Evolutions'][i]) : PokemonData[PokemonData[pokemonName]['Evolutions']['Evolutions'][i]]['DexID'].replace('#', '') + "-" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + ".png");
+                firstLayerLI.push("<li data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "'><div data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "' style='color:#" + ColorData[pokemonName]['Color'][1] + ";" + "font-weight:bold" + "'>" + "<img data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "' src='assets/media/" + imageName + "'><p data-evolution='" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "'>" + PokemonData[pokemonName]['Evolutions']['Evolutions'][i] + "</p></div></li><div class='betweenArrowsWrapper'>" + '<svg class="betweenArrows" fill=#' + ColorData[pokemonName]['Color'][1] + ' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 477.18 477.18"><path d="M360.73 229.08L135.63 3.98c-5.3-5.3-13.8-5.3-19.1 0s-5.3 13.8 0 19.1l215.5 215.5-215.5 215.5c-5.3 5.3-5.3 13.8 0 19.1 2.6 2.6 6.1 4 9.5 4s6.9-1.3 9.5-4l225.1-225.1c5.3-5.2 5.3-13.8.1-19z"/></svg>' + "</div>");
             }
         }
         domElement.appendChild(document.createRange().createContextualFragment("<h3 class='stats-titles' style='margin-left: 0px; color:" + ColorData[pokemonName]['Color'][1] + "'>Evolution line</h3><ul>" + firstLayerLI.join("") + "</ul>"));
@@ -146,17 +146,17 @@ function BaseStatsColors(size){
     }
 }
 function nameException(Pokemon){
-    if(Pokemon == "Type: Null"){
+    if(Pokemon == "TypeNull"){
         return "Type: Null";
-    }else if(Pokemon == "Farfetch'd"){
+    }else if(Pokemon == "Farfetchd"){
         return "Farfetch'd";
     }
 }
 function imageException(Pokemon){
     if(Pokemon == "Type: Null"){
         return "772-TypeNull.png";
-    }else if(Pokemon == "Farfetch'd"){
-        return "083-Farfetch'd.png";
+    }else if(Pokemon == "Farfetchd"){
+        return "083-Farfetchd.png";
     }
 }
 function createTypeElement(dom, type){
@@ -179,6 +179,11 @@ function createPokedexEntry(src, dom, file){
         image.setAttribute('data-pokemon', "772-TypeNull");
         text.setAttribute('data-pokemon', "772-TypeNull");
         text.innerHTML = "Type: Null"
+    }else if(removeFileExtension(PokemonNameWOD) == "Farfetchd"){
+        li.setAttribute('data-pokemon', "083-Farfetchd");
+        image.setAttribute('data-pokemon', "083-Farfetchd");
+        text.setAttribute('data-pokemon', "083-Farfetchd");
+        text.innerHTML = "Farfetch'd"
     }else{
         li.setAttribute('data-pokemon', removeFileExtension(src.substring(src.lastIndexOf("/") + 1)));
         image.setAttribute('data-pokemon', removeFileExtension(src.substring(src.lastIndexOf("/") + 1)));
@@ -203,12 +208,22 @@ function emptySearchField(){
 }
 function setBackgroundColorOfPokemonPage(imageName){
     var pokemonName = imageName.substring(imageName.lastIndexOf("-") + 1)
-    displayPokemonData(((pokemonName == "Type: Null") ? "Type: Null" : pokemonName))
-    document.getElementById('pokemonImage').style.backgroundColor = ((pokemonName == "Type: Null") ? ColorData["Type: Null"]['Color'][0] : ColorData[pokemonName]['Color'][0]);
-    document.getElementById('pokemonImage').style.backgroundImage = ((pokemonName == "Type: Null") ? "url(assets/media/772-TypeNull.png)" : "url(assets/media/" + imageName + ".png)");
+    if(nameException(pokemonName) != null){
+        pokemonName = nameException(pokemonName)
+    }else{
+        pokemonName = pokemonName;
+    }
+    displayPokemonData(pokemonName)
+    document.getElementById('pokemonImage').style.backgroundColor = ((nameException(pokemonName) != null) ? ColorData[nameException(pokemonName)]['Color'][0] : ColorData[pokemonName]['Color'][0]);
+    document.getElementById('pokemonImage').style.backgroundImage = ((imageException(pokemonName != null)) ? "url(assets/media/" + imageException(pokemonName) + ")" : "url(assets/media/" + imageName + ".png)");
     ShowAndHidePokemonPage('show', 'hide', 'hide')     
 }
-function displayPokemonData(pokemonName){
+function displayPokemonData(Name){
+    if(nameException(Name) != null){
+        pokemonName = nameException(Name)
+    }else{
+        pokemonName = Name;
+    }
     for(i = 0; i < document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper, .stats-titles, .info-names").length; i++){
         document.querySelectorAll("#pokemon-name-en, #pokemon-name-jp, .pokemon-stats-wrapper, .stats-titles, .info-names")[i].style.color = ColorData[pokemonName]['Color'][1];
         if(i <= 5){
@@ -225,7 +240,7 @@ function displayPokemonData(pokemonName){
     document.getElementById('pokemon-weight').innerHTML = PokemonData[pokemonName]['Weight'][pokemonName].join(", ");
     abilitiesKeys = Object.keys(PokemonData[pokemonName]['PokemonAbilities'])
     pokemonAbilities = PokemonData[pokemonName]['PokemonAbilities'][abilitiesKeys[0]].join(", ");
-    document.getElementById('pokemon-abilities').innerHTML = pokemonAbilities.replace('Hidden Ability', "(HA)");
+    document.getElementById('pokemon-abilities').innerHTML = pokemonAbilities.replace('Hidden Ability', "HA");
     tempEVYield = [];
     for(i = 0; i < PokemonData[pokemonName]['EVYeild'].length; i++){
         if(!PokemonData[pokemonName]['EVYeild'][i].includes(0)){
@@ -316,6 +331,13 @@ document.getElementById('pokedexBTN').addEventListener('click', () => {
 })
 
 document.getElementById('searchResults').addEventListener('click', (e) => {setBackgroundColorOfPokemonPage(e.target.getAttribute('data-pokemon'))})
+
+document.getElementById('evolutionWrapper').addEventListener('click', (e) => {
+    if(e.target.tagName != document.getElementById('evolutionWrapper') && e.target.tagName != "H3" && e.target.className != "betweenArrowsWrapper" && e.target.tagName != "svg" && e.target.tagName != "path"){
+        var Pokemon = PokemonData[e.target.getAttribute('data-evolution')]['DexID'] + "-" + e.target.getAttribute('data-evolution')
+        setBackgroundColorOfPokemonPage(Pokemon.replace("#", ''))
+    }
+})
 
 document.getElementById('searchResults').addEventListener('keypress', (e) => {
     var key = e.which || e.keyCode;

@@ -1,7 +1,7 @@
 const {remote} = require('electron'); 
 const fs = require('electron').remote.require('fs')
 const path = require('electron').remote.require('path')
-var PokemonFile = fs.readFileSync('public/assets/data/Data.json', 'utf8')
+var PokemonFile = fs.readFileSync('public/assets/data/Pokedex.json', 'utf8')
 var PokemonData = JSON.parse(PokemonFile);
 var ColorFile = fs.readFileSync('public/assets/data/ColorData.json', 'utf8')
 var ColorData = JSON.parse(ColorFile);
@@ -73,13 +73,14 @@ function search(){
     tempArray = []
     searchValue = document.getElementById('search').value
     PokemonDataKeys.forEach(function(element, index){
-        if(element.includes(searchValue)){
+        if(element.startsWith(searchValue)){
             tempArray.push(element)
-        }else if(element.toLowerCase().includes(searchValue)){
+        }else if(element.toLowerCase().startsWith(searchValue)){
             tempArray.push(element)
         }
     })
     tempArray = tempArray.sort()
+    console.log(tempArray)
     for(i = 1; i <= 5; i++){
         if(searchValue.length == 0){
             FlexNone('hide', document.getElementById('result' + i))
@@ -88,8 +89,8 @@ function search(){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1];
-            document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1] + ".png";
-            document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1];
+            document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]].NationalDexID + "-" + tempArray[i - 1] + ".png";
+            //document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]].DexID.replace('#','') + "-" + tempArray[i - 1];
             FlexNone('show', document.getElementById('result' + i))
         }
     }

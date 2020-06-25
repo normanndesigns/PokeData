@@ -1,2429 +1,3287 @@
 {
     "Bulbasaur": {
-        "Color": ["92c2a7", "648770"]
+        "Color": [119, 179, 152]
     },
     "Ivysaur": {
-        "Color": ["9cabaf", "578380"]
+        "Color": [106, 168, 166]
+    },
+    "Venusaur-Gigantamax": {
+        "Color": [99, 73, 71]
+    },
+    "Venusaur-Mega": {
+        "Color": [81, 131, 116]
     },
     "Venusaur": {
-        "Color": ["b19595", "4c6f66"]
+        "Color": [88, 142, 132]
     },
     "Charmander": {
-        "Color": ["a9795f", "eac09a"]
+        "Color": [221, 167, 128]
     },
     "Charmeleon": {
-        "Color": ["e2c9b0", "c36a5a"]
+        "Color": [218, 123, 101]
+    },
+    "Charizard-Gigantamax": {
+        "Color": [186, 90, 39]
+    },
+    "Charizard-Mega_X": {
+        "Color": [72, 88, 104]
+    },
+    "Charizard-Mega_Y": {
+        "Color": [210, 135, 99]
     },
     "Charizard": {
-        "Color": ["3f7076", "d59f6b"]
+        "Color": [37, 113, 125]
     },
     "Squirtle": {
-        "Color": ["646463", "93b7bd"]
+        "Color": [123, 178, 191]
     },
     "Wartortle": {
-        "Color": ["6e849e", "c9d5dc"]
+        "Color": [202, 216, 225]
+    },
+    "Blastoise-Gigantamax": {
+        "Color": [74, 59, 67]
+    },
+    "Blastoise-Mega": {
+        "Color": [193, 187, 179]
     },
     "Blastoise": {
-        "Color": ["bec1c8", "706b6d"]
+        "Color": [125, 116, 112]
     },
     "Caterpie": {
-        "Color": ["dec98c", "83aa69"]
+        "Color": [136, 182, 102]
     },
     "Metapod": {
-        "Color": ["7b9b50", "adcd7b"]
+        "Color": [146, 186, 86]
+    },
+    "Butterfree-Gigantamax": {
+        "Color": [156, 193, 172]
     },
     "Butterfree": {
-        "Color": ["716978", "e6ecf2"]
+        "Color": [227, 232, 240]
     },
     "Weedle": {
-        "Color": ["d8bdc5", "a8805d"]
+        "Color": [190, 148, 99]
     },
     "Kakuna": {
-        "Color": ["ddc776", "ab9250"]
+        "Color": [211, 187, 94]
+    },
+    "Beedrill-Mega": {
+        "Color": [42, 42, 43]
     },
     "Beedrill": {
-        "Color": ["dce0e2", "9e8c6b"]
+        "Color": [48, 48, 56]
     },
     "Pidgey": {
-        "Color": ["ddd2a8", "95714e"]
+        "Color": [212, 192, 151]
     },
     "Pidgeotto": {
-        "Color": ["8c6554", "d4c19b"]
+        "Color": [209, 187, 149]
+    },
+    "Pidgeot-Mega": {
+        "Color": [173, 142, 135]
     },
     "Pidgeot": {
-        "Color": ["ddcda6", "9b6d52"]
+        "Color": [213, 185, 149]
+    },
+    "Rattata-Alola": {
+        "Color": [73, 75, 70]
     },
     "Rattata": {
-        "Color": ["7c647a", "b79fb0"]
+        "Color": [164, 140, 175]
+    },
+    "Raticate-Alola": {
+        "Color": [74, 71, 64]
     },
     "Raticate": {
-        "Color": ["e0caab", "937049"]
+        "Color": [174, 138, 93]
     },
     "Spearow": {
-        "Color": ["a26659", "d7beb3"]
+        "Color": [189, 121, 103]
     },
     "Fearow": {
-        "Color": ["d4bca7", "986c4d"]
+        "Color": [183, 133, 87]
     },
     "Ekans": {
-        "Color": ["c19eae", "815e71"]
+        "Color": [157, 115, 146]
     },
     "Arbok": {
-        "Color": ["948695", "443b3d"]
+        "Color": [154, 140, 159]
+    },
+    "Pikachu-Alola": {
+        "Color": [227, 187, 120]
+    },
+    "Pikachu-Gigantamax": {
+        "Color": [235, 209, 105]
     },
     "Pikachu": {
-        "Color": ["8f6f4b", "eacd79"]
+        "Color": [237, 206, 127]
+    },
+    "Raichu-Alola": {
+        "Color": [203, 177, 100]
     },
     "Raichu": {
-        "Color": ["f4e3b8", "bf9856"]
+        "Color": [222, 183, 109]
+    },
+    "Sandshrew-Alola": {
+        "Color": [210, 221, 228]
     },
     "Sandshrew": {
-        "Color": ["e3d19e", "98875f"]
+        "Color": [202, 181, 126]
+    },
+    "Sandslash-Alola": {
+        "Color": [155, 185, 207]
     },
     "Sandslash": {
-        "Color": ["7c5e3a", "d8c08d"]
+        "Color": [166, 132, 78]
     },
     "Nidoran\u2640": {
-        "Color": ["c1cde4", "587088"]
+        "Color": [161, 192, 202]
     },
     "Nidorina": {
-        "Color": ["51687b", "a3c2cc"]
+        "Color": [161, 192, 202]
     },
     "Nidoqueen": {
-        "Color": ["95aab5", "566776"]
+        "Color": [113, 145, 173]
     },
     "Nidoran\u2642": {
-        "Color": ["ba93bc", "766a86"]
+        "Color": [160, 116, 156]
     },
     "Nidorino": {
-        "Color": ["a98bae", "615b6a"]
+        "Color": [164, 136, 166]
     },
     "Nidoking": {
-        "Color": ["b99db9", "766279"]
+        "Color": [164, 128, 159]
     },
     "Clefairy": {
-        "Color": ["f2cbd1", "8b7676"]
+        "Color": [243, 209, 214]
     },
     "Clefable": {
-        "Color": ["ead0ca", "806d6d"]
+        "Color": [236, 216, 209]
+    },
+    "Vulpix-Alola": {
+        "Color": [222, 233, 242]
     },
     "Vulpix": {
-        "Color": ["cf8a69", "7c503d"]
+        "Color": [200, 131, 100]
+    },
+    "Ninetales-Alola": {
+        "Color": [207, 229, 240]
     },
     "Ninetales": {
-        "Color": ["ece2ac", "a99a72"]
+        "Color": [228, 215, 158]
     },
     "Jigglypuff": {
-        "Color": ["edc9d2", "476976"]
+        "Color": [237, 199, 208]
     },
     "Wigglytuff": {
-        "Color": ["ecd8df", "666f77"]
+        "Color": [242, 222, 230]
     },
     "Zubat": {
-        "Color": ["4a5f77", "9b77a5"]
+        "Color": [142, 114, 158]
     },
     "Golbat": {
-        "Color": ["a678ad", "4a6580"]
+        "Color": [169, 111, 164]
     },
     "Oddish": {
-        "Color": ["509545", "6c9294"]
+        "Color": [95, 150, 109]
     },
     "Gloom": {
-        "Color": ["af6954", "63839e"]
+        "Color": [184, 109, 79]
     },
     "Vileplume": {
-        "Color": ["d98a95", "5e617c"]
+        "Color": [209, 132, 142]
     },
     "Paras": {
-        "Color": ["c3825d", "e1b4ac"]
+        "Color": [211, 145, 97]
     },
     "Parasect": {
-        "Color": ["d598ab", "c18059"]
+        "Color": [206, 139, 109]
     },
     "Venonat": {
-        "Color": ["645e90", "bd99b2"]
+        "Color": [115, 103, 158]
     },
     "Venomoth": {
-        "Color": ["dcd2e6", "908999"]
+        "Color": [220, 211, 227]
+    },
+    "Diglett-Alola": {
+        "Color": [141, 104, 62]
     },
     "Diglett": {
-        "Color": ["a1897d", "c5b4b5"]
+        "Color": [175, 151, 132]
+    },
+    "Dugtrio-Alola": {
+        "Color": [139, 105, 65]
     },
     "Dugtrio": {
-        "Color": ["907b6f", "b8a6a5"]
+        "Color": [154, 133, 120]
+    },
+    "Meowth-Alola": {
+        "Color": [190, 190, 203]
+    },
+    "Meowth-Galar": {
+        "Color": [167, 152, 137]
+    },
+    "Meowth-Gigantamax": {
+        "Color": [236, 220, 181]
     },
     "Meowth": {
-        "Color": ["e9dfc6", "937b61"]
+        "Color": [234, 222, 198]
+    },
+    "Persian-Alola": {
+        "Color": [188, 189, 203]
     },
     "Persian": {
-        "Color": ["8d8070", "e6d4b1"]
+        "Color": [230, 215, 178]
     },
     "Psyduck": {
-        "Color": ["f4e4c4", "d7b67c"]
+        "Color": [228, 194, 139]
     },
     "Golduck": {
-        "Color": ["9cbcd0", "5c86a7"]
+        "Color": [106, 153, 190]
     },
     "Mankey": {
-        "Color": ["eadacf", "998275"]
+        "Color": [236, 221, 208]
     },
     "Primeape": {
-        "Color": ["8d7368", "d6c3b8"]
+        "Color": [177, 150, 133]
     },
     "Growlithe": {
-        "Color": ["dec0a2", "9a785e"]
+        "Color": [213, 179, 147]
     },
     "Arcanine": {
-        "Color": ["706156", "dfbea0"]
+        "Color": [217, 183, 147]
     },
     "Poliwag": {
-        "Color": ["6380a4", "c6d3e2"]
+        "Color": [190, 203, 223]
     },
     "Poliwhirl": {
-        "Color": ["d1d9e6", "617fa4"]
+        "Color": [217, 223, 235]
     },
     "Poliwrath": {
-        "Color": ["d7dee9", "5f7ea4"]
+        "Color": [98, 132, 178]
     },
     "Abra": {
-        "Color": ["ead569", "998854"]
+        "Color": [222, 201, 76]
     },
     "Kadabra": {
-        "Color": ["81714f", "ddc764"]
+        "Color": [212, 189, 79]
+    },
+    "Alakazam-Mega": {
+        "Color": [184, 160, 140]
     },
     "Alakazam": {
-        "Color": ["e1d078", "817250"]
+        "Color": [214, 193, 81]
     },
     "Machop": {
-        "Color": ["6b6f72", "a2b9c1"]
+        "Color": [170, 189, 194]
     },
     "Machoke": {
-        "Color": ["75717f", "a8adc5"]
+        "Color": [168, 169, 189]
+    },
+    "Machamp-Gigantamax": {
+        "Color": [201, 115, 72]
     },
     "Machamp": {
-        "Color": ["717984", "a4b4c1"]
+        "Color": [149, 160, 174]
     },
     "Bellsprout": {
-        "Color": ["91b487", "e9e687"]
+        "Color": [184, 203, 138]
     },
     "Weepinbell": {
-        "Color": ["84ad7d", "ddd796"]
+        "Color": [185, 205, 128]
     },
     "Victreebel": {
-        "Color": ["81af78", "d0dd8c"]
+        "Color": [179, 207, 125]
     },
     "Tentacool": {
-        "Color": ["7fbdd7", "886573"]
+        "Color": [129, 177, 200]
     },
     "Tentacruel": {
-        "Color": ["82b6ca", "846371"]
+        "Color": [135, 166, 181]
+    },
+    "Geodude-Alola": {
+        "Color": [168, 167, 176]
     },
     "Geodude": {
-        "Color": ["797575", "b5b3ac"]
+        "Color": [172, 169, 161]
+    },
+    "Graveler-Alola": {
+        "Color": [163, 160, 150]
     },
     "Graveler": {
-        "Color": ["6a6f6e", "bcbbb1"]
+        "Color": [183, 183, 172]
+    },
+    "Golem-Alola": {
+        "Color": [77, 74, 76]
     },
     "Golem": {
-        "Color": ["585352", "a8a09f"]
+        "Color": [133, 125, 121]
+    },
+    "Ponyta-Galar": {
+        "Color": [195, 192, 211]
     },
     "Ponyta": {
-        "Color": ["efe7c4", "d6853f"]
+        "Color": [240, 236, 201]
+    },
+    "Rapidash-Galar": {
+        "Color": [201, 190, 213]
     },
     "Rapidash": {
-        "Color": ["ede6c5", "d38858"]
+        "Color": [235, 147, 72]
+    },
+    "Slowpoke-Galar": {
+        "Color": [226, 181, 188]
     },
     "Slowpoke": {
-        "Color": ["e1afbb", "94747c"]
+        "Color": [222, 177, 186]
+    },
+    "Slowbro-Galar": {
+        "Color": [182, 149, 176]
+    },
+    "Slowbro-Mega": {
+        "Color": [170, 146, 144]
     },
     "Slowbro": {
-        "Color": ["897b81", "d6b8bc"]
+        "Color": [208, 182, 186]
     },
     "Magnemite": {
-        "Color": ["726f75", "bbcbd1"]
+        "Color": [185, 191, 193]
     },
     "Magneton": {
-        "Color": ["7c7c80", "c6d6dd"]
+        "Color": [154, 165, 169]
+    },
+    "Farfetch'd-Galar": {
+        "Color": [94, 101, 78]
     },
     "Farfetch'd": {
-        "Color": ["cfc0a6", "928771"]
+        "Color": [181, 166, 150]
     },
     "Doduo": {
-        "Color": ["d1aa8e", "90725f"]
+        "Color": [193, 153, 119]
     },
     "Dodrio": {
-        "Color": ["6d5b54", "caa492"]
+        "Color": [185, 149, 127]
     },
     "Seel": {
-        "Color": ["dae0e8", "7c7d80"]
+        "Color": [225, 229, 237]
     },
     "Dewgong": {
-        "Color": ["e1e7ef", "7c8085"]
+        "Color": [232, 237, 245]
+    },
+    "Grimer-Alola": {
+        "Color": [115, 149, 115]
     },
     "Grimer": {
-        "Color": ["bca8c9", "7f6d88"]
+        "Color": [153, 130, 161]
+    },
+    "Muk-Alola": {
+        "Color": [69, 99, 108]
     },
     "Muk": {
-        "Color": ["736878", "af9fb8"]
+        "Color": [153, 137, 157]
     },
     "Shellder": {
-        "Color": ["a59cbf", "403c45"]
+        "Color": [170, 157, 192]
     },
     "Cloyster": {
-        "Color": ["9d98b4", "4e4a57"]
+        "Color": [138, 133, 159]
     },
     "Gastly": {
-        "Color": ["e8e5e8", "8c738a"]
+        "Color": [149, 124, 154]
     },
     "Haunter": {
-        "Color": ["9f93aa", "62576c"]
+        "Color": [113, 102, 124]
+    },
+    "Gengar-Gigantamax": {
+        "Color": [128, 50, 105]
+    },
+    "Gengar-Mega": {
+        "Color": [106, 72, 99]
     },
     "Gengar": {
-        "Color": ["716c8f", "aea4bb"]
+        "Color": [127, 120, 156]
     },
     "Onix": {
-        "Color": ["a4a3ae", "595762"]
+        "Color": [132, 131, 143]
     },
     "Drowzee": {
-        "Color": ["6c645b", "ebc85a"]
+        "Color": [78, 70, 63]
     },
     "Hypno": {
-        "Color": ["817445", "e3cd6e"]
+        "Color": [226, 201, 68]
     },
     "Krabby": {
-        "Color": ["c08365", "e5d2cc"]
+        "Color": [212, 146, 102]
+    },
+    "Kingler-Gigantamax": {
+        "Color": [151, 82, 66]
     },
     "Kingler": {
-        "Color": ["b67b5e", "e2cbc1"]
+        "Color": [206, 141, 98]
     },
     "Voltorb": {
-        "Color": ["d1c4cb", "cd8685"]
+        "Color": [220, 183, 182]
     },
     "Electrode": {
-        "Color": ["a994a4", "ebecef"]
+        "Color": [219, 216, 223]
     },
     "Exeggcute": {
-        "Color": ["7a6e6e", "e8d0d2"]
+        "Color": [236, 215, 216]
+    },
+    "Exeggutor-Alola": {
+        "Color": [111, 105, 69]
     },
     "Exeggutor": {
-        "Color": ["c6caa7", "6c8d6e"]
+        "Color": [130, 163, 127]
     },
     "Cubone": {
-        "Color": ["a7957c", "d7d5cf"]
+        "Color": [213, 205, 186]
+    },
+    "Marowak-Alola": {
+        "Color": [136, 155, 147]
     },
     "Marowak": {
-        "Color": ["d4d2d2", "9f876d"]
+        "Color": [205, 195, 185]
     },
     "Hitmonlee": {
-        "Color": ["cbbcb1", "938481"]
+        "Color": [187, 170, 159]
     },
     "Hitmonchan": {
-        "Color": ["c2afb0", "8a6d68"]
+        "Color": [182, 154, 144]
     },
     "Lickitung": {
-        "Color": ["ecc0c2", "ac848b"]
+        "Color": [225, 184, 186]
     },
     "Koffing": {
-        "Color": ["797483", "bbb7b4"]
+        "Color": [174, 168, 171]
+    },
+    "Weezing-Galar": {
+        "Color": [131, 137, 117]
     },
     "Weezing": {
-        "Color": ["7b707a", "bbb4be"]
+        "Color": [174, 162, 171]
     },
     "Rhyhorn": {
-        "Color": ["62676f", "98a4ae"]
+        "Color": [133, 141, 149]
     },
     "Rhydon": {
-        "Color": ["777a85", "b3b3b9"]
+        "Color": [149, 151, 162]
     },
     "Chansey": {
-        "Color": ["c299a7", "f3d2e1"]
+        "Color": [235, 203, 216]
     },
     "Tangela": {
-        "Color": ["86a2b9", "66626e"]
+        "Color": [103, 138, 166]
+    },
+    "Kangaskhan-Mega": {
+        "Color": [193, 176, 161]
     },
     "Kangaskhan": {
-        "Color": ["8a7774", "d1c1a9"]
+        "Color": [182, 161, 142]
     },
     "Horsea": {
-        "Color": ["dfe0c7", "76bed7"]
+        "Color": [135, 198, 225]
     },
     "Seadra": {
-        "Color": ["8ec6d5", "55727b"]
+        "Color": [132, 193, 217]
     },
     "Goldeen": {
-        "Color": ["a37169", "e1dce4"]
+        "Color": [227, 220, 228]
     },
     "Seaking": {
-        "Color": ["dfe0e3", "b0766a"]
+        "Color": [229, 227, 227]
     },
     "Staryu": {
-        "Color": ["e1cc90", "836e53"]
+        "Color": [150, 124, 84]
     },
     "Starmie": {
-        "Color": ["807686", "d0c2b7"]
+        "Color": [150, 137, 151]
+    },
+    "Mr. Mime-Galar": {
+        "Color": [82, 97, 122]
     },
     "Mr. Mime": {
-        "Color": ["5b6174", "e2c1ca"]
+        "Color": [34, 67, 90]
     },
     "Scyther": {
-        "Color": ["81a47c", "e0e4da"]
+        "Color": [148, 184, 128]
     },
     "Jynx": {
-        "Color": ["aa6a6d", "e1d8bc"]
+        "Color": [186, 105, 103]
     },
     "Electabuzz": {
-        "Color": ["93815c", "eed38a"]
+        "Color": [207, 180, 117]
     },
     "Magmar": {
-        "Color": ["b16342", "debd79"]
+        "Color": [201, 130, 83]
+    },
+    "Pinsir-Mega": {
+        "Color": [192, 181, 142]
     },
     "Pinsir": {
-        "Color": ["c2b9bc", "6c6161"]
+        "Color": [184, 175, 177]
     },
     "Tauros": {
-        "Color": ["635957", "c19c76"]
+        "Color": [165, 136, 101]
     },
     "Magikarp": {
-        "Color": ["c6795d", "ecdfd2"]
+        "Color": [210, 121, 87]
+    },
+    "Gyarados-Mega": {
+        "Color": [226, 208, 159]
     },
     "Gyarados": {
-        "Color": ["407790", "b8ada2"]
+        "Color": [199, 185, 165]
+    },
+    "Lapras-Gigantamax": {
+        "Color": [199, 205, 206]
     },
     "Lapras": {
-        "Color": ["aab4be", "5298b8"]
+        "Color": [120, 166, 192]
     },
     "Ditto": {
-        "Color": ["5d5261", "baa9cb"]
+        "Color": [195, 175, 207]
+    },
+    "Eevee-Gigantamax": {
+        "Color": [152, 107, 79]
     },
     "Eevee": {
-        "Color": ["886648", "d2af84"]
+        "Color": [175, 137, 98]
     },
     "Vaporeon": {
-        "Color": ["4f7684", "9bcdd5"]
+        "Color": [116, 185, 203]
     },
     "Jolteon": {
-        "Color": ["eed893", "ac955b"]
+        "Color": [231, 197, 110]
     },
     "Flareon": {
-        "Color": ["d9c58f", "c36e46"]
+        "Color": [212, 161, 111]
     },
     "Porygon": {
-        "Color": ["c9d2d7", "7b747d"]
+        "Color": [52, 87, 92]
     },
     "Omanyte": {
-        "Color": ["729596", "dcdcc4"]
+        "Color": [219, 218, 191]
     },
     "Omastar": {
-        "Color": ["5c787f", "c2d1c3"]
+        "Color": [206, 211, 190]
     },
     "Kabuto": {
-        "Color": ["a07c59", "020203", "e3ab88"]
+        "Color": [190, 150, 115]
     },
     "Kabutops": {
-        "Color": ["bca48f", "6d5647"]
+        "Color": [155, 121, 85]
+    },
+    "Aerodactyl-Mega": {
+        "Color": [112, 96, 110]
     },
     "Aerodactyl": {
-        "Color": ["b2a8c0", "726776"]
+        "Color": [166, 152, 173]
+    },
+    "Snorlax-Gigantamax": {
+        "Color": [50, 100, 94]
     },
     "Snorlax": {
-        "Color": ["e0d5ca", "4f7b8a"]
+        "Color": [47, 98, 118]
+    },
+    "Articuno-Galar": {
+        "Color": [142, 124, 165]
     },
     "Articuno": {
-        "Color": ["8bbfdd", "3e7594"]
+        "Color": [103, 164, 200]
+    },
+    "Zapdos-Galar": {
+        "Color": [41, 40, 40]
     },
     "Zapdos": {
-        "Color": ["847251", "e3c57c"]
+        "Color": [218, 187, 119]
+    },
+    "Moltres-Galar": {
+        "Color": [211, 51, 103]
     },
     "Moltres": {
-        "Color": ["8e6956", "f1af76"]
+        "Color": [235, 170, 116]
     },
     "Dratini": {
-        "Color": ["818eae", "d0d5de"]
+        "Color": [207, 211, 222]
     },
     "Dragonair": {
-        "Color": ["7199bf", "dfe5e8"]
+        "Color": [190, 211, 229]
     },
     "Dragonite": {
-        "Color": ["b79d6e", "f0ddb8"]
+        "Color": [217, 168, 111]
+    },
+    "Mewtwo-Mega_X": {
+        "Color": [211, 199, 209]
+    },
+    "Mewtwo-Mega_Y": {
+        "Color": [213, 205, 214]
     },
     "Mewtwo": {
-        "Color": ["d2ccd6", "947f94"]
+        "Color": [190, 176, 192]
     },
     "Mew": {
-        "Color": ["e4c0c9", "74646a"]
+        "Color": [234, 193, 207]
     },
     "Chikorita": {
-        "Color": ["cadfaa", "87a373"]
+        "Color": [173, 200, 146]
     },
     "Bayleef": {
-        "Color": ["e4d99b", "93936a"]
+        "Color": [201, 193, 137]
     },
     "Meganium": {
-        "Color": ["cedbaa", "b18273"]
+        "Color": [191, 167, 132]
     },
     "Cyndaquil": {
-        "Color": ["ecc88a", "8c7062"]
+        "Color": [231, 182, 127]
     },
     "Quilava": {
-        "Color": ["ae8159", "f7de95"]
+        "Color": [217, 189, 128]
     },
     "Typhlosion": {
-        "Color": ["ddbd7b", "77503a"]
+        "Color": [214, 196, 137]
     },
     "Totodile": {
-        "Color": ["7aaeae", "535c62"]
+        "Color": [93, 145, 150]
     },
     "Croconaw": {
-        "Color": ["d9ab85", "6e9ca3"]
+        "Color": [121, 163, 164]
     },
     "Feraligatr": {
-        "Color": ["82c9d9", "77767b"]
+        "Color": [103, 177, 198]
     },
     "Sentret": {
-        "Color": ["947367", "dbc2b0"]
+        "Color": [161, 126, 113]
     },
     "Furret": {
-        "Color": ["7d6155", "e0c7ac"]
+        "Color": [191, 163, 141]
     },
     "Hoothoot": {
-        "Color": ["413b38", "c6a391"]
+        "Color": [200, 165, 140]
     },
     "Noctowl": {
-        "Color": ["b79e85", "594740"]
+        "Color": [142, 115, 101]
     },
     "Ledyba": {
-        "Color": ["a17663", "e5d8b4"]
+        "Color": [217, 195, 151]
     },
     "Ledian": {
-        "Color": ["8e515b", "ddd7ba"]
+        "Color": [44, 48, 53]
     },
     "Spinarak": {
-        "Color": ["4f615a", "bbc886"]
+        "Color": [178, 193, 130]
     },
     "Ariados": {
-        "Color": ["dfbc98", "975c6b"]
+        "Color": [167, 87, 99]
     },
     "Crobat": {
-        "Color": ["55536c", "7d87a6"]
+        "Color": [113, 120, 152]
     },
     "Chinchou": {
-        "Color": ["e6dbab", "6a79a4"]
+        "Color": [109, 127, 176]
     },
     "Lanturn": {
-        "Color": ["dbd2b5", "7681a6"]
+        "Color": [122, 135, 176]
     },
     "Pichu": {
-        "Color": ["9f926b", "f6eaa5"]
+        "Color": [242, 232, 161]
     },
     "Cleffa": {
-        "Color": ["edc9c0", "715c4b"]
+        "Color": [240, 209, 200]
     },
     "Igglybuff": {
-        "Color": ["efd4d5", "896366"]
+        "Color": [241, 219, 221]
     },
     "Togepi": {
-        "Color": ["7e7b77", "ebe3c9"]
+        "Color": [238, 233, 205]
     },
     "Togetic": {
-        "Color": ["dfe9da", "7f7672"]
+        "Color": [222, 233, 218]
     },
     "Natu": {
-        "Color": ["a2c15d", "b3525b"]
+        "Color": [138, 186, 84]
     },
     "Xatu": {
-        "Color": ["d9e3e5", "9e8657"]
+        "Color": [212, 218, 214]
     },
     "Mareep": {
-        "Color": ["d6c7a3", "566c7f"]
+        "Color": [210, 196, 163]
     },
     "Flaaffy": {
-        "Color": ["aa818f", "d4c2ca"]
+        "Color": [206, 178, 188]
+    },
+    "Ampharos-Mega": {
+        "Color": [219, 210, 184]
     },
     "Ampharos": {
-        "Color": ["a68a4f", "eeda9d"]
+        "Color": [225, 189, 82]
     },
     "Bellossom": {
-        "Color": ["8d7753", "cfbd7e"]
+        "Color": [198, 171, 108]
     },
     "Marill": {
-        "Color": ["61b2d9", "85554f"]
+        "Color": [71, 171, 220]
     },
     "Azumarill": {
-        "Color": ["4798bf", "d0b6b5"]
+        "Color": [71, 154, 195]
     },
     "Sudowoodo": {
-        "Color": ["a48f6f", "71654a"]
+        "Color": [151, 131, 101]
     },
     "Politoed": {
-        "Color": ["bbd276", "6b8347"]
+        "Color": [138, 179, 91]
     },
     "Hoppip": {
-        "Color": ["8c9f64", "e78fa6"]
+        "Color": [215, 138, 154]
     },
     "Skiploom": {
-        "Color": ["83b253", "f0e591"]
+        "Color": [131, 181, 83]
     },
     "Jumpluff": {
-        "Color": ["e5d9b8", "7786af"]
+        "Color": [193, 192, 190]
     },
     "Aipom": {
-        "Color": ["e2d2a7", "94739a"]
+        "Color": [167, 135, 162]
     },
     "Sunkern": {
-        "Color": ["d2c977", "596042"]
+        "Color": [208, 196, 113]
     },
     "Sunflora": {
-        "Color": ["f1df8e", "87af72"]
+        "Color": [223, 216, 139]
     },
     "Yanma": {
-        "Color": ["a27553", "e8e7e9"]
+        "Color": [177, 108, 79]
     },
     "Wooper": {
-        "Color": ["818697", "9ec8e0"]
+        "Color": [154, 188, 210]
     },
     "Quagsire": {
-        "Color": ["6e6970", "8eb6c7"]
+        "Color": [141, 177, 194]
     },
     "Espeon": {
-        "Color": ["ceb2c2", "615764"]
+        "Color": [207, 178, 200]
     },
     "Umbreon": {
-        "Color": ["414648", "dbbc78"]
+        "Color": [63, 74, 78]
     },
     "Murkrow": {
-        "Color": ["33485d", "dac096"]
+        "Color": [37, 62, 84]
     },
     "Slowking": {
-        "Color": ["c48c89", "ded9d1"]
+        "Color": [219, 183, 174]
     },
     "Misdreavus": {
-        "Color": ["3c586f", "7b8796"]
+        "Color": [76, 114, 137]
     },
     "Unown": {
-        "Color": ["dee2e8", "54646f"]
+        "Color": [59, 76, 90]
     },
     "Wobbuffet": {
-        "Color": ["648195", "6ab8d9"]
+        "Color": [101, 169, 200]
     },
     "Girafarig": {
-        "Color": ["433027", "dea64e"]
+        "Color": [47, 34, 32]
     },
     "Pineco": {
-        "Color": ["394c57", "7ba09b"]
+        "Color": [52, 68, 78]
     },
     "Forretress": {
-        "Color": ["804140", "c7b6bd"]
+        "Color": [196, 172, 179]
     },
     "Dunsparce": {
-        "Color": ["638b83", "eee39d"]
+        "Color": [57, 97, 99]
     },
     "Gligar": {
-        "Color": ["d28fb7", "676589"]
+        "Color": [199, 134, 175]
+    },
+    "Steelix-Mega": {
+        "Color": [142, 150, 169]
     },
     "Steelix": {
-        "Color": ["b1b8c6", "676b84"]
+        "Color": [117, 122, 148]
     },
     "Snubbull": {
-        "Color": ["9e737a", "e99fa5"]
+        "Color": [206, 137, 147]
     },
     "Granbull": {
-        "Color": ["e0b9d5", "a28396"]
+        "Color": [210, 172, 197]
     },
     "Qwilfish": {
-        "Color": ["c0c799", "527876"]
+        "Color": [175, 189, 150]
+    },
+    "Scizor-Mega": {
+        "Color": [171, 101, 94]
     },
     "Scizor": {
-        "Color": ["7d4141", "c36d6f"]
+        "Color": [180, 87, 86]
     },
     "Shuckle": {
-        "Color": ["e4c579", "93523f"]
+        "Color": [223, 191, 99]
+    },
+    "Heracross-Mega": {
+        "Color": [74, 95, 126]
     },
     "Heracross": {
-        "Color": ["96aebe", "456b8a"]
+        "Color": [85, 124, 153]
     },
     "Sneasel": {
-        "Color": ["d2a1a7", "4a6d7d"]
+        "Color": [84, 110, 127]
     },
     "Teddiursa": {
-        "Color": ["614934", "d79b68"]
+        "Color": [210, 142, 93]
     },
     "Ursaring": {
-        "Color": ["684d3f", "a9856c"]
+        "Color": [146, 109, 91]
     },
     "Slugma": {
-        "Color": ["d5695a", "efad83"]
+        "Color": [223, 118, 99]
     },
     "Magcargo": {
-        "Color": ["ad6362", "dfaa85"]
+        "Color": [189, 106, 100]
     },
     "Swinub": {
-        "Color": ["50382b", "a98574"]
+        "Color": [169, 133, 116]
     },
     "Piloswine": {
-        "Color": ["926d5c", "c3a192"]
+        "Color": [164, 125, 110]
+    },
+    "Corsola-Galar": {
+        "Color": [227, 224, 222]
     },
     "Corsola": {
-        "Color": ["ae7781", "f39ca8"]
+        "Color": [230, 149, 161]
     },
     "Remoraid": {
-        "Color": ["c3d5c8", "788a82"]
+        "Color": [186, 204, 191]
     },
     "Octillery": {
-        "Color": ["d96857", "7a3e30"]
+        "Color": [212, 92, 82]
     },
     "Delibird": {
-        "Color": ["af5145", "d7d2d3"]
+        "Color": [214, 209, 209]
     },
     "Mantine": {
-        "Color": ["bdb2be", "576274"]
+        "Color": [191, 179, 190]
     },
     "Skarmory": {
-        "Color": ["7b4d57", "b8c0d4"]
+        "Color": [184, 190, 210]
     },
     "Houndour": {
-        "Color": ["524e4d", "c5ada4"]
+        "Color": [90, 85, 82]
+    },
+    "Houndoom-Mega": {
+        "Color": [227, 224, 232]
     },
     "Houndoom": {
-        "Color": ["514543", "beaaa3"]
+        "Color": [73, 68, 67]
     },
     "Kingdra": {
-        "Color": ["5b9ab5", "cbb793"]
+        "Color": [96, 159, 188]
     },
     "Phanpy": {
-        "Color": ["86c5c6", "a86959"]
+        "Color": [133, 196, 197]
     },
     "Donphan": {
-        "Color": ["606975", "b9c7cf"]
+        "Color": [93, 100, 113]
     },
     "Porygon2": {
-        "Color": ["d16177", "6ca5c5"]
+        "Color": [109, 140, 174]
     },
     "Stantler": {
-        "Color": ["715c4f", "c3a286"]
+        "Color": [182, 149, 125]
     },
     "Smeargle": {
-        "Color": ["7e6e54", "dcd0c0"]
+        "Color": [218, 205, 189]
     },
     "Tyrogue": {
-        "Color": ["cbb4c5", "735f4e"]
+        "Color": [201, 179, 194]
     },
     "Hitmontop": {
-        "Color": ["a18474", "7195b7"]
+        "Color": [146, 137, 140]
     },
     "Smoochum": {
-        "Color": ["aa7a7c", "eddea3"]
+        "Color": [216, 182, 148]
     },
     "Elekid": {
-        "Color": ["e5cf84", "5d5643"]
+        "Color": [231, 210, 123]
     },
     "Magby": {
-        "Color": ["c97677", "eadca6"]
+        "Color": [208, 122, 123]
     },
     "Miltank": {
-        "Color": ["524e51", "e1bcb0"]
+        "Color": [227, 188, 176]
     },
     "Blissey": {
-        "Color": ["9b959f", "f0bbc6"]
+        "Color": [216, 168, 185]
     },
     "Raikou": {
-        "Color": ["7b705b", "d9c496"]
+        "Color": [199, 171, 122]
     },
     "Entei": {
-        "Color": ["734933", "a8aa9e"]
+        "Color": [122, 84, 65]
     },
     "Suicune": {
-        "Color": ["d0e0d8", "7c899d"]
+        "Color": [128, 138, 160]
     },
     "Larvitar": {
-        "Color": ["695648", "96a281"]
+        "Color": [142, 156, 124]
     },
     "Pupitar": {
-        "Color": ["7d869f", "abb9d5"]
+        "Color": [149, 161, 190]
+    },
+    "Tyranitar-Mega": {
+        "Color": [154, 167, 116]
     },
     "Tyranitar": {
-        "Color": ["6d7462", "a3b394"]
+        "Color": [145, 158, 131]
     },
     "Lugia": {
-        "Color": ["ebebf4", "8d97b0"]
-    },
-    "Ho-oh": {
-        "Color": ["ccd6a9", "bb613c"]
+        "Color": [223, 225, 236]
     },
     "Celebi": {
-        "Color": ["6d8472", "d8e8c9"]
+        "Color": [215, 230, 201]
     },
     "Treecko": {
-        "Color": ["76904a", "c5cd86"]
+        "Color": [183, 198, 122]
     },
     "Grovyle": {
-        "Color": ["b4b998", "668a65"]
+        "Color": [126, 170, 125]
+    },
+    "Sceptile-Mega": {
+        "Color": [91, 118, 77]
     },
     "Sceptile": {
-        "Color": ["628662", "9ac897"]
+        "Color": [129, 180, 133]
     },
     "Torchic": {
-        "Color": ["f6d676", "e19a43"]
+        "Color": [240, 166, 78]
     },
     "Combusken": {
-        "Color": ["b78262", "f3dfa6"]
+        "Color": [225, 183, 133]
+    },
+    "Blaziken-Mega": {
+        "Color": [214, 132, 100]
     },
     "Blaziken": {
-        "Color": ["a7604d", "e6c898"]
+        "Color": [217, 167, 123]
     },
     "Mudkip": {
-        "Color": ["ddc3a9", "5dacd3"]
+        "Color": [93, 178, 217]
     },
     "Marshtomp": {
-        "Color": ["5c6b75", "a5c1bd"]
+        "Color": [129, 180, 185]
+    },
+    "Swampert-Mega": {
+        "Color": [58, 66, 73]
     },
     "Swampert": {
-        "Color": ["9bb6cb", "555e6a"]
+        "Color": [112, 142, 169]
     },
     "Poochyena": {
-        "Color": ["5a5859", "c2c3c2"]
+        "Color": [198, 197, 196]
     },
     "Mightyena": {
-        "Color": ["bebebe", "484848"]
+        "Color": [192, 192, 193]
+    },
+    "Zigzagoon-Galar": {
+        "Color": [49, 51, 54]
     },
     "Zigzagoon": {
-        "Color": ["d3cbc2", "8a7d71"]
+        "Color": [169, 148, 129]
+    },
+    "Linoone-Galar": {
+        "Color": [225, 222, 222]
     },
     "Linoone": {
-        "Color": ["938479", "dad1cb"]
+        "Color": [206, 195, 186]
     },
     "Wurmple": {
-        "Color": ["c26e6d", "e4dbc9"]
+        "Color": [216, 152, 138]
     },
     "Silcoon": {
-        "Color": ["e8ebf2", "7f757a"]
+        "Color": [231, 237, 245]
     },
     "Beautifly": {
-        "Color": ["626362", "e4c58d"]
+        "Color": [103, 103, 102]
     },
     "Cascoon": {
-        "Color": ["dbccdd", "7e6974"]
+        "Color": [216, 203, 224]
     },
     "Dustox": {
-        "Color": ["d1afaa", "859347"]
+        "Color": [151, 167, 71]
     },
     "Lotad": {
-        "Color": ["80b9a9", "69a37c"]
+        "Color": [107, 167, 136]
     },
     "Lombre": {
-        "Color": ["bad2ba", "719948"]
+        "Color": [134, 170, 76]
     },
     "Ludicolo": {
-        "Color": ["cfd5a1", "838a60"]
+        "Color": [195, 200, 143]
     },
     "Seedot": {
-        "Color": ["8d8580", "dccfb2"]
+        "Color": [186, 175, 159]
     },
     "Nuzleaf": {
-        "Color": ["9a8776", "d7cdc2"]
+        "Color": [174, 158, 141]
     },
     "Shiftry": {
-        "Color": ["828664", "e6e7ef"]
+        "Color": [161, 140, 103]
     },
     "Taillow": {
-        "Color": ["514e66", "e1babd"]
+        "Color": [220, 174, 180]
     },
     "Swellow": {
-        "Color": ["cc95a6", "46455c"]
+        "Color": [204, 144, 164]
     },
     "Wingull": {
-        "Color": ["7f8382", "ebf2f6"]
+        "Color": [197, 222, 235]
     },
     "Pelipper": {
-        "Color": ["f4dfa5", "bad2df"]
+        "Color": [216, 203, 157]
     },
     "Ralts": {
-        "Color": ["9aac89", "e9ebf1"]
+        "Color": [195, 203, 191]
     },
     "Kirlia": {
-        "Color": ["f4f4f4", "95ac85"]
+        "Color": [147, 182, 137]
+    },
+    "Gardevoir-Mega": {
+        "Color": [237, 239, 245]
     },
     "Gardevoir": {
-        "Color": ["f5f5f6", "8ca884"]
+        "Color": [226, 233, 225]
     },
     "Surskit": {
-        "Color": ["8fd0ec", "a7a688"]
+        "Color": [116, 200, 234]
     },
     "Masquerain": {
-        "Color": ["e3edf4", "c79182"]
+        "Color": [230, 217, 218]
     },
     "Shroomish": {
-        "Color": ["819786", "e1d1bc"]
+        "Color": [225, 209, 188]
     },
     "Breloom": {
-        "Color": ["e8dac2", "94967b"]
+        "Color": [199, 186, 160]
     },
     "Slakoth": {
-        "Color": ["dbcfc2", "77685e"]
+        "Color": [216, 206, 195]
     },
     "Vigoroth": {
-        "Color": ["8c7373", "ebebeb"]
+        "Color": [233, 230, 232]
     },
     "Slaking": {
-        "Color": ["928173", "d8d0ca"]
+        "Color": [202, 194, 184]
     },
     "Nincada": {
-        "Color": ["8c8984", "e5e8e8"]
+        "Color": [216, 218, 216]
     },
     "Ninjask": {
-        "Color": ["8e6a64", "eae6dd"]
+        "Color": [38, 39, 39]
     },
     "Shedinja": {
-        "Color": ["e3d6bb", "a69070"]
+        "Color": [190, 165, 126]
     },
     "Whismur": {
-        "Color": ["dfc19b", "e2cadc"]
+        "Color": [222, 193, 190]
     },
     "Loudred": {
-        "Color": ["b5a8ba", "695363"]
+        "Color": [151, 146, 186]
     },
     "Exploud": {
-        "Color": ["7e7191", "c6bdbf"]
+        "Color": [152, 157, 195]
     },
     "Makuhita": {
-        "Color": ["f7e09d", "737173"]
+        "Color": [64, 69, 78]
     },
     "Hariyama": {
-        "Color": ["8e7572", "efcd97"]
+        "Color": [223, 178, 127]
     },
     "Azurill": {
-        "Color": ["5facde", "34516c"]
+        "Color": [45, 171, 224]
     },
     "Nosepass": {
-        "Color": ["8483ae", "4c4462"]
+        "Color": [101, 128, 181]
     },
     "Skitty": {
-        "Color": ["82656c", "f5ccbc"]
+        "Color": [243, 207, 186]
     },
     "Delcatty": {
-        "Color": ["d4b2b1", "7e5f6c"]
+        "Color": [192, 151, 175]
+    },
+    "Sableye-Mega": {
+        "Color": [199, 92, 126]
     },
     "Sableye": {
-        "Color": ["79609b", "cfdae4"]
+        "Color": [122, 98, 159]
+    },
+    "Mawile-Mega": {
+        "Color": [95, 90, 99]
     },
     "Mawile": {
-        "Color": ["686061", "eed99e"]
+        "Color": [101, 96, 97]
     },
     "Aron": {
-        "Color": ["4a5a62", "d4d6d7"]
+        "Color": [38, 52, 58]
     },
     "Lairon": {
-        "Color": ["787778", "dfdfe0"]
+        "Color": [210, 211, 214]
+    },
+    "Aggron-Mega": {
+        "Color": [137, 145, 159]
     },
     "Aggron": {
-        "Color": ["d4d4d7", "5f6064"]
+        "Color": [84, 84, 87]
     },
     "Meditite": {
-        "Color": ["dbdfe2", "71a6be"]
+        "Color": [28, 95, 117]
+    },
+    "Medicham-Mega": {
+        "Color": [226, 220, 220]
     },
     "Medicham": {
-        "Color": ["c66f82", "e0d0c0"]
+        "Color": [212, 113, 141]
     },
     "Electrike": {
-        "Color": ["dcd9a0", "9cba91"]
+        "Color": [176, 200, 150]
+    },
+    "Manectric-Mega": {
+        "Color": [70, 113, 123]
     },
     "Manectric": {
-        "Color": ["739aaa", "dacf99"]
+        "Color": [189, 197, 164]
     },
     "Plusle": {
-        "Color": ["f6ecc1", "c96a6e"]
+        "Color": [235, 218, 183]
     },
     "Minun": {
-        "Color": ["f7eec1", "7bb7d7"]
+        "Color": [223, 224, 184]
     },
     "Volbeat": {
-        "Color": ["7b5551", "c8b8b2"]
+        "Color": [192, 168, 171]
     },
     "Illumise": {
-        "Color": ["57595d", "bac0cb"]
+        "Color": [181, 186, 200]
     },
     "Roselia": {
-        "Color": ["d2b7a4", "63a491"]
+        "Color": [130, 183, 125]
     },
     "Gulpin": {
-        "Color": ["f5dd89", "97be94"]
+        "Color": [155, 193, 146]
     },
     "Swalot": {
-        "Color": ["8978a7", "b09fc3"]
+        "Color": [146, 137, 188]
     },
     "Carvanha": {
-        "Color": ["5e556a", "dcba86"]
+        "Color": [213, 165, 122]
+    },
+    "Sharpedo-Mega": {
+        "Color": [191, 181, 175]
     },
     "Sharpedo": {
-        "Color": ["264f71", "d7d0db"]
+        "Color": [18, 76, 107]
     },
     "Wailmer": {
-        "Color": ["f6e5be", "39749e"]
+        "Color": [249, 232, 193]
     },
     "Wailord": {
-        "Color": ["bcb9b7", "3b7899"]
+        "Color": [191, 189, 187]
     },
     "Numel": {
-        "Color": ["f6e0a2", "869371"]
+        "Color": [236, 213, 145]
+    },
+    "Camerupt-Mega": {
+        "Color": [211, 139, 120]
     },
     "Camerupt": {
-        "Color": ["c3846f", "b9bebd"]
+        "Color": [199, 139, 125]
     },
     "Torkoal": {
-        "Color": ["dbccb8", "ad8872"]
+        "Color": [209, 194, 174]
     },
     "Spoink": {
-        "Color": ["bcaeaf", "767478"]
+        "Color": [174, 165, 169]
     },
     "Grumpig": {
-        "Color": ["d4b2c8", "625f61"]
+        "Color": [90, 92, 93]
     },
     "Spinda": {
-        "Color": ["e5dacb", "c46a67"]
+        "Color": [227, 216, 203]
     },
     "Trapinch": {
-        "Color": ["e59a79", "6d4e41"]
+        "Color": [231, 149, 114]
     },
     "Vibrava": {
-        "Color": ["8cb681", "465f49"]
+        "Color": [97, 143, 101]
     },
     "Flygon": {
-        "Color": ["7c6f5e", "bfc69c"]
+        "Color": [184, 186, 145]
     },
     "Cacnea": {
-        "Color": ["bed59f", "6e8f65"]
+        "Color": [158, 193, 139]
     },
     "Cacturne": {
-        "Color": ["507252", "b4cfa4"]
+        "Color": [178, 204, 157]
     },
     "Swablu": {
-        "Color": ["f3f8fb", "7ebbdd"]
+        "Color": [217, 236, 248]
+    },
+    "Altaria-Mega": {
+        "Color": [221, 228, 238]
     },
     "Altaria": {
-        "Color": ["edf1f6", "68a7c4"]
+        "Color": [49, 141, 168]
     },
     "Zangoose": {
-        "Color": ["a6656e", "ecedf4"]
+        "Color": [228, 227, 240]
     },
     "Seviper": {
-        "Color": ["dfb78b", "546172"]
+        "Color": [80, 106, 132]
     },
     "Lunatone": {
-        "Color": ["d1c49c", "554f43"]
+        "Color": [210, 196, 153]
     },
     "Solrock": {
-        "Color": ["eccb86", "b07446"]
+        "Color": [228, 176, 111]
     },
     "Barboach": {
-        "Color": ["a1c0cf", "4e6672"]
+        "Color": [184, 196, 200]
     },
     "Whiscash": {
-        "Color": ["aac5c7", "39466f"]
+        "Color": [22, 74, 127]
     },
     "Corphish": {
-        "Color": ["e1cab8", "d27354"]
+        "Color": [222, 147, 118]
     },
     "Crawdaunt": {
-        "Color": ["ac564e", "c3bfb0"]
+        "Color": [191, 85, 76]
     },
     "Baltoy": {
-        "Color": ["937767", "d5c39d"]
+        "Color": [203, 181, 146]
     },
     "Claydol": {
-        "Color": ["e5b6b3", "484645"]
+        "Color": [65, 68, 69]
     },
     "Lileep": {
-        "Color": ["e3bab8", "826f8a"]
+        "Color": [208, 174, 185]
     },
     "Cradily": {
-        "Color": ["e3c9b3", "92b088"]
+        "Color": [189, 195, 159]
     },
     "Anorith": {
-        "Color": ["d6dedc", "8d7975"]
+        "Color": [192, 181, 178]
     },
     "Armaldo": {
-        "Color": ["a8b5bf", "615f67"]
+        "Color": [116, 156, 189]
     },
     "Feebas": {
-        "Color": ["d3c6ae", "838a87"]
+        "Color": [180, 177, 158]
     },
     "Milotic": {
-        "Color": ["ab737c", "e5dfc7"]
+        "Color": [47, 104, 122]
+    },
+    "Castform-Rainy": {
+        "Color": [174, 195, 205]
+    },
+    "Castform-Snowy": {
+        "Color": [181, 195, 198]
+    },
+    "Castform-Sunny": {
+        "Color": [224, 171, 108]
     },
     "Castform": {
-        "Color": ["d6d6db", "69696b"]
+        "Color": [207, 210, 217]
     },
     "Kecleon": {
-        "Color": ["d8dda2", "9eab69"]
+        "Color": [193, 205, 122]
     },
     "Shuppet": {
-        "Color": ["878fb1", "5c607c"]
+        "Color": [111, 128, 168]
+    },
+    "Banette-Mega": {
+        "Color": [74, 73, 74]
     },
     "Banette": {
-        "Color": ["9e9890", "635f61"]
+        "Color": [131, 133, 135]
     },
     "Duskull": {
-        "Color": ["8a8c87", "e6e3d6"]
+        "Color": [141, 150, 144]
     },
     "Dusclops": {
-        "Color": ["868381", "ccc7c2"]
+        "Color": [183, 182, 179]
     },
     "Tropius": {
-        "Color": ["629265", "b7aa90"]
+        "Color": [116, 158, 110]
     },
     "Chimecho": {
-        "Color": ["dce9ef", "b68086"]
+        "Color": [210, 196, 205]
+    },
+    "Absol-Mega": {
+        "Color": [220, 226, 239]
     },
     "Absol": {
-        "Color": ["eaedf2", "6b768f"]
+        "Color": [59, 70, 93]
     },
     "Wynaut": {
-        "Color": ["6f5d5e", "8ccad1"]
+        "Color": [133, 202, 209]
     },
     "Snorunt": {
-        "Color": ["4c4642", "edce9f"]
+        "Color": [237, 200, 148]
+    },
+    "Glalie-Mega": {
+        "Color": [79, 90, 104]
     },
     "Glalie": {
-        "Color": ["d1d6e4", "60666b"]
+        "Color": [15, 20, 22]
     },
     "Spheal": {
-        "Color": ["f4ecd8", "7a97c5"]
+        "Color": [79, 109, 153]
     },
     "Sealeo": {
-        "Color": ["e8dfd0", "62aed1"]
+        "Color": [232, 224, 210]
     },
     "Walrein": {
-        "Color": ["5b97b3", "c9dbe7"]
+        "Color": [51, 157, 191]
     },
     "Clamperl": {
-        "Color": ["b9c9dd", "50698c"]
+        "Color": [199, 205, 222]
     },
     "Huntail": {
-        "Color": ["94c5df", "c99979"]
+        "Color": [197, 181, 168]
     },
     "Gorebyss": {
-        "Color": ["ebb9ce", "8c6c82"]
+        "Color": [229, 181, 209]
     },
     "Relicanth": {
-        "Color": ["655d5a", "b3a190"]
+        "Color": [127, 118, 111]
     },
     "Luvdisc": {
-        "Color": ["e38f96", "f4c4c6"]
+        "Color": [228, 146, 159]
     },
     "Bagon": {
-        "Color": ["5e6c6e", "a6bfc8"]
+        "Color": [132, 183, 201]
     },
     "Shelgon": {
-        "Color": ["7f7b7c", "dad9db"]
+        "Color": [214, 216, 218]
+    },
+    "Salamence-Mega": {
+        "Color": [149, 78, 78]
     },
     "Salamence": {
-        "Color": ["71b0c4", "9e515c"]
+        "Color": [165, 86, 98]
     },
     "Beldum": {
-        "Color": ["82a9bf", "4b6474"]
+        "Color": [123, 164, 186]
     },
     "Metang": {
-        "Color": ["3f6274", "95b2c0"]
+        "Color": [81, 121, 141]
+    },
+    "Metagross-Mega": {
+        "Color": [100, 120, 125]
     },
     "Metagross": {
-        "Color": ["92b2c1", "4a687a"]
+        "Color": [95, 145, 165]
     },
     "Regirock": {
-        "Color": ["d4c6bf", "9d7b72"]
+        "Color": [186, 162, 158]
     },
     "Regice": {
-        "Color": ["b6dbeb", "638d9e"]
+        "Color": [137, 201, 222]
     },
     "Registeel": {
-        "Color": ["cac7c9", "746f73"]
+        "Color": [134, 137, 145]
+    },
+    "Latias-Mega": {
+        "Color": [129, 124, 165]
     },
     "Latias": {
-        "Color": ["d5dbe8", "ae6c73"]
+        "Color": [186, 121, 133]
+    },
+    "Latios-Mega": {
+        "Color": [125, 119, 159]
     },
     "Latios": {
-        "Color": ["3d79a6", "a4b8c9"]
+        "Color": [84, 142, 183]
+    },
+    "Kyogre-Primal": {
+        "Color": [81, 72, 134]
     },
     "Kyogre": {
-        "Color": ["4077af", "973e4e"]
+        "Color": [31, 97, 164]
+    },
+    "Groudon-Primal": {
+        "Color": [169, 85, 96]
     },
     "Groudon": {
-        "Color": ["a24538", "d3c7ca"]
+        "Color": [193, 70, 54]
+    },
+    "Rayquaza-Mega": {
+        "Color": [86, 116, 98]
     },
     "Rayquaza": {
-        "Color": ["416d50", "8bad8f"]
+        "Color": [82, 139, 110]
     },
     "Jirachi": {
-        "Color": ["f4ecbe", "6e9e9a"]
+        "Color": [240, 227, 184]
+    },
+    "Deoxys-Attack": {
+        "Color": [194, 124, 94]
+    },
+    "Deoxys-Defense": {
+        "Color": [185, 129, 105]
+    },
+    "Deoxys-Speed": {
+        "Color": [126, 109, 98]
     },
     "Deoxys": {
-        "Color": ["b77455", "89abaf"]
+        "Color": [196, 127, 95]
     },
     "Turtwig": {
-        "Color": ["829763", "cbd38f"]
+        "Color": [177, 187, 127]
     },
     "Grotle": {
-        "Color": ["4f6d47", "a1a868"]
+        "Color": [116, 144, 95]
     },
     "Torterra": {
-        "Color": ["60754d", "bab8b7"]
+        "Color": [74, 107, 69]
     },
     "Chimchar": {
-        "Color": ["ebd8a1", "c07840"]
+        "Color": [227, 185, 131]
     },
     "Monferno": {
-        "Color": ["aba59d", "bb7f49"]
+        "Color": [198, 147, 101]
     },
     "Infernape": {
-        "Color": ["af7253", "dacea4"]
+        "Color": [195, 122, 85]
     },
     "Piplup": {
-        "Color": ["5386ab", "cbddd2"]
+        "Color": [89, 141, 183]
     },
     "Prinplup": {
-        "Color": ["415874", "a8b7a1"]
+        "Color": [78, 106, 136]
     },
     "Empoleon": {
-        "Color": ["31373b", "a3acb2"]
+        "Color": [41, 48, 53]
     },
     "Starly": {
-        "Color": ["d4d1d0", "6c5d56"]
+        "Color": [66, 61, 58]
     },
     "Staravia": {
-        "Color": ["5a4f49", "b9aaa5"]
+        "Color": [101, 90, 85]
     },
     "Staraptor": {
-        "Color": ["635754", "d8b59f"]
+        "Color": [86, 76, 72]
     },
     "Bidoof": {
-        "Color": ["efdeb9", "98734c"]
+        "Color": [154, 117, 77]
     },
     "Bibarel": {
-        "Color": ["624f3c", "caa672"]
+        "Color": [161, 124, 71]
     },
     "Kricketot": {
-        "Color": ["e8d09e", "925e52"]
+        "Color": [159, 100, 85]
     },
     "Kricketune": {
-        "Color": ["d3755d", "5b4b47"]
+        "Color": [206, 105, 74]
     },
     "Shinx": {
-        "Color": ["7db0c0", "897a48"]
+        "Color": [120, 171, 189]
     },
     "Luxio": {
-        "Color": ["8caca4", "464643"]
+        "Color": [61, 63, 62]
     },
     "Luxray": {
-        "Color": ["434242", "88a599"]
+        "Color": [64, 62, 63]
     },
     "Budew": {
-        "Color": ["73a356", "d7e58c"]
+        "Color": [120, 170, 89]
     },
     "Roserade": {
-        "Color": ["758682", "cddee2"]
+        "Color": [199, 203, 204]
     },
     "Cranidos": {
-        "Color": ["626f7e", "84a1ba"]
+        "Color": [114, 139, 161]
     },
     "Rampardos": {
-        "Color": ["586572", "c5c5c7"]
+        "Color": [86, 86, 86]
     },
     "Shieldon": {
-        "Color": ["d5be96", "6e6c69"]
+        "Color": [122, 119, 113]
     },
     "Bastiodon": {
-        "Color": ["6f6e6e", "d8ccb7"]
+        "Color": [120, 118, 115]
+    },
+    "Burmy-Plant": {
+        "Color": [92, 144, 73]
+    },
+    "Burmy-Sandy": {
+        "Color": [208, 194, 152]
+    },
+    "Burmy-Trash": {
+        "Color": [201, 141, 141]
     },
     "Burmy": {
-        "Color": ["556a4d", "71a554"]
+        "Color": [126, 134, 106]
+    },
+    "Wormadam-Plant": {
+        "Color": [87, 141, 82]
+    },
+    "Wormadam-Sandy": {
+        "Color": [181, 158, 118]
+    },
+    "Wormadam-Trash": {
+        "Color": [189, 125, 138]
     },
     "Wormadam": {
-        "Color": ["5b8959", "e4e4e1"]
+        "Color": [158, 135, 112]
     },
     "Mothim": {
-        "Color": ["865b3c", "e8c278"]
+        "Color": [230, 192, 99]
     },
     "Combee": {
-        "Color": ["d19c48", "c7d3e2"]
+        "Color": [223, 169, 57]
     },
     "Vespiquen": {
-        "Color": ["dab771", "71563d"]
+        "Color": [132, 98, 56]
     },
     "Pachirisu": {
-        "Color": ["85b7c1", "e7f3f7"]
+        "Color": [220, 232, 242]
     },
     "Buizel": {
-        "Color": ["9a6c49", "e4a968"]
+        "Color": [200, 126, 81]
     },
     "Floatzel": {
-        "Color": ["e7d79f", "b37c4d"]
+        "Color": [200, 134, 66]
     },
     "Cherubi": {
-        "Color": ["d66679", "4d9d50"]
+        "Color": [212, 97, 115]
+    },
+    "Cherrim-Overcast": {
+        "Color": [111, 83, 121]
+    },
+    "Cherrim-Sunny": {
+        "Color": [225, 174, 152]
     },
     "Cherrim": {
-        "Color": ["726b74", "423c3f"]
+        "Color": [111, 83, 121]
     },
     "Shellos": {
-        "Color": ["e2b1bd", "ac757e"]
+        "Color": [204, 161, 153]
     },
     "Gastrodon": {
-        "Color": ["66afa5", "4e824c"]
+        "Color": [98, 128, 91]
     },
     "Ambipom": {
-        "Color": ["e9c39e", "83698b"]
+        "Color": [162, 118, 146]
     },
     "Drifloon": {
-        "Color": ["ece1c1", "937f9a"]
+        "Color": [155, 132, 167]
     },
     "Drifblim": {
-        "Color": ["e5d3ab", "8d788d"]
+        "Color": [152, 128, 154]
     },
     "Buneary": {
-        "Color": ["e4ce9f", "9b715b"]
+        "Color": [197, 165, 126]
+    },
+    "Lopunny-Mega": {
+        "Color": [144, 113, 99]
     },
     "Lopunny": {
-        "Color": ["8f6a54", "e8d3a0"]
+        "Color": [212, 183, 140]
     },
     "Mismagius": {
-        "Color": ["9771a0", "594564"]
+        "Color": [121, 90, 133]
     },
     "Honchkrow": {
-        "Color": ["496073", "8a3836"]
+        "Color": [39, 63, 86]
     },
     "Glameow": {
-        "Color": ["b2b0bb", "686c7a"]
+        "Color": [131, 137, 152]
     },
     "Purugly": {
-        "Color": ["868193", "e8e3e1"]
+        "Color": [147, 142, 158]
     },
     "Chingling": {
-        "Color": ["c07152", "e1d386"]
+        "Color": [223, 172, 91]
     },
     "Stunky": {
-        "Color": ["5f4a64", "e9dabe"]
+        "Color": [97, 75, 103]
     },
     "Skuntank": {
-        "Color": ["e6d9bb", "634f69"]
+        "Color": [97, 73, 104]
     },
     "Bronzor": {
-        "Color": ["3a6777", "639da3"]
+        "Color": [56, 124, 142]
     },
     "Bronzong": {
-        "Color": ["506d6e", "7db9b3"]
+        "Color": [109, 166, 162]
     },
     "Bonsly": {
-        "Color": ["648061", "bba979"]
+        "Color": [131, 145, 104]
     },
     "Mime Jr.": {
-        "Color": ["7c7583", "f1d8e2"]
+        "Color": [142, 129, 138]
     },
     "Happiny": {
-        "Color": ["f3d9da", "b59096"]
+        "Color": [231, 201, 200]
     },
     "Chatot": {
-        "Color": ["4d6164", "c6bbb0"]
+        "Color": [65, 76, 74]
     },
     "Spiritomb": {
-        "Color": ["848c6e", "d1a4af"]
+        "Color": [203, 171, 168]
     },
     "Gible": {
-        "Color": ["a86156", "688795"]
+        "Color": [103, 132, 146]
     },
     "Gabite": {
-        "Color": ["725a68", "838cb1"]
+        "Color": [108, 117, 157]
+    },
+    "Garchomp-Mega": {
+        "Color": [78, 94, 124]
     },
     "Garchomp": {
-        "Color": ["595b75", "dea27e"]
+        "Color": [91, 93, 122]
     },
     "Munchlax": {
-        "Color": ["859ba4", "4c5f68"]
+        "Color": [99, 126, 142]
     },
     "Riolu": {
-        "Color": ["78a5b7", "4b5156"]
+        "Color": [69, 80, 85]
+    },
+    "Lucario-Mega": {
+        "Color": [125, 112, 106]
     },
     "Lucario": {
-        "Color": ["8cacb2", "555a5c"]
+        "Color": [92, 102, 106]
     },
     "Hippopotas": {
-        "Color": ["755835", "c5b077"]
+        "Color": [182, 157, 89]
     },
     "Hippowdon": {
-        "Color": ["736456", "cbb98d"]
+        "Color": [149, 130, 104]
     },
     "Skorupi": {
-        "Color": ["b3b9cf", "5a6384"]
+        "Color": [110, 114, 155]
     },
     "Drapion": {
-        "Color": ["634d73", "b69cbc"]
+        "Color": [132, 100, 143]
     },
     "Croagunk": {
-        "Color": ["3f4147", "8794b1"]
+        "Color": [98, 125, 178]
     },
     "Toxicroak": {
-        "Color": ["bd6054", "6287ac"]
+        "Color": [97, 135, 174]
     },
     "Carnivine": {
-        "Color": ["b0c788", "6c7548"]
+        "Color": [148, 182, 110]
     },
     "Finneon": {
-        "Color": ["434b52", "aeb7c1"]
+        "Color": [46, 59, 65]
     },
     "Lumineon": {
-        "Color": ["3f4c52", "a4d0cf"]
+        "Color": [183, 218, 217]
     },
     "Mantyke": {
-        "Color": ["92bccf", "3270a8"]
+        "Color": [86, 142, 185]
     },
     "Snover": {
-        "Color": ["78857e", "eff2f3"]
+        "Color": [124, 138, 124]
+    },
+    "Abomasnow-Mega": {
+        "Color": [223, 228, 236]
     },
     "Abomasnow": {
-        "Color": ["6b8584", "e9e8ec"]
+        "Color": [105, 139, 133]
     },
     "Weavile": {
-        "Color": ["b4525c", "818498"]
+        "Color": [140, 89, 112]
     },
     "Magnezone": {
-        "Color": ["b8bbba", "505964"]
+        "Color": [85, 97, 110]
     },
     "Lickilicky": {
-        "Color": ["c78490", "dbbe5c"]
+        "Color": [200, 129, 139]
     },
     "Rhyperior": {
-        "Color": ["67534d", "af826d"]
+        "Color": [128, 103, 96]
     },
     "Tangrowth": {
-        "Color": ["4f4d5c", "758daa"]
+        "Color": [109, 137, 164]
     },
     "Electivire": {
-        "Color": ["d1b77c", "46433c"]
+        "Color": [202, 176, 120]
     },
     "Magmortar": {
-        "Color": ["e28c56", "774b35"]
+        "Color": [186, 90, 53]
     },
     "Togekiss": {
-        "Color": ["d6e7e4", "9baaab"]
+        "Color": [202, 214, 210]
     },
     "Yanmega": {
-        "Color": ["eee4df", "886754"]
+        "Color": [232, 161, 148]
     },
     "Leafeon": {
-        "Color": ["ebe0ac", "86aa84"]
+        "Color": [203, 209, 164]
     },
     "Glaceon": {
-        "Color": ["498289", "b0d9d7"]
+        "Color": [176, 216, 210]
     },
     "Gliscor": {
-        "Color": ["524e52", "9a9bb4"]
+        "Color": [136, 138, 159]
     },
     "Mamoswine": {
-        "Color": ["cfc7bb", "816143"]
+        "Color": [152, 116, 83]
     },
     "Porygon-Z": {
-        "Color": ["c36568", "599bb5"]
+        "Color": [87, 155, 181]
+    },
+    "Gallade-Mega": {
+        "Color": [132, 171, 174]
     },
     "Gallade": {
-        "Color": ["517757", "d1d4d1"]
+        "Color": [61, 107, 72]
     },
     "Probopass": {
-        "Color": ["ae6865", "5c7996"]
+        "Color": [61, 63, 72]
     },
     "Dusknoir": {
-        "Color": ["5f5b54", "aba68d"]
+        "Color": [115, 110, 98]
     },
     "Froslass": {
-        "Color": ["847375", "d0dcdc"]
+        "Color": [208, 217, 218]
+    },
+    "Rotom-Fan": {
+        "Color": [230, 187, 126]
+    },
+    "Rotom-Frost": {
+        "Color": [194, 129, 120]
+    },
+    "Rotom-Heat": {
+        "Color": [210, 116, 95]
+    },
+    "Rotom-Mow": {
+        "Color": [193, 144, 81]
+    },
+    "Rotom-Wash": {
+        "Color": [217, 127, 89]
     },
     "Rotom": {
-        "Color": ["b8e1e1", "a08987"]
+        "Color": [150, 204, 206]
     },
     "Uxie": {
-        "Color": ["93a5b5", "ddc17d"]
+        "Color": [188, 186, 165]
     },
     "Mesprit": {
-        "Color": ["b8cee4", "b4859b"]
+        "Color": [190, 155, 182]
     },
     "Azelf": {
-        "Color": ["7697a5", "aec9da"]
+        "Color": [137, 173, 192]
     },
     "Dialga": {
-        "Color": ["4e5b77", "b8cad5"]
+        "Color": [84, 96, 126]
     },
     "Palkia": {
-        "Color": ["7d7385", "d4ced4"]
+        "Color": [196, 187, 199]
     },
     "Heatran": {
-        "Color": ["624234", "b1a79e"]
+        "Color": [172, 170, 169]
     },
     "Regigigas": {
-        "Color": ["d0c5a6", "5c7157"]
+        "Color": [190, 175, 133]
     },
-    "Giratina": {
-        "Color": ["b3a186", "4a413f"]
+    "Giratina-Altered": {
+        "Color": [66, 63, 58]
+    },
+    "Giratina-Origin": {
+        "Color": [57, 52, 50]
     },
     "Cresselia": {
-        "Color": ["a17a77", "d6bebf"]
+        "Color": [206, 181, 179]
     },
     "Phione": {
-        "Color": ["578b9a", "74bfcf"]
+        "Color": [115, 174, 187]
     },
     "Manaphy": {
-        "Color": ["77c6d2", "507d86"]
+        "Color": [102, 182, 199]
     },
     "Darkrai": {
-        "Color": ["474142", "d1c8c5"]
+        "Color": [60, 60, 60]
     },
-    "Shaymin": {
-        "Color": ["5c8852", "bcb898"]
+    "Shaymin-Land": {
+        "Color": [179, 174, 117]
+    },
+    "Shaymin-Sky": {
+        "Color": [223, 217, 209]
     },
     "Arceus": {
-        "Color": ["c4c4be", "696756"]
+        "Color": [195, 195, 194]
     },
     "Victini": {
-        "Color": ["f5e4af", "b6886a"]
+        "Color": [225, 180, 133]
     },
     "Snivy": {
-        "Color": ["dad595", "548658"]
+        "Color": [227, 217, 145]
     },
     "Servine": {
-        "Color": ["61985a", "d0d0a4"]
+        "Color": [129, 181, 89]
     },
     "Serperior": {
-        "Color": ["1e7c4d", "a8c295"]
+        "Color": [53, 139, 94]
     },
     "Tepig": {
-        "Color": ["dc9164", "4d3e39"]
+        "Color": [58, 47, 45]
     },
     "Pignite": {
-        "Color": ["5b4843", "db8d53"]
+        "Color": [177, 111, 68]
     },
     "Emboar": {
-        "Color": ["584743", "dc9863"]
+        "Color": [120, 88, 75]
     },
     "Oshawott": {
-        "Color": ["f3f2eb", "6a929d"]
+        "Color": [212, 225, 222]
     },
     "Dewott": {
-        "Color": ["9ccccd", "536879"]
+        "Color": [92, 121, 144]
     },
     "Samurott": {
-        "Color": ["4f6a8b", "d4cfb1"]
+        "Color": [78, 113, 156]
     },
     "Patrat": {
-        "Color": ["c8ab91", "7c614a"]
+        "Color": [176, 135, 92]
     },
     "Watchog": {
-        "Color": ["724037", "e0c288"]
+        "Color": [127, 67, 57]
     },
     "Lillipup": {
-        "Color": ["f1d19e", "ae7f65"]
+        "Color": [216, 174, 127]
     },
     "Herdier": {
-        "Color": ["e1b492", "514e5e"]
+        "Color": [99, 90, 105]
     },
     "Stoutland": {
-        "Color": ["5c5b58", "e3d4ba"]
+        "Color": [66, 72, 74]
     },
     "Purrloin": {
-        "Color": ["73607f", "e3c2b6"]
+        "Color": [116, 92, 128]
     },
     "Liepard": {
-        "Color": ["715b75", "ddb568"]
+        "Color": [115, 87, 121]
     },
     "Pansage": {
-        "Color": ["edd498", "63a67b"]
+        "Color": [86, 166, 114]
     },
     "Simisage": {
-        "Color": ["50a071", "cfcc9e"]
+        "Color": [80, 177, 118]
     },
     "Pansear": {
-        "Color": ["cd7865", "f1d699"]
+        "Color": [214, 124, 99]
     },
     "Simisear": {
-        "Color": ["b66b5d", "e6c6a1"]
+        "Color": [199, 116, 95]
     },
     "Panpour": {
-        "Color": ["e1c88f", "5cadbd"]
+        "Color": [113, 180, 190]
     },
     "Simipour": {
-        "Color": ["587774", "88c5c0"]
+        "Color": [230, 208, 144]
     },
     "Munna": {
-        "Color": ["b1889d", "f4ccd3"]
+        "Color": [240, 204, 210]
     },
     "Musharna": {
-        "Color": ["eca9b3", "9984a8"]
+        "Color": [200, 146, 174]
     },
     "Pidove": {
-        "Color": ["564e4d", "c2bbb7"]
+        "Color": [199, 193, 188]
     },
     "Tranquill": {
-        "Color": ["554f4f", "bdb7b9"]
+        "Color": [194, 186, 185]
     },
     "Unfezant": {
-        "Color": ["474c4a", "a6848a"]
+        "Color": [68, 69, 64]
     },
     "Blitzle": {
-        "Color": ["dddad2", "545353"]
+        "Color": [76, 74, 71]
     },
     "Zebstrika": {
-        "Color": ["4c4b4b", "d5d5d5"]
+        "Color": [67, 65, 65]
     },
     "Roggenrola": {
-        "Color": ["3e4351", "b3905d"]
+        "Color": [42, 51, 71]
     },
     "Boldore": {
-        "Color": ["353c54", "c2694e"]
+        "Color": [56, 63, 92]
     },
     "Gigalith": {
-        "Color": ["423c4e", "c9655d"]
+        "Color": [56, 54, 74]
     },
     "Woobat": {
-        "Color": ["b8d1e0", "767a7f"]
+        "Color": [177, 191, 203]
     },
     "Swoobat": {
-        "Color": ["46484f", "8ea7be"]
+        "Color": [59, 62, 68]
     },
     "Drilbur": {
-        "Color": ["615b5f", "e9e0dc"]
+        "Color": [85, 79, 81]
     },
     "Excadrill": {
-        "Color": ["b1b1b3", "584847"]
+        "Color": [98, 77, 77]
+    },
+    "Audino-Mega": {
+        "Color": [235, 227, 222]
     },
     "Audino": {
-        "Color": ["ab9286", "f3c4b6"]
+        "Color": [223, 166, 162]
     },
     "Timburr": {
-        "Color": ["c5ab9b", "6a5544"]
+        "Color": [209, 185, 169]
     },
     "Gurdurr": {
-        "Color": ["b69a9b", "5d323e"]
+        "Color": [192, 162, 161]
     },
     "Conkeldurr": {
-        "Color": ["a8a09b", "71625f"]
+        "Color": [156, 142, 133]
     },
     "Tympole": {
-        "Color": ["b9c2b0", "46494b"]
+        "Color": [236, 216, 169]
     },
     "Palpitoad": {
-        "Color": ["c2cdb5", "465c6c"]
+        "Color": [220, 212, 178]
     },
     "Seismitoad": {
-        "Color": ["44677f", "85cbc9"]
+        "Color": [67, 107, 129]
     },
     "Throh": {
-        "Color": ["c9bfb7", "785958"]
+        "Color": [175, 134, 125]
     },
     "Sawk": {
-        "Color": ["97c9cf", "56768b"]
+        "Color": [97, 132, 157]
     },
     "Sewaddle": {
-        "Color": ["6f803c", "c4b96a"]
+        "Color": [140, 162, 55]
     },
     "Swadloon": {
-        "Color": ["a5c756", "5b8241"]
+        "Color": [150, 187, 57]
     },
     "Leavanny": {
-        "Color": ["607e41", "bdcb68"]
+        "Color": [135, 169, 68]
     },
     "Venipede": {
-        "Color": ["b85b6d", "4d4846"]
+        "Color": [185, 83, 100]
     },
     "Whirlipede": {
-        "Color": ["9e95a8", "645c63"]
+        "Color": [130, 122, 134]
     },
     "Scolipede": {
-        "Color": ["a95a77", "5b3f48"]
+        "Color": [134, 72, 90]
     },
     "Cottonee": {
-        "Color": ["dee7de", "7f9c7d"]
+        "Color": [210, 217, 205]
     },
     "Whimsicott": {
-        "Color": ["f1edd0", "98987c"]
+        "Color": [223, 218, 189]
     },
     "Petilil": {
-        "Color": ["649a63", "d0e0a8"]
+        "Color": [65, 128, 73]
     },
     "Lilligant": {
-        "Color": ["6a8550", "c5c991"]
+        "Color": [180, 180, 114]
+    },
+    "Basculin-Blue": {
+        "Color": [96, 161, 111]
+    },
+    "Basculin-Red": {
+        "Color": [95, 138, 97]
     },
     "Basculin": {
-        "Color": ["dddcd6", "608463"]
+        "Color": [100, 162, 110]
     },
     "Sandile": {
-        "Color": ["c39f7b", "574d4a"]
+        "Color": [192, 155, 116]
     },
     "Krokorok": {
-        "Color": ["5f544e", "c79f88"]
+        "Color": [190, 151, 120]
     },
     "Krookodile": {
-        "Color": ["604a51", "ad95a2"]
+        "Color": [141, 98, 106]
+    },
+    "Darumaka-Galar": {
+        "Color": [211, 221, 224]
     },
     "Darumaka": {
-        "Color": ["ecc192", "ad5b59"]
+        "Color": [189, 97, 84]
+    },
+    "Darmanitan-Galar-Zen": {
+        "Color": [227, 130, 81]
+    },
+    "Darmanitan-Galar": {
+        "Color": [50, 79, 95]
+    },
+    "Darmanitan-Zen": {
+        "Color": [107, 161, 185]
     },
     "Darmanitan": {
-        "Color": ["e3c2a3", "a15249"]
+        "Color": [181, 88, 71]
     },
     "Maractus": {
-        "Color": ["649066", "d9a196"]
+        "Color": [131, 180, 101]
     },
     "Dwebble": {
-        "Color": ["c18e72", "635a57"]
+        "Color": [126, 111, 104]
     },
     "Crustle": {
-        "Color": ["a3826d", "483d37"]
+        "Color": [71, 58, 50]
     },
     "Scraggy": {
-        "Color": ["f5d99f", "ae8865"]
+        "Color": [226, 190, 122]
     },
     "Scrafty": {
-        "Color": ["9f6f56", "f2bd87"]
+        "Color": [197, 140, 92]
     },
     "Sigilyph": {
-        "Color": ["c7ac8a", "4b463e"]
+        "Color": [234, 175, 115]
+    },
+    "Yamask-Galar": {
+        "Color": [65, 61, 63]
     },
     "Yamask": {
-        "Color": ["de9f73", "494747"]
+        "Color": [227, 166, 110]
     },
     "Cofagrigus": {
-        "Color": ["dabc89", "585f5b"]
+        "Color": [79, 82, 80]
     },
     "Tirtouga": {
-        "Color": ["5a687e", "7ca8cd"]
+        "Color": [94, 108, 134]
     },
     "Carracosta": {
-        "Color": ["71a6ce", "56647a"]
+        "Color": [99, 127, 160]
     },
     "Archen": {
-        "Color": ["da9e7e", "4394c3"]
+        "Color": [49, 105, 138]
     },
     "Archeops": {
-        "Color": ["3587a7", "c1906f"]
+        "Color": [62, 137, 169]
     },
     "Trubbish": {
-        "Color": ["efedf1", "69786a"]
+        "Color": [104, 123, 103]
+    },
+    "Garbodor-Gigantamax": {
+        "Color": [72, 68, 59]
     },
     "Garbodor": {
-        "Color": ["878277", "49a5a1"]
+        "Color": [136, 135, 115]
     },
     "Zorua": {
-        "Color": ["973e47", "5f5d6e"]
+        "Color": [104, 80, 97]
     },
     "Zoroark": {
-        "Color": ["4a404b", "913541"]
+        "Color": [100, 58, 70]
     },
     "Minccino": {
-        "Color": ["9a8c8b", "dad6d3"]
+        "Color": [216, 207, 205]
     },
     "Cinccino": {
-        "Color": ["8e8693", "d9dae0"]
+        "Color": [206, 202, 211]
     },
     "Gothita": {
-        "Color": ["ae9bb4", "f0f1f5"]
+        "Color": [216, 200, 217]
     },
     "Gothorita": {
-        "Color": ["d3d0d6", "353437"]
+        "Color": [220, 214, 218]
     },
     "Gothitelle": {
-        "Color": ["383637", "d3ced3"]
+        "Color": [53, 51, 48]
     },
     "Solosis": {
-        "Color": ["dbe6c3", "86af90"]
+        "Color": [152, 195, 154]
     },
     "Duosion": {
-        "Color": ["87b595", "cfe3c5"]
+        "Color": [151, 194, 156]
     },
     "Reuniclus": {
-        "Color": ["d7d7bc", "85b795"]
+        "Color": [149, 199, 158]
     },
     "Ducklett": {
-        "Color": ["768e84", "b0dcd7"]
+        "Color": [179, 212, 208]
     },
     "Swanna": {
-        "Color": ["76838f", "e1eae6"]
+        "Color": [227, 235, 234]
     },
     "Vanillite": {
-        "Color": ["e1edf5", "8fa1be"]
+        "Color": [210, 221, 238]
     },
     "Vanillish": {
-        "Color": ["e5eff6", "78a0c3"]
+        "Color": [216, 230, 242]
     },
     "Vanilluxe": {
-        "Color": ["deedf6", "86a3c1"]
+        "Color": [215, 227, 241]
     },
-    "Deerling": {
-        "Color": ["967a67", "ecc8b0"]
+    "Deerling-Autumn": {
+        "Color": [215, 157, 106]
     },
-    "Sawsbuck": {
-        "Color": ["604536", "ceab79"]
+    "Deerling-Spring": {
+        "Color": [226, 191, 180]
+    },
+    "Deerling-Summer": {
+        "Color": [51, 115, 48]
+    },
+    "Deerling-Winter": {
+        "Color": [181, 152, 134]
+    },
+    "Sawsbuck-Autumn": {
+        "Color": [145, 89, 71]
+    },
+    "Sawsbuck-Spring": {
+        "Color": [115, 83, 57]
+    },
+    "Sawsbuck-Summer": {
+        "Color": [41, 87, 54]
+    },
+    "Sawsbuck-Winter": {
+        "Color": [114, 83, 67]
     },
     "Emolga": {
-        "Color": ["eff1f4", "cab26a"]
+        "Color": [235, 228, 203]
     },
     "Karrablast": {
-        "Color": ["dbb360", "4a7495"]
+        "Color": [228, 190, 88]
     },
     "Escavalier": {
-        "Color": ["c8b4ae", "926666"]
+        "Color": [165, 122, 122]
     },
     "Foongus": {
-        "Color": ["89726c", "f2e9e0"]
+        "Color": [68, 58, 50]
     },
     "Amoonguss": {
-        "Color": ["bba1a0", "524e4f"]
+        "Color": [192, 163, 160]
     },
     "Frillish": {
-        "Color": ["bde4e8", "689eb6"]
+        "Color": [217, 217, 228]
+    },
+    "Jellicent-Blue": {
+        "Color": [225, 220, 235]
     },
     "Jellicent": {
-        "Color": ["b5dbf1", "568fb4"]
+        "Color": [225, 220, 235]
     },
     "Alomomola": {
-        "Color": ["8f5f6d", "c995a0"]
+        "Color": [196, 138, 151]
     },
     "Joltik": {
-        "Color": ["f1d678", "93855c"]
+        "Color": [220, 196, 97]
     },
     "Galvantula": {
-        "Color": ["f5d88b", "807571"]
+        "Color": [198, 178, 129]
     },
     "Ferroseed": {
-        "Color": ["bcc0bc", "6a8172"]
+        "Color": [144, 163, 144]
     },
     "Ferrothorn": {
-        "Color": ["5a7965", "bcc2bf"]
+        "Color": [186, 190, 184]
     },
     "Klink": {
-        "Color": ["c4c8d2", "60696b"]
+        "Color": [194, 194, 200]
     },
     "Klang": {
-        "Color": ["b4b9c1", "5a6769"]
+        "Color": [185, 186, 191]
     },
     "Klinklang": {
-        "Color": ["b5bac5", "5f666b"]
+        "Color": [179, 180, 186]
     },
     "Tynamo": {
-        "Color": ["e1eded", "a1b0c1"]
+        "Color": [213, 225, 234]
     },
     "Eelektrik": {
-        "Color": ["bb7358", "828988"]
+        "Color": [112, 103, 113]
     },
     "Eelektross": {
-        "Color": ["ddce9c", "566071"]
+        "Color": [75, 92, 118]
     },
     "Elgyem": {
-        "Color": ["a0d8d2", "65857b"]
+        "Color": [156, 203, 194]
     },
     "Beheeyem": {
-        "Color": ["7d6b63", "cba799"]
+        "Color": [197, 160, 144]
     },
     "Litwick": {
-        "Color": ["8b98c0", "e0e6f2"]
+        "Color": [157, 167, 207]
     },
     "Lampent": {
-        "Color": ["9eadc4", "333435"]
+        "Color": [48, 49, 50]
     },
     "Chandelure": {
-        "Color": ["373739", "909bc5"]
+        "Color": [50, 49, 49]
     },
     "Axew": {
-        "Color": ["899a82", "454d38"]
+        "Color": [105, 118, 92]
     },
     "Fraxure": {
-        "Color": ["556153", "847c76"]
+        "Color": [109, 116, 101]
     },
     "Haxorus": {
-        "Color": ["968643", "53453b"]
+        "Color": [133, 115, 58]
     },
     "Cubchoo": {
-        "Color": ["d2edf8", "8badcc"]
+        "Color": [183, 215, 238]
     },
     "Beartic": {
-        "Color": ["9daab8", "e1eff1"]
+        "Color": [224, 235, 242]
     },
     "Cryogonal": {
-        "Color": ["c0d5ed", "647eaa"]
+        "Color": [108, 134, 181]
     },
     "Shelmet": {
-        "Color": ["816f6f", "c9b4b0"]
+        "Color": [207, 192, 186]
     },
     "Accelgor": {
-        "Color": ["a890a2", "6b646f"]
+        "Color": [121, 122, 141]
+    },
+    "Stunfisk-Galar": {
+        "Color": [114, 108, 105]
     },
     "Stunfisk": {
-        "Color": ["f5de8d", "b18367"]
+        "Color": [198, 147, 107]
     },
     "Mienfoo": {
-        "Color": ["f7eea3", "ae6f70"]
+        "Color": [226, 191, 145]
     },
     "Mienshao": {
-        "Color": ["d7ccd2", "7e7582"]
+        "Color": [217, 206, 212]
     },
     "Druddigon": {
-        "Color": ["065c72", "b16c72"]
+        "Color": [10, 85, 106]
     },
     "Golett": {
-        "Color": ["90b8ac", "536e6c"]
+        "Color": [104, 144, 140]
     },
     "Golurk": {
-        "Color": ["5b726e", "91b3a9"]
+        "Color": [107, 145, 142]
     },
     "Pawniard": {
-        "Color": ["dee1e4", "7a5758"]
+        "Color": [138, 91, 89]
     },
     "Bisharp": {
-        "Color": ["d1d2d4", "7a5654"]
+        "Color": [138, 92, 86]
     },
     "Bouffalant": {
-        "Color": ["6b5c4e", "ccbb97"]
+        "Color": [118, 99, 78]
     },
     "Rufflet": {
-        "Color": ["84797e", "ece8d7"]
+        "Color": [63, 61, 67]
     },
     "Braviary": {
-        "Color": ["624b51", "e1d6be"]
+        "Color": [80, 65, 76]
     },
     "Vullaby": {
-        "Color": ["d6bdb0", "605754"]
+        "Color": [107, 96, 91]
     },
     "Mandibuzz": {
-        "Color": ["a68e84", "544a49"]
+        "Color": [135, 120, 110]
     },
     "Heatmor": {
-        "Color": ["b99472", "88554b"]
+        "Color": [166, 117, 91]
     },
     "Durant": {
-        "Color": ["585657", "aaaaad"]
+        "Color": [85, 83, 82]
     },
     "Deino": {
-        "Color": ["6580a1", "60595b"]
+        "Color": [95, 91, 92]
     },
     "Zweilous": {
-        "Color": ["6a788c", "595152"]
+        "Color": [83, 80, 81]
     },
     "Hydreigon": {
-        "Color": ["756b80", "4d424c"]
+        "Color": [95, 83, 96]
     },
     "Larvesta": {
-        "Color": ["d0d0d2", "8f6254"]
+        "Color": [210, 194, 191]
     },
     "Volcarona": {
-        "Color": ["c9d2d3", "bf7562"]
+        "Color": [209, 127, 96]
     },
     "Cobalion": {
-        "Color": ["468892", "c0bab0"]
+        "Color": [66, 146, 162]
     },
     "Terrakion": {
-        "Color": ["b4a69b", "746a64"]
+        "Color": [136, 125, 114]
     },
     "Virizion": {
-        "Color": ["b8d294", "6c795d"]
+        "Color": [162, 185, 115]
+    },
+    "Tornadus-Therian": {
+        "Color": [128, 142, 121]
     },
     "Tornadus": {
-        "Color": ["74747e", "dcd5cd"]
+        "Color": [132, 128, 137]
+    },
+    "Thundurus-Therian": {
+        "Color": [140, 163, 183]
     },
     "Thundurus": {
-        "Color": ["d1dbe4", "646a77"]
+        "Color": [118, 127, 140]
     },
     "Reshiram": {
-        "Color": ["8892aa", "dae5eb"]
+        "Color": [212, 222, 234]
     },
     "Zekrom": {
-        "Color": ["26262a", "454e50"]
+        "Color": [52, 55, 57]
+    },
+    "Landorus-Therian": {
+        "Color": [170, 122, 99]
     },
     "Landorus": {
-        "Color": ["decac5", "7b645f"]
+        "Color": [151, 115, 100]
+    },
+    "Kyurem-Black": {
+        "Color": [61, 57, 61]
+    },
+    "Kyurem-Black2": {
+        "Color": [62, 68, 71]
+    },
+    "Kyurem-White": {
+        "Color": [174, 178, 177]
+    },
+    "Kyurem-White2": {
+        "Color": [177, 148, 137]
     },
     "Kyurem": {
-        "Color": ["6b7075", "c2d3d5"]
+        "Color": [137, 148, 152]
+    },
+    "Keldeo-Resolute": {
+        "Color": [136, 178, 199]
     },
     "Keldeo": {
-        "Color": ["e1aa7a", "79abce"]
+        "Color": [203, 218, 194]
+    },
+    "Meloetta-Pirouette": {
+        "Color": [177, 136, 122]
     },
     "Meloetta": {
-        "Color": ["84847c", "e1ead3"]
+        "Color": [217, 226, 202]
     },
     "Genesect": {
-        "Color": ["694b70", "b491b6"]
+        "Color": [126, 93, 136]
     },
     "Chespin": {
-        "Color": ["cdc383", "796446"]
+        "Color": [187, 172, 111]
     },
     "Quilladin": {
-        "Color": ["604c2f", "bcb974"]
+        "Color": [101, 82, 50]
     },
     "Chesnaught": {
-        "Color": ["e6e6d1", "919770"]
+        "Color": [211, 212, 181]
     },
     "Fennekin": {
-        "Color": ["c97849", "f7ea9d"]
+        "Color": [235, 193, 112]
     },
     "Braixen": {
-        "Color": ["eee3a4", "986545"]
+        "Color": [64, 61, 58]
     },
     "Delphox": {
-        "Color": ["a8553d", "d7b77c"]
+        "Color": [183, 98, 69]
     },
     "Froakie": {
-        "Color": ["e2deb5", "59a6c2"]
+        "Color": [90, 177, 207]
     },
     "Frogadier": {
-        "Color": ["d0dadb", "3d7598"]
+        "Color": [57, 114, 154]
+    },
+    "Greninja-Ash": {
+        "Color": [211, 167, 169]
     },
     "Greninja": {
-        "Color": ["414676", "ceb6b5"]
+        "Color": [71, 78, 132]
     },
     "Bunnelby": {
-        "Color": ["6b4f33", "aba8a9"]
+        "Color": [168, 163, 163]
     },
     "Diggersby": {
-        "Color": ["c5c2af", "7b644b"]
+        "Color": [165, 150, 124]
     },
     "Fletchling": {
-        "Color": ["d9ab9d", "534b47"]
+        "Color": [196, 130, 102]
     },
     "Fletchinder": {
-        "Color": ["bf7c54", "d1d8e5"]
+        "Color": [194, 125, 87]
     },
     "Talonflame": {
-        "Color": ["db8854", "5e534d"]
+        "Color": [111, 96, 84]
     },
     "Scatterbug": {
-        "Color": ["656361", "bdb5ab"]
+        "Color": [110, 106, 105]
     },
     "Spewpa": {
-        "Color": ["827476", "eeedea"]
+        "Color": [213, 208, 209]
+    },
+    "Vivillon-Archipelago": {
+        "Color": [158, 79, 49]
+    },
+    "Vivillon-Continental": {
+        "Color": [44, 41, 38]
+    },
+    "Vivillon-Elegant": {
+        "Color": [71, 55, 94]
+    },
+    "Vivillon-Fancy": {
+        "Color": [213, 198, 178]
+    },
+    "Vivillon-Garden": {
+        "Color": [40, 124, 86]
+    },
+    "Vivillon-High_Plains": {
+        "Color": [213, 127, 71]
+    },
+    "Vivillon-Icy_Snow": {
+        "Color": [201, 198, 200]
+    },
+    "Vivillon-Jungle": {
+        "Color": [70, 75, 59]
+    },
+    "Vivillon-Marine": {
+        "Color": [52, 146, 200]
+    },
+    "Vivillon-Meadow": {
+        "Color": [203, 113, 153]
+    },
+    "Vivillon-Modern": {
+        "Color": [205, 66, 60]
+    },
+    "Vivillon-Monsoon": {
+        "Color": [59, 60, 67]
+    },
+    "Vivillon-Ocean": {
+        "Color": [82, 157, 193]
+    },
+    "Vivillon-Pok\u00e9_Ball": {
+        "Color": [64, 51, 51]
+    },
+    "Vivillon-Polar": {
+        "Color": [48, 58, 106]
+    },
+    "Vivillon-River": {
+        "Color": [190, 149, 58]
+    },
+    "Vivillon-Sandstorm": {
+        "Color": [203, 179, 124]
+    },
+    "Vivillon-Savanna": {
+        "Color": [101, 178, 162]
+    },
+    "Vivillon-Sun": {
+        "Color": [215, 111, 96]
+    },
+    "Vivillon-Tundra": {
+        "Color": [177, 211, 231]
     },
     "Vivillon": {
-        "Color": ["e197b9", "86515e"]
+        "Color": [201, 125, 153]
     },
     "Litleo": {
-        "Color": ["584840", "d6af86"]
+        "Color": [218, 172, 128]
     },
     "Pyroar": {
-        "Color": ["7f4637", "d0a969"]
+        "Color": [206, 164, 95]
     },
     "Flab\u00e9b\u00e9": {
-        "Color": ["f5f2c9", "be7d69"]
+        "Color": [212, 125, 114]
     },
     "Floette": {
-        "Color": ["dee3d2", "825e54"]
+        "Color": [154, 77, 75]
     },
     "Florges": {
-        "Color": ["14876f", "c79c9e"]
+        "Color": [38, 153, 128]
     },
     "Skiddo": {
-        "Color": ["e7e2e4", "466951"]
+        "Color": [58, 96, 73]
     },
     "Gogoat": {
-        "Color": ["a6967f", "336644"]
+        "Color": [48, 103, 71]
     },
     "Pancham": {
-        "Color": ["f0eacf", "595b60"]
+        "Color": [244, 236, 206]
     },
     "Pangoro": {
-        "Color": ["d3d1c5", "5c5d66"]
+        "Color": [95, 95, 106]
+    },
+    "Furfrou-Blue": {
+        "Color": [194, 213, 206]
     },
     "Furfrou": {
-        "Color": ["93938a", "e6ede0"]
+        "Color": [228, 235, 220]
     },
     "Espurr": {
-        "Color": ["aaaabd", "736f7c"]
+        "Color": [157, 155, 171]
     },
     "Meowstic": {
-        "Color": ["707993", "f2f4f5"]
+        "Color": [227, 227, 227]
     },
     "Honedge": {
-        "Color": ["656c6f", "a6d0e0"]
+        "Color": [118, 116, 112]
     },
     "Doublade": {
-        "Color": ["6e5259", "cb8ca3"]
+        "Color": [186, 125, 147]
+    },
+    "Aegislash-Blade": {
+        "Color": [196, 183, 136]
+    },
+    "Aegislash-Shield": {
+        "Color": [178, 162, 139]
     },
     "Aegislash": {
-        "Color": ["6f6656", "d2c8ab"]
+        "Color": [183, 169, 137]
     },
     "Spritzee": {
-        "Color": ["e3d5e1", "ca7986"]
+        "Color": [210, 131, 147]
     },
     "Aromatisse": {
-        "Color": ["e6a6b8", "a46386"]
+        "Color": [195, 123, 157]
     },
     "Swirlix": {
-        "Color": ["9b7b86", "f3eef1"]
+        "Color": [241, 234, 238]
     },
     "Slurpuff": {
-        "Color": ["e6d0da", "a86c7f"]
+        "Color": [226, 200, 210]
     },
     "Inkay": {
-        "Color": ["f0e7de", "9996a9"]
+        "Color": [213, 203, 208]
     },
     "Malamar": {
-        "Color": ["dcdbde", "827190"]
+        "Color": [147, 129, 162]
     },
     "Binacle": {
-        "Color": ["e1e1c8", "826e64"]
+        "Color": [149, 126, 115]
     },
     "Barbaracle": {
-        "Color": ["d9cbbc", "6b5d58"]
+        "Color": [108, 95, 91]
     },
     "Skrelp": {
-        "Color": ["7d5644", "b7bed6"]
+        "Color": [129, 87, 65]
     },
     "Dragalge": {
-        "Color": ["b07781", "6c4839"]
+        "Color": [126, 87, 70]
     },
     "Clauncher": {
-        "Color": ["7b7e6b", "91d1ee"]
+        "Color": [139, 202, 231]
     },
     "Clawitzer": {
-        "Color": ["2b7fb8", "827654"]
+        "Color": [45, 117, 170]
     },
     "Helioptile": {
-        "Color": ["696a64", "efde82"]
+        "Color": [222, 205, 118]
     },
     "Heliolisk": {
-        "Color": ["eacb6c", "6b5e51"]
+        "Color": [229, 195, 104]
     },
     "Tyrunt": {
-        "Color": ["7f6960", "d7d2cf"]
+        "Color": [129, 108, 100]
     },
     "Tyrantrum": {
-        "Color": ["965d55", "dcdad8"]
+        "Color": [155, 93, 87]
     },
     "Amaura": {
-        "Color": ["e8d2ab", "95c2db"]
+        "Color": [156, 199, 223]
     },
     "Aurorus": {
-        "Color": ["dfe3cc", "7a90b2"]
+        "Color": [210, 218, 205]
     },
     "Sylveon": {
-        "Color": ["bb8f9f", "f0eef2"]
+        "Color": [232, 208, 217]
     },
     "Hawlucha": {
-        "Color": ["7b765c", "e8ece9"]
+        "Color": [85, 140, 120]
     },
     "Dedenne": {
-        "Color": ["dfb662", "4f4438"]
+        "Color": [55, 52, 49]
     },
     "Carbink": {
-        "Color": ["d8dee5", "878b9c"]
+        "Color": [155, 160, 175]
     },
     "Goomy": {
-        "Color": ["8e808f", "ded5e1"]
+        "Color": [209, 199, 213]
     },
     "Sliggoo": {
-        "Color": ["8a7b88", "d2c5da"]
+        "Color": [202, 188, 208]
     },
     "Goodra": {
-        "Color": ["998c9d", "ded5e4"]
+        "Color": [207, 194, 212]
     },
     "Klefki": {
-        "Color": ["cbc8c3", "655654"]
+        "Color": [48, 43, 48]
     },
     "Phantump": {
-        "Color": ["59564c", "a7907b"]
+        "Color": [115, 103, 89]
     },
     "Trevenant": {
-        "Color": ["a79880", "516753"]
+        "Color": [129, 121, 103]
     },
     "Pumpkaboo": {
-        "Color": ["635644", "d39a72"]
+        "Color": [106, 89, 70]
     },
     "Gourgeist": {
-        "Color": ["dda274", "66533e"]
+        "Color": [194, 141, 96]
     },
     "Bergmite": {
-        "Color": ["93a2b8", "d9e9f4"]
+        "Color": [214, 231, 243]
     },
     "Avalugg": {
-        "Color": ["e0eff9", "8b9abd"]
+        "Color": [224, 238, 248]
     },
     "Noibat": {
-        "Color": ["bda8c4", "725677"]
+        "Color": [150, 121, 161]
     },
     "Noivern": {
-        "Color": ["9280a6", "504348"]
+        "Color": [75, 70, 74]
     },
     "Xerneas": {
-        "Color": ["56585d", "cbbd9f"]
+        "Color": [61, 64, 62]
     },
     "Yveltal": {
-        "Color": ["4b4046", "d94f42"]
+        "Color": [60, 54, 61]
+    },
+    "Zygarde-10Percent": {
+        "Color": [68, 68, 68]
+    },
+    "Zygarde-Complete": {
+        "Color": [69, 64, 59]
+    },
+    "Zygarde-Core": {
+        "Color": [172, 199, 88]
     },
     "Zygarde": {
-        "Color": ["a7c361", "4d483d"]
+        "Color": [72, 67, 60]
+    },
+    "Diancie-Mega": {
+        "Color": [237, 219, 226]
     },
     "Diancie": {
-        "Color": ["9c859a", "ecdfe6"]
+        "Color": [211, 190, 204]
+    },
+    "Hoopa-Unbound": {
+        "Color": [146, 124, 145]
     },
     "Hoopa": {
-        "Color": ["d8cda9", "936767"]
+        "Color": [178, 152, 126]
     },
     "Volcanion": {
-        "Color": ["ae8966", "742b2e"]
+        "Color": [127, 49, 51]
     },
     "Rowlet": {
-        "Color": ["eadacc", "798870"]
+        "Color": [233, 215, 202]
     },
     "Dartrix": {
-        "Color": ["888754", "ebebe9"]
+        "Color": [148, 175, 98]
     },
     "Decidueye": {
-        "Color": ["e0c7a8", "777555"]
+        "Color": [160, 113, 83]
     },
     "Litten": {
-        "Color": ["43434d", "df8051"]
+        "Color": [228, 128, 82]
     },
     "Torracat": {
-        "Color": ["52433e", "e17a4f"]
+        "Color": [219, 111, 73]
     },
     "Incineroar": {
-        "Color": ["6a504d", "e0644d"]
+        "Color": [113, 85, 82]
     },
     "Popplio": {
-        "Color": ["7b97c3", "435279"]
+        "Color": [74, 99, 147]
     },
     "Brionne": {
-        "Color": ["629bbb", "e7f0f2"]
+        "Color": [93, 161, 199]
     },
     "Primarina": {
-        "Color": ["568eac", "d8dee8"]
+        "Color": [138, 177, 197]
     },
     "Pikipek": {
-        "Color": ["dcdad8", "614a44"]
+        "Color": [46, 48, 46]
     },
     "Trumbeak": {
-        "Color": ["544a42", "e4e1df"]
+        "Color": [233, 217, 208]
     },
     "Toucannon": {
-        "Color": ["e2cda3", "5a433c"]
+        "Color": [227, 183, 136]
     },
     "Yungoos": {
-        "Color": ["efd38e", "a87d68"]
+        "Color": [177, 132, 107]
     },
     "Gumshoos": {
-        "Color": ["8c745b", "dbcb77"]
+        "Color": [145, 119, 93]
     },
     "Grubbin": {
-        "Color": ["e1d5ae", "b5704c"]
+        "Color": [219, 167, 115]
     },
     "Charjabug": {
-        "Color": ["d9c9b4", "718c6b"]
+        "Color": [118, 143, 104]
     },
     "Vikavolt": {
-        "Color": ["e0dcbf", "3e596c"]
+        "Color": [232, 223, 183]
     },
     "Crabrawler": {
-        "Color": ["17b2d3", "667382"]
+        "Color": [75, 95, 129]
     },
     "Crabominable": {
-        "Color": ["d6e3e5", "5b667a"]
+        "Color": [58, 75, 95]
     },
-    "Oricorio": {
-        "Color": ["4f3130", "d5545b"]
+    "Oricorio-Baile": {
+        "Color": [212, 78, 84]
+    },
+    "Oricorio-Pa%27u": {
+        "Color": [237, 210, 206]
+    },
+    "Oricorio-Pom-Pom": {
+        "Color": [215, 215, 60]
+    },
+    "Oricorio-Sensu": {
+        "Color": [161, 167, 193]
     },
     "Cutiefly": {
-        "Color": ["d2c086", "fafaf8"]
+        "Color": [220, 201, 139]
     },
     "Ribombee": {
-        "Color": ["b9a36e", "f8f9f7"]
+        "Color": [192, 167, 111]
     },
     "Rockruff": {
-        "Color": ["6f5c56", "d1c5bc"]
+        "Color": [199, 182, 171]
+    },
+    "Lycanroc-Dusk": {
+        "Color": [156, 140, 132]
+    },
+    "Lycanroc-Midnight": {
+        "Color": [117, 89, 87]
     },
     "Lycanroc": {
-        "Color": ["e3d7d0", "6d635c"]
+        "Color": [206, 188, 175]
     },
-    "Wishiwashi": {
-        "Color": ["ebeded", "657e99"]
+    "Wishiwashi-School": {
+        "Color": [32, 54, 77]
+    },
+    "Wishiwashi-Solo": {
+        "Color": [95, 127, 162]
     },
     "Mareanie": {
-        "Color": ["a1c2d1", "5a717b"]
+        "Color": [149, 186, 197]
     },
     "Toxapex": {
-        "Color": ["b0d0d6", "635f7f"]
+        "Color": [99, 100, 135]
     },
     "Mudbray": {
-        "Color": ["82675b", "eccabb"]
+        "Color": [140, 110, 97]
     },
     "Mudsdale": {
-        "Color": ["514141", "c1725e"]
+        "Color": [68, 59, 59]
     },
     "Dewpider": {
-        "Color": ["6e8f6d", "bbdae6"]
+        "Color": [102, 132, 101]
     },
     "Araquanid": {
-        "Color": ["c4dce5", "729379"]
+        "Color": [208, 227, 233]
     },
     "Fomantis": {
-        "Color": ["9ebeac", "627960"]
+        "Color": [120, 176, 150]
     },
     "Lurantis": {
-        "Color": ["be6f75", "f0dfe0"]
+        "Color": [205, 114, 121]
     },
     "Morelull": {
-        "Color": ["f2e5e7", "9e899d"]
+        "Color": [235, 223, 225]
     },
     "Shiinotic": {
-        "Color": ["efdfd4", "a2839c"]
+        "Color": [222, 196, 199]
     },
     "Salandit": {
-        "Color": ["ce5f44", "514b49"]
+        "Color": [70, 65, 64]
     },
     "Salazzle": {
-        "Color": ["9d6d88", "595255"]
+        "Color": [100, 93, 98]
     },
     "Stufful": {
-        "Color": ["5a4138", "f1d1d8"]
+        "Color": [232, 165, 179]
     },
     "Bewear": {
-        "Color": ["d399a5", "0e0d0d", "fbf9f9"]
+        "Color": [56, 53, 52]
     },
     "Bounsweet": {
-        "Color": ["b3677a", "b9d49d"]
+        "Color": [173, 179, 130]
     },
     "Steenee": {
-        "Color": ["76765c", "d0e0b3"]
+        "Color": [155, 184, 113]
     },
     "Tsareena": {
-        "Color": ["cadca0", "7c705b"]
+        "Color": [135, 122, 99]
     },
     "Comfey": {
-        "Color": ["ba785d", "e2e0ab"]
+        "Color": [209, 172, 119]
     },
     "Oranguru": {
-        "Color": ["e1e1e2", "756f73"]
+        "Color": [137, 137, 138]
     },
     "Passimian": {
-        "Color": ["5c6252", "e5e8d2"]
+        "Color": [72, 77, 67]
     },
     "Wimpod": {
-        "Color": ["826d82", "d2e0d3"]
+        "Color": [136, 113, 136]
     },
     "Golisopod": {
-        "Color": ["d2dbd5", "696a69"]
+        "Color": [200, 207, 201]
     },
     "Sandygast": {
-        "Color": ["967467", "d9d4ba"]
+        "Color": [216, 210, 184]
     },
     "Palossand": {
-        "Color": ["ae7351", "f4c38a"]
+        "Color": [223, 165, 115]
     },
     "Pyukumuku": {
-        "Color": ["524446", "db7b9e"]
+        "Color": [67, 65, 64]
     },
     "Type: Null": {
-        "Color": ["9f948f", "4c4745"]
+        "Color": [58, 59, 58]
     },
     "Silvally": {
-        "Color": ["51575b", "e1e4e8"]
+        "Color": [228, 232, 239]
+    },
+    "Minior-Core": {
+        "Color": [212, 92, 136]
     },
     "Minior": {
-        "Color": ["635050", "b49590"]
+        "Color": [129, 103, 101]
     },
     "Komala": {
-        "Color": ["6f6962", "bbc7c9"]
+        "Color": [184, 193, 194]
     },
     "Turtonator": {
-        "Color": ["6d4840", "e59c5d"]
+        "Color": [123, 85, 73]
     },
     "Togedemaru": {
-        "Color": ["e9e6dd", "837c6d"]
+        "Color": [210, 206, 189]
     },
     "Mimikyu": {
-        "Color": ["63513e", "bfb492"]
+        "Color": [187, 176, 142]
     },
     "Bruxish": {
-        "Color": ["a16e8a", "bbdab4"]
+        "Color": [169, 102, 158]
     },
     "Drampa": {
-        "Color": ["7b9b93", "e7e9d8"]
+        "Color": [221, 224, 207]
     },
     "Dhelmise": {
-        "Color": ["baa163", "3a575b"]
+        "Color": [45, 78, 87]
     },
     "Jangmo-o": {
-        "Color": ["696761", "e4dfc0"]
+        "Color": [60, 59, 58]
     },
     "Hakamo-o": {
-        "Color": ["766855", "d0c48d"]
+        "Color": [178, 157, 93]
     },
     "Kommo-o": {
-        "Color": ["75664f", "c4bb8c"]
+        "Color": [167, 152, 112]
     },
     "Tapu Koko": {
-        "Color": ["d9a74c", "65583b"]
+        "Color": [121, 107, 66]
     },
     "Tapu Lele": {
-        "Color": ["765058", "e299aa"]
+        "Color": [184, 111, 127]
     },
     "Tapu Bulu": {
-        "Color": ["c67958", "4c3e37"]
+        "Color": [107, 81, 66]
     },
     "Tapu Fini": {
-        "Color": ["b0c1de", "605878"]
+        "Color": [76, 70, 92]
     },
     "Cosmog": {
-        "Color": ["4aadce", "454283"]
+        "Color": [60, 69, 136]
     },
     "Cosmoem": {
-        "Color": ["464768", "beac74"]
+        "Color": [159, 139, 104]
+    },
+    "Solgaleo-RadiantSunPhase": {
+        "Color": [57, 55, 54]
     },
     "Solgaleo": {
-        "Color": ["f4f3ea", "716859"]
+        "Color": [33, 34, 34]
+    },
+    "Lunala-FullMoonPhase": {
+        "Color": [193, 216, 229]
     },
     "Lunala": {
-        "Color": ["44356d", "c6c99c"]
+        "Color": [68, 54, 113]
     },
     "Nihilego": {
-        "Color": ["869cb8", "e0e8e8"]
+        "Color": [222, 230, 232]
     },
     "Buzzwole": {
-        "Color": ["e16251", "5d302b"]
+        "Color": [235, 91, 76]
     },
     "Pheromosa": {
-        "Color": ["b1a294", "f7f5f3"]
+        "Color": [229, 221, 211]
     },
     "Xurkitree": {
-        "Color": ["d5ddd8", "545045"]
+        "Color": [222, 222, 213]
     },
     "Celesteela": {
-        "Color": ["94bcaa", "41645d"]
+        "Color": [123, 171, 158]
     },
     "Kartana": {
-        "Color": ["e3e5e3", "b08d49"]
+        "Color": [230, 231, 225]
     },
     "Guzzlord": {
-        "Color": ["9cb486", "3b444d"]
+        "Color": [52, 59, 65]
+    },
+    "Necrozma-Dawn_Wings": {
+        "Color": [212, 230, 243]
+    },
+    "Necrozma-Dusk_Mane": {
+        "Color": [41, 41, 39]
+    },
+    "Necrozma-Ultra": {
+        "Color": [249, 248, 236]
     },
     "Necrozma": {
-        "Color": ["cfc9c2", "4a4646"]
+        "Color": [45, 44, 44]
     },
     "Magearna": {
-        "Color": ["8b837a", "dfdbd7"]
+        "Color": [212, 205, 198]
+    },
+    "Marshadow-Alt": {
+        "Color": [74, 123, 127]
     },
     "Marshadow": {
-        "Color": ["575a67", "787476"]
+        "Color": [102, 104, 116]
     },
     "Poipole": {
-        "Color": ["462d5a", "81569d"]
+        "Color": [91, 62, 133]
     },
     "Naganadel": {
-        "Color": ["453474", "a985b7"]
+        "Color": [82, 58, 135]
     },
     "Stakataka": {
-        "Color": ["7a8381", "44433f"]
+        "Color": [66, 67, 63]
     },
     "Blacephalon": {
-        "Color": ["f5f4ed", "8b8894"]
+        "Color": [39, 91, 110]
     },
     "Zeraora": {
-        "Color": ["78714c", "e2d061"]
+        "Color": [208, 188, 85]
     },
     "Meltan": {
-        "Color": ["765e40", "e0cfa3"]
+        "Color": [222, 198, 134]
     },
     "Melmetal": {
-        "Color": ["77736d", "dfdbce"]
+        "Color": [125, 121, 116]
+    },
+    "Grookey": {
+        "Color": [140, 154, 92]
+    },
+    "Thwackey": {
+        "Color": [205, 198, 106]
+    },
+    "Rillaboom-Gigantamax": {
+        "Color": [123, 89, 70]
+    },
+    "Rillaboom": {
+        "Color": [69, 65, 59]
+    },
+    "Scorbunny": {
+        "Color": [185, 98, 62]
+    },
+    "Raboot": {
+        "Color": [213, 211, 209]
+    },
+    "Cinderace-Gigantamax": {
+        "Color": [243, 199, 57]
+    },
+    "Cinderace": {
+        "Color": [22, 36, 50]
+    },
+    "Sobble": {
+        "Color": [133, 178, 197]
+    },
+    "Drizzile": {
+        "Color": [92, 146, 158]
+    },
+    "Inteleon-Gigantamax": {
+        "Color": [106, 146, 177]
+    },
+    "Inteleon": {
+        "Color": [54, 64, 69]
+    },
+    "Skwovet": {
+        "Color": [119, 108, 100]
+    },
+    "Greedent": {
+        "Color": [145, 94, 86]
+    },
+    "Rookidee": {
+        "Color": [74, 97, 131]
+    },
+    "Corvisquire": {
+        "Color": [44, 49, 56]
+    },
+    "Corviknight-Gigantamax": {
+        "Color": [46, 43, 66]
+    },
+    "Corviknight": {
+        "Color": [60, 59, 96]
+    },
+    "Blipbug": {
+        "Color": [108, 103, 136]
+    },
+    "Dottler": {
+        "Color": [215, 169, 63]
+    },
+    "Orbeetle-Gigantamax": {
+        "Color": [129, 58, 59]
+    },
+    "Orbeetle": {
+        "Color": [66, 52, 65]
+    },
+    "Nickit": {
+        "Color": [168, 87, 62]
+    },
+    "Thievul": {
+        "Color": [171, 84, 58]
+    },
+    "Gossifleur": {
+        "Color": [243, 215, 64]
+    },
+    "Eldegoss": {
+        "Color": [245, 238, 208]
+    },
+    "Wooloo": {
+        "Color": [228, 224, 223]
+    },
+    "Dubwool": {
+        "Color": [96, 87, 89]
+    },
+    "Chewtle": {
+        "Color": [163, 185, 173]
+    },
+    "Drednaw-Gigantamax": {
+        "Color": [110, 84, 77]
+    },
+    "Drednaw": {
+        "Color": [187, 137, 75]
+    },
+    "Yamper": {
+        "Color": [210, 193, 120]
+    },
+    "Boltund": {
+        "Color": [106, 113, 93]
+    },
+    "Rolycoly": {
+        "Color": [61, 57, 56]
+    },
+    "Carkol": {
+        "Color": [50, 48, 48]
+    },
+    "Coalossal-Gigantamax": {
+        "Color": [62, 47, 48]
+    },
+    "Coalossal": {
+        "Color": [62, 60, 57]
+    },
+    "Applin": {
+        "Color": [185, 84, 87]
+    },
+    "Flapple-Gigantamax": {
+        "Color": [224, 180, 117]
+    },
+    "Flapple": {
+        "Color": [187, 159, 105]
+    },
+    "Appletun-Gigantamax": {
+        "Color": [224, 180, 117]
+    },
+    "Appletun": {
+        "Color": [158, 142, 94]
+    },
+    "Silicobra": {
+        "Color": [150, 144, 108]
+    },
+    "Sandaconda-Gigantamax": {
+        "Color": [117, 92, 85]
+    },
+    "Sandaconda": {
+        "Color": [96, 90, 53]
+    },
+    "Cramorant": {
+        "Color": [174, 169, 158]
+    },
+    "Arrokuda": {
+        "Color": [126, 109, 92]
+    },
+    "Barraskewda": {
+        "Color": [128, 102, 82]
+    },
+    "Toxel": {
+        "Color": [148, 110, 164]
+    },
+    "Toxtricity-Amped": {
+        "Color": [115, 89, 131]
+    },
+    "Toxtricity-Gigantamax": {
+        "Color": [76, 46, 91]
+    },
+    "Toxtricity-Low_Key": {
+        "Color": [108, 88, 133]
+    },
+    "Toxtricity": {
+        "Color": [112, 89, 132]
+    },
+    "Sizzlipede": {
+        "Color": [133, 55, 58]
+    },
+    "Centiskorch-Gigantamax": {
+        "Color": [188, 44, 57]
+    },
+    "Centiskorch": {
+        "Color": [64, 37, 40]
+    },
+    "Clobbopus": {
+        "Color": [54, 52, 74]
+    },
+    "Grapploct": {
+        "Color": [51, 58, 93]
+    },
+    "Sinistea": {
+        "Color": [185, 183, 184]
+    },
+    "Polteageist": {
+        "Color": [190, 189, 191]
+    },
+    "Hatenna": {
+        "Color": [187, 194, 205]
+    },
+    "Hattrem": {
+        "Color": [180, 197, 213]
+    },
+    "Hatterene-Gigantamax": {
+        "Color": [219, 213, 222]
+    },
+    "Hatterene": {
+        "Color": [210, 198, 212]
+    },
+    "Impidimp": {
+        "Color": [202, 107, 148]
+    },
+    "Morgrem": {
+        "Color": [51, 49, 69]
+    },
+    "Grimmsnarl-Gigantamax": {
+        "Color": [64, 62, 95]
+    },
+    "Grimmsnarl": {
+        "Color": [65, 70, 97]
+    },
+    "Obstagoon": {
+        "Color": [103, 105, 109]
+    },
+    "Perrserker": {
+        "Color": [76, 70, 67]
+    },
+    "Cursola": {
+        "Color": [232, 227, 228]
+    },
+    "Sirfetch'd": {
+        "Color": [200, 207, 172]
+    },
+    "Mr._Rime": {
+        "Color": [81, 83, 113]
+    },
+    "Runerigus": {
+        "Color": [98, 90, 92]
+    },
+    "Milcery": {
+        "Color": [237, 232, 203]
+    },
+    "Alcremie-Gigantamax": {
+        "Color": [211, 183, 152]
+    },
+    "Alcremie": {
+        "Color": [249, 230, 214]
+    },
+    "Falinks": {
+        "Color": [36, 42, 41]
+    },
+    "Pincurchin": {
+        "Color": [73, 59, 73]
+    },
+    "Snom": {
+        "Color": [205, 222, 240]
+    },
+    "Frosmoth": {
+        "Color": [207, 211, 223]
+    },
+    "Stonjourner": {
+        "Color": [140, 133, 134]
+    },
+    "Eiscue-Noice": {
+        "Color": [205, 210, 213]
+    },
+    "Eiscue": {
+        "Color": [198, 219, 227]
+    },
+    "Indeedee": {
+        "Color": [106, 99, 125]
+    },
+    "Morpeko-Full": {
+        "Color": [189, 173, 127]
+    },
+    "Morpeko-Hangry": {
+        "Color": [117, 96, 122]
+    },
+    "Morpeko": {
+        "Color": [126, 108, 115]
+    },
+    "Cufant": {
+        "Color": [229, 160, 119]
+    },
+    "Copperajah-Gigantamax": {
+        "Color": [61, 69, 73]
+    },
+    "Copperajah": {
+        "Color": [201, 161, 127]
+    },
+    "Dracozolt": {
+        "Color": [21, 85, 73]
+    },
+    "Arctozolt": {
+        "Color": [199, 219, 220]
+    },
+    "Dracovish": {
+        "Color": [27, 81, 79]
+    },
+    "Arctovish": {
+        "Color": [146, 184, 210]
+    },
+    "Duraludon-Gigantamax": {
+        "Color": [205, 202, 211]
+    },
+    "Duraludon": {
+        "Color": [212, 212, 217]
+    },
+    "Dreepy": {
+        "Color": [102, 134, 118]
+    },
+    "Drakloak": {
+        "Color": [90, 123, 126]
+    },
+    "Dragapult": {
+        "Color": [116, 189, 188]
+    },
+    "Zacian-Hero": {
+        "Color": [83, 126, 169]
+    },
+    "Zacian": {
+        "Color": [166, 119, 110]
+    },
+    "Zamazenta-Hero": {
+        "Color": [130, 74, 82]
+    },
+    "Zamazenta": {
+        "Color": [35, 45, 93]
+    },
+    "Eternatus": {
+        "Color": [216, 69, 97]
     }
 }

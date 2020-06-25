@@ -294,11 +294,24 @@
 	background-size: 60%;
 	background-repeat: no-repeat;
 	background-position: center;
+	z-index: 200;
 }
 #backBTN:hover{
 	filter: invert(100%);
 	cursor: pointer;
 }
+#information{
+	width: 50%;
+    height: calc(100vh - 220px);
+	position: absolute;
+	z-index: 0;
+}
+#name{
+	font-size: 50px;
+    margin-left: 100px;
+	margin-top: 30px;
+}
+
 /*   Keyframes   */
 @keyframes fadein {
     from { opacity: 0.7; }

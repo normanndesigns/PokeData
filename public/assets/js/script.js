@@ -172,7 +172,6 @@ window.addEventListener('load', function() {
         selector: 'li, .navigate'
     });
     SpatialNavigation.makeFocusable();
-    SpatialNavigation.focus();
 });
 
 fs.readdir(__dirname + "/assets/media/", (err, files) => {
@@ -365,18 +364,18 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
         if(e.target.tagName === "LI"){
             InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1), RGBtoHex(ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][0],ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][2],ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'][2]))
             if(e.target.childNodes[1].innerHTML.includes("Farfetch'd") || e.target.childNodes[1].innerHTML.includes("Sirfetch'd")){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML.replace("'","") + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt.replace("'","") + '.png)'
             }else if(e.target.childNodes[1].innerHTML.includes("\u2640")){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML.replace("\u2640","") + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt.replace("\u2640","") + '.png)'
             }else if(e.target.childNodes[1].innerHTML.includes("\u2642")){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML.replace("\u2642","") + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt.replace("\u2642","") + '.png)'
 
             }else if(e.target.childNodes[1].innerHTML.includes(": ")){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML.replace(": ","_") + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt.replace(": ","_") + '.png)'
             }else if(e.target.childNodes[1].innerHTML.includes(" ")){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML.replace(" ","_") + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt.replace(" ","_") + '.png)'
             }else{
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].innerHTML + '.png)'
+                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + '.png)'
             }
             document.getElementById('pokemonImage').style.backgroundColor = 'rgb(' + ColorData[e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1)]['Color'] + ')';
             ShowHideWrapper('show', 'hide', 'hide')

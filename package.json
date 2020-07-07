@@ -14,7 +14,7 @@
   "author": "Normann",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^4.2.12"
+    "electron": "^7.2.4"
   },
   "dependencies": {
     "img-color": "^1.0.2"

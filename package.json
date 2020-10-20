@@ -13,10 +13,9 @@
   ],
   "author": "Normann",
   "license": "ISC",
-  "devDependencies": {
-    "electron": "^4.2.12"
-  },
+  "devDependencies": {},
   "dependencies": {
+    "electron": "^10.1.4",
     "img-color": "^1.0.2"
   }
 }

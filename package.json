@@ -16,6 +16,6 @@
   "devDependencies": {},
   "dependencies": {
     "electron": "^10.1.4",
-    "img-color": "^1.0.2"
+    "node-fetch": "^2.6.1"
   }
 }

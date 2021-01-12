@@ -83,13 +83,13 @@
     "Pidgeot": {
         "Color": [213, 185, 149]
     },
-    "Rattata-Alola": {
+    "Alolan Rattata": {
         "Color": [73, 75, 70]
     },
     "Rattata": {
         "Color": [164, 140, 175]
     },
-    "Raticate-Alola": {
+    "Alolan Raticate": {
         "Color": [74, 71, 64]
     },
     "Raticate": {
@@ -107,28 +107,25 @@
     "Arbok": {
         "Color": [154, 140, 159]
     },
-    "Pikachu-Alola": {
-        "Color": [227, 187, 120]
-    },
     "Pikachu-Gigantamax": {
         "Color": [235, 209, 105]
     },
     "Pikachu": {
         "Color": [237, 206, 127]
     },
-    "Raichu-Alola": {
+    "Alolan Raichu": {
         "Color": [203, 177, 100]
     },
     "Raichu": {
         "Color": [222, 183, 109]
     },
-    "Sandshrew-Alola": {
+    "Alolan Sandshrew": {
         "Color": [210, 221, 228]
     },
     "Sandshrew": {
         "Color": [202, 181, 126]
     },
-    "Sandslash-Alola": {
+    "Alolan Sandslash": {
         "Color": [155, 185, 207]
     },
     "Sandslash": {
@@ -158,13 +155,13 @@
     "Clefable": {
         "Color": [236, 216, 209]
     },
-    "Vulpix-Alola": {
+    "Alolan Vulpix": {
         "Color": [222, 233, 242]
     },
     "Vulpix": {
         "Color": [200, 131, 100]
     },
-    "Ninetales-Alola": {
+    "Alolan Ninetales": {
         "Color": [207, 229, 240]
     },
     "Ninetales": {
@@ -203,22 +200,22 @@
     "Venomoth": {
         "Color": [220, 211, 227]
     },
-    "Diglett-Alola": {
+    "Alolan Diglett": {
         "Color": [141, 104, 62]
     },
     "Diglett": {
         "Color": [175, 151, 132]
     },
-    "Dugtrio-Alola": {
+    "Alolan Dugtrio": {
         "Color": [139, 105, 65]
     },
     "Dugtrio": {
         "Color": [154, 133, 120]
     },
-    "Meowth-Alola": {
+    "Alolan Meowth": {
         "Color": [190, 190, 203]
     },
-    "Meowth-Galar": {
+    "Galarian Meowth": {
         "Color": [167, 152, 137]
     },
     "Meowth-Gigantamax": {
@@ -227,7 +224,7 @@
     "Meowth": {
         "Color": [234, 222, 198]
     },
-    "Persian-Alola": {
+    "Alolan Persian": {
         "Color": [188, 189, 203]
     },
     "Persian": {
@@ -299,43 +296,43 @@
     "Tentacruel": {
         "Color": [135, 166, 181]
     },
-    "Geodude-Alola": {
+    "Alolan Geodude": {
         "Color": [168, 167, 176]
     },
     "Geodude": {
         "Color": [172, 169, 161]
     },
-    "Graveler-Alola": {
+    "Alolan Graveler": {
         "Color": [163, 160, 150]
     },
     "Graveler": {
         "Color": [183, 183, 172]
     },
-    "Golem-Alola": {
+    "Alolan Golem": {
         "Color": [77, 74, 76]
     },
     "Golem": {
         "Color": [133, 125, 121]
     },
-    "Ponyta-Galar": {
+    "Galarian Ponyta": {
         "Color": [195, 192, 211]
     },
     "Ponyta": {
         "Color": [240, 236, 201]
     },
-    "Rapidash-Galar": {
+    "Galarian Rapidash": {
         "Color": [201, 190, 213]
     },
     "Rapidash": {
         "Color": [235, 147, 72]
     },
-    "Slowpoke-Galar": {
+    "Galarian Slowpoke": {
         "Color": [226, 181, 188]
     },
     "Slowpoke": {
         "Color": [222, 177, 186]
     },
-    "Slowbro-Galar": {
+    "Galarian Slowbro": {
         "Color": [182, 149, 176]
     },
     "Slowbro-Mega": {
@@ -350,7 +347,7 @@
     "Magneton": {
         "Color": [154, 165, 169]
     },
-    "Farfetch'd-Galar": {
+    "Galarian Farfetch'd": {
         "Color": [94, 101, 78]
     },
     "Farfetch'd": {
@@ -368,13 +365,13 @@
     "Dewgong": {
         "Color": [232, 237, 245]
     },
-    "Grimer-Alola": {
+    "Alolan Grimer": {
         "Color": [115, 149, 115]
     },
     "Grimer": {
         "Color": [153, 130, 161]
     },
-    "Muk-Alola": {
+    "Alolan Muk": {
         "Color": [69, 99, 108]
     },
     "Muk": {
@@ -428,7 +425,7 @@
     "Exeggcute": {
         "Color": [236, 215, 216]
     },
-    "Exeggutor-Alola": {
+    "Alolan Exeggutor": {
         "Color": [111, 105, 69]
     },
     "Exeggutor": {
@@ -437,7 +434,7 @@
     "Cubone": {
         "Color": [213, 205, 186]
     },
-    "Marowak-Alola": {
+    "Alolan Marowak": {
         "Color": [136, 155, 147]
     },
     "Marowak": {
@@ -455,7 +452,7 @@
     "Koffing": {
         "Color": [174, 168, 171]
     },
-    "Weezing-Galar": {
+    "Galarian Weezing": {
         "Color": [131, 137, 117]
     },
     "Weezing": {
@@ -497,7 +494,7 @@
     "Starmie": {
         "Color": [150, 137, 151]
     },
-    "Mr. Mime-Galar": {
+    "Galarian Mr. Mime": {
         "Color": [82, 97, 122]
     },
     "Mr. Mime": {
@@ -584,19 +581,19 @@
     "Snorlax": {
         "Color": [47, 98, 118]
     },
-    "Articuno-Galar": {
+    "Galarian Articuno": {
         "Color": [142, 124, 165]
     },
     "Articuno": {
         "Color": [103, 164, 200]
     },
-    "Zapdos-Galar": {
+    "Galarian Zapdos": {
         "Color": [41, 40, 40]
     },
     "Zapdos": {
         "Color": [218, 187, 119]
     },
-    "Moltres-Galar": {
+    "Galarian Moltres": {
         "Color": [211, 51, 103]
     },
     "Moltres": {
@@ -845,7 +842,7 @@
     "Piloswine": {
         "Color": [164, 125, 110]
     },
-    "Corsola-Galar": {
+    "Galarian Corsola": {
         "Color": [227, 224, 222]
     },
     "Corsola": {
@@ -938,6 +935,9 @@
     "Lugia": {
         "Color": [223, 225, 236]
     },
+    "Ho Oh": {
+        "Color": [234, 98, 74]
+    },
     "Celebi": {
         "Color": [215, 230, 201]
     },
@@ -983,13 +983,13 @@
     "Mightyena": {
         "Color": [192, 192, 193]
     },
-    "Zigzagoon-Galar": {
+    "Galarian Zigzagoon": {
         "Color": [49, 51, 54]
     },
     "Zigzagoon": {
         "Color": [169, 148, 129]
     },
-    "Linoone-Galar": {
+    "Galarian Linoone": {
         "Color": [225, 222, 222]
     },
     "Linoone": {
@@ -1790,6 +1790,9 @@
     "Regigigas": {
         "Color": [190, 175, 133]
     },
+    "Giratina": {
+        "Color": [66, 63, 58]
+    },
     "Giratina-Altered": {
         "Color": [66, 63, 58]
     },
@@ -1807,6 +1810,9 @@
     },
     "Darkrai": {
         "Color": [60, 60, 60]
+    },
+    "Shaymin": {
+        "Color": [179, 174, 117]
     },
     "Shaymin-Land": {
         "Color": [179, 174, 117]
@@ -2006,16 +2012,16 @@
     "Krookodile": {
         "Color": [141, 98, 106]
     },
-    "Darumaka-Galar": {
+    "Galarian Darumaka": {
         "Color": [211, 221, 224]
     },
     "Darumaka": {
         "Color": [189, 97, 84]
     },
-    "Darmanitan-Galar-Zen": {
+    "Galarian Darmanitan-Zen": {
         "Color": [227, 130, 81]
     },
-    "Darmanitan-Galar": {
+    "Galarian Darmanitan": {
         "Color": [50, 79, 95]
     },
     "Darmanitan-Zen": {
@@ -2042,7 +2048,7 @@
     "Sigilyph": {
         "Color": [234, 175, 115]
     },
-    "Yamask-Galar": {
+    "Galarian Yamask": {
         "Color": [65, 61, 63]
     },
     "Yamask": {
@@ -2117,6 +2123,9 @@
     "Vanilluxe": {
         "Color": [215, 227, 241]
     },
+    "Deerling": {
+        "Color": [215, 157, 106]
+    },
     "Deerling-Autumn": {
         "Color": [215, 157, 106]
     },
@@ -2128,6 +2137,9 @@
     },
     "Deerling-Winter": {
         "Color": [181, 152, 134]
+    },
+    "Sawsbuck": {
+        "Color": [145, 89, 71]
     },
     "Sawsbuck-Autumn": {
         "Color": [145, 89, 71]
@@ -2237,7 +2249,7 @@
     "Accelgor": {
         "Color": [121, 122, 141]
     },
-    "Stunfisk-Galar": {
+    "Galarian Stunfisk": {
         "Color": [114, 108, 105]
     },
     "Stunfisk": {
@@ -2504,9 +2516,6 @@
     "Pangoro": {
         "Color": [95, 95, 106]
     },
-    "Furfrou-Blue": {
-        "Color": [194, 213, 206]
-    },
     "Furfrou": {
         "Color": [228, 235, 220]
     },
@@ -2723,6 +2732,9 @@
     "Crabominable": {
         "Color": [58, 75, 95]
     },
+    "Oricorio": {
+        "Color": [212, 78, 84]
+    },
     "Oricorio-Baile": {
         "Color": [212, 78, 84]
     },
@@ -2757,6 +2769,9 @@
         "Color": [32, 54, 77]
     },
     "Wishiwashi-Solo": {
+        "Color": [95, 127, 162]
+    },
+    "Wishiwashi": {
         "Color": [95, 127, 162]
     },
     "Mareanie": {

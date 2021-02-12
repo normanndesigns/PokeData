@@ -256,8 +256,7 @@ function InsertPokemonData(PokemonName){
         "Meloetta": "Aria"
     }
     DexID = PokemonData[PokemonName.toLowerCase()]
-    PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace(' ',"-")
-    
+    PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace(' ',"-").replace("♂", "-m").replace("♀", "-f")
     if(PokemonNameForLink.includes('Alolan')){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("alolan-","") + "-alola"
     }else if(PokemonNameForLink.includes('Galarian')){

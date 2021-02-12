@@ -64,10 +64,12 @@
 /*   Eyes   */
 .eye-wrapper{
 	display: flex;
-	width: 100%;
-	justify-content: center;
-	position: relative;
-	z-index: 2;
+    width: 350px;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
 }
 .arch{
 	position: absolute;
@@ -274,17 +276,41 @@
 .pokemon img{
 	width: 100px;
 }
-#pokemonImage{
+.PokemonImageWrapper{
 	background-color: #F2F5F8;
+    position: relative;
+    z-index: 2;
+}
+#pokemonImage{
 	width: 100%;
 	height: calc(100vh - 220px);
-	z-index: 5;
+	position: relative;
+	z-index: 1;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 20vw;
 	background-position-x: calc(95%);
 	background-position-y: calc(95%);
+	overflow-y: auto;
 }
+#pokemonImage::-webkit-scrollbar {
+	width: 10px;
+  }
+  
+  /* Track */
+  #pokemonImage::-webkit-scrollbar-track {
+	background: #DE6463; 
+  }
+  
+  /* Handle */
+  #pokemonImage::-webkit-scrollbar-thumb {
+	background: #CD5352; 
+  }
+  
+  /* Handle on hover */
+  #pokemonImage::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
 #backBTN{
 	width: 30px;
 	height: 30px;
@@ -307,12 +333,9 @@
 .information-wrapper{
 	width: 50%;
     height: calc(100vh - 220px);
-	position: absolute;
-	z-index: 0;
 }
 .information{
-	margin-top: 65px;
-	margin-left: 35px;
+	margin-top: 55px;
 }
 #name{
 	font-size: 60px;
@@ -360,7 +383,7 @@
 	width: 100%;
 }
 .base-stats{
-	display: flex;
+	display: inline-flex;
 }
 .base-stats > p:first-of-type{
 	width: 80px;
@@ -374,6 +397,20 @@
 }
 .min-max-stats > p{
 	margin-left: 25px;
+}
+.min-max-text{
+	display: inline-flex;
+}
+.min-max-text > p:first-of-type{
+    margin-right: 20px;
+}
+.total-stats{
+	display: flex;
+    justify-content: space-between;
+}
+.section-title{
+	margin-top: 20px;
+    font-size: 25px;
 }
 .progress-wrapper{
 	display: flex;
@@ -397,12 +434,40 @@
 .stats-green{
 	background-color: #a0e515;
 }
+#evolution-wrapper{
+	display: flex;
+	align-items: center;
+}
+.Pokemon-evo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.EvoPokemon{
+	padding: 10px;
+}
+.EvoPokemon > img{
+	height: 100px;
+}
+.EvoPokemon > p{
+	text-align: center;
+}
+.EvoSteps{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 116px;
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+}
 #circle-wrapper{
 	display: none;
 	position: fixed;
     bottom: calc(0% + 20px);
     right: calc(0% + 20px);
-	z-index: 8;
+	z-index: 0;
 }
 #circle{
 	width: 480px;

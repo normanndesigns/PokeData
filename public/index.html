@@ -65,6 +65,7 @@
         </form>
       </div>
     </div>
+    <div class="PokemonImageWrapper">
     <div class="none" id="pokemonImage">
       <div id="backBTN"></div>
       <div class="information-wrapper">
@@ -103,7 +104,22 @@
               <div class="progress-bar"><div class="progress" id="Speed-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Speed-min-stat"></p><p id="Speed-max-stat"></p></div>
             </div>
-            <div class="base-stats total-stats"><p>Total:</p><p id="Total-stat"></p></div>
+            <div class="total-stats">
+              <div class="base-stats">
+                <p>Total:</p>
+                <p id="Total-stat"></p>
+              </div>
+              <div class="min-max-text">
+                <p>Min</p>
+                <p>Max</p>
+              </div>
+            </div>
+          </div>
+          <h2 class="section-title">Evolution</h2>
+          <div id="evolution-wrapper">
+            <div id="Stage0"></div>
+            <div id="Stage1"></div>
+            <div id="Stage2"></div>
           </div>
         </div>
       </div>
@@ -114,6 +130,7 @@
       <path id="st0" d="M500,131.99V0C223.86,0,0,223.86,0,500h131.99C131.99,296.75,296.75,131.99,500,131.99z"/>
       </svg>
     </div>
+  </div>
     <script src="assets/js/spatial_navigation.js"></script>
     <script src="assets/js/script.js"></script>
 </body>

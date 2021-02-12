@@ -254,52 +254,52 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "PPokeDexIDsgey": {
-        "PPokeDexIDsgey": {
+    "Pidgey": {
+        "Pidgey": {
             "PokeDexIDs": "016",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
         },
-        "PPokeDexIDsgeotto": {
+        "Pidgeotto": {
             "PokeDexIDs": "017",
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 36)"
         },
-        "PPokeDexIDsgeot": {
+        "Pidgeot": {
             "PokeDexIDs": "018",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "PPokeDexIDsgeotto": {
-        "PPokeDexIDsgey": {
+    "Pidgeotto": {
+        "Pidgey": {
             "PokeDexIDs": "016",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
         },
-        "PPokeDexIDsgeotto": {
+        "Pidgeotto": {
             "PokeDexIDs": "017",
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 36)"
         },
-        "PPokeDexIDsgeot": {
+        "Pidgeot": {
             "PokeDexIDs": "018",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "PPokeDexIDsgeot": {
-        "PPokeDexIDsgey": {
+    "Pidgeot": {
+        "Pidgey": {
             "PokeDexIDs": "016",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
         },
-        "PPokeDexIDsgeotto": {
+        "Pidgeotto": {
             "PokeDexIDs": "017",
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 36)"
         },
-        "PPokeDexIDsgeot": {
+        "Pidgeot": {
             "PokeDexIDs": "018",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
@@ -524,103 +524,103 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsoran\u2640": {
-        "NPokeDexIDsoran\u2640": {
+    "Nidoran♀": {
+        "Nidoran♀": {
             "PokeDexIDs": "029",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorina": {
+        "Nidorina": {
             "PokeDexIDs": "030",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoqueen": {
+        "Nidoqueen": {
             "PokeDexIDs": "031",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsorina": {
-        "NPokeDexIDsoran\u2640": {
+    "Nidorina": {
+        "Nidoran♀": {
             "PokeDexIDs": "029",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorina": {
+        "Nidorina": {
             "PokeDexIDs": "030",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoqueen": {
+        "Nidoqueen": {
             "PokeDexIDs": "031",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsoqueen": {
-        "NPokeDexIDsoran\u2640": {
+    "Nidoqueen": {
+        "Nidoran♀": {
             "PokeDexIDs": "029",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorina": {
+        "Nidorina": {
             "PokeDexIDs": "030",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoqueen": {
+        "Nidoqueen": {
             "PokeDexIDs": "031",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsoran\u2642": {
-        "NPokeDexIDsoran\u2642": {
+    "Nidoran♂": {
+        "Nidoran♂": {
             "PokeDexIDs": "032",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorino": {
+        "Nidorino": {
             "PokeDexIDs": "033",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoking": {
+        "Nidoking": {
             "PokeDexIDs": "034",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsorino": {
-        "NPokeDexIDsoran\u2642": {
+    "Nidorino": {
+        "Nidoran♂": {
             "PokeDexIDs": "032",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorino": {
+        "Nidorino": {
             "PokeDexIDs": "033",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoking": {
+        "Nidoking": {
             "PokeDexIDs": "034",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "NPokeDexIDsoking": {
-        "NPokeDexIDsoran\u2642": {
+    "Nidoking": {
+        "Nidoran♂": {
             "PokeDexIDs": "032",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 16)"
         },
-        "NPokeDexIDsorino": {
+        "Nidorino": {
             "PokeDexIDs": "033",
             "EvolutionStage": 1,
             "HowToEvolve": "(use Moon Stone)"
         },
-        "NPokeDexIDsoking": {
+        "Nidoking": {
             "PokeDexIDs": "034",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
@@ -1439,19 +1439,19 @@
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 40)"
         },
-        "RapPokeDexIDsash": {
+        "Rapidash": {
             "PokeDexIDs": "078",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         }
     },
-    "RapPokeDexIDsash": {
+    "Rapidash": {
         "Ponyta": {
             "PokeDexIDs": "077",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 40)"
         },
-        "RapPokeDexIDsash": {
+        "Rapidash": {
             "PokeDexIDs": "078",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -1463,19 +1463,19 @@
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 40)"
         },
-        "Galarian RapPokeDexIDsash": {
+        "Galarian Rapidash": {
             "PokeDexIDs": "078",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         }
     },
-    "Galarian RapPokeDexIDsash": {
+    "Galarian Rapidash": {
         "Galarian Ponyta": {
             "PokeDexIDs": "077",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 40)"
         },
-        "Galarian RapPokeDexIDsash": {
+        "Galarian Rapidash": {
             "PokeDexIDs": "078",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -1899,7 +1899,7 @@
             "PokeDexIDs": "102",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Exeggutor": "Use a Leaf Stone, outsPokeDexIDse Alola",
+                "Exeggutor": "Use a Leaf Stone, Outside Alola",
                 "Alolan Exeggutor": "Use a Leaf Stone, in Alola"
             }
         },
@@ -1919,7 +1919,7 @@
             "PokeDexIDs": "102",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Exeggutor": "Use a Leaf Stone, outsPokeDexIDse Alola",
+                "Exeggutor": "Use a Leaf Stone, Outside Alola",
                 "Alolan Exeggutor": "Use a Leaf Stone, in Alola"
             }
         },
@@ -1939,7 +1939,7 @@
             "PokeDexIDs": "102",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Exeggutor": "Use a Leaf Stone, outsPokeDexIDse Alola",
+                "Exeggutor": "Use a Leaf Stone, Outside Alola",
                 "Alolan Exeggutor": "Use a Leaf Stone, in Alola"
             }
         },
@@ -1959,7 +1959,7 @@
             "PokeDexIDs": "104",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Marowak": "Level 28, outsPokeDexIDse Alola",
+                "Marowak": "Level 28, Outside Alola",
                 "Alolan Marowak": "Level 28, Nighttime, in Alola"
             }
         },
@@ -1979,7 +1979,7 @@
             "PokeDexIDs": "104",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Marowak": "Level 28, outsPokeDexIDse Alola",
+                "Marowak": "Level 28, Outside Alola",
                 "Alolan Marowak": "Level 28, Nighttime, in Alola"
             }
         },
@@ -1999,7 +1999,7 @@
             "PokeDexIDs": "104",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Marowak": "Level 28, outsPokeDexIDse Alola",
+                "Marowak": "Level 28, Outside Alola",
                 "Alolan Marowak": "Level 28, Nighttime, in Alola"
             }
         },
@@ -2344,7 +2344,7 @@
         }
     },
     "Electabuzz": {
-        "ElekPokeDexIDs": {
+        "Elekid": {
             "PokeDexIDs": "239",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 30)"
@@ -3788,8 +3788,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "RemoraPokeDexIDs": {
-        "RemoraPokeDexIDs": {
+    "Remoraid": {
+        "Remoraid": {
             "PokeDexIDs": "223",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 25)"
@@ -3801,7 +3801,7 @@
         }
     },
     "Octillery": {
-        "RemoraPokeDexIDs": {
+        "Remoraid": {
             "PokeDexIDs": "223",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 25)"
@@ -3816,7 +3816,7 @@
         "Mantyke": {
             "PokeDexIDs": "458",
             "EvolutionStage": 0,
-            "HowToEvolve": "(with RemoraPokeDexIDs in party)"
+            "HowToEvolve": "(with Remoraid in party)"
         },
         "Mantine": {
             "PokeDexIDs": "226",
@@ -3970,8 +3970,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "ElekPokeDexIDs": {
-        "ElekPokeDexIDs": {
+    "Elekid": {
+        "Elekid": {
             "PokeDexIDs": "239",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 30)"
@@ -6030,8 +6030,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "BPokeDexIDsoof": {
-        "BPokeDexIDsoof": {
+    "Bidoof": {
+        "Bidoof": {
             "PokeDexIDs": "399",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 15)"
@@ -6043,7 +6043,7 @@
         }
     },
     "Bibarel": {
-        "BPokeDexIDsoof": {
+        "Bidoof": {
             "PokeDexIDs": "399",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 15)"
@@ -6163,8 +6163,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "CranPokeDexIDsos": {
-        "CranPokeDexIDsos": {
+    "Cranidos": {
+        "Cranidos": {
             "PokeDexIDs": "408",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 30)"
@@ -6176,7 +6176,7 @@
         }
     },
     "Rampardos": {
-        "CranPokeDexIDsos": {
+        "Cranidos": {
             "PokeDexIDs": "408",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 30)"
@@ -6799,7 +6799,7 @@
         "Mantyke": {
             "PokeDexIDs": "458",
             "EvolutionStage": 0,
-            "HowToEvolve": "(with RemoraPokeDexIDs in party)"
+            "HowToEvolve": "(with Remoraid in party)"
         },
         "Mantine": {
             "PokeDexIDs": "226",
@@ -6902,7 +6902,7 @@
         }
     },
     "Electivire": {
-        "ElekPokeDexIDs": {
+        "Elekid": {
             "PokeDexIDs": "239",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 30)"
@@ -7546,8 +7546,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "PPokeDexIDsove": {
-        "PPokeDexIDsove": {
+    "Pidove": {
+        "Pidove": {
             "PokeDexIDs": "519",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 21)"
@@ -7564,7 +7564,7 @@
         }
     },
     "Tranquill": {
-        "PPokeDexIDsove": {
+        "Pidove": {
             "PokeDexIDs": "519",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 21)"
@@ -7581,7 +7581,7 @@
         }
     },
     "Unfezant": {
-        "PPokeDexIDsove": {
+        "Pidove": {
             "PokeDexIDs": "519",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 21)"
@@ -9417,7 +9417,7 @@
         }
     },
     "Florges": {
-        "Flab\u00e9b\u00e9": {
+        "Flabébé": {
             "PokeDexIDs": "669",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 19)"
@@ -9433,8 +9433,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "SkPokeDexIDsdo": {
-        "SkPokeDexIDsdo": {
+    "Skiddo": {
+        "Skiddo": {
             "PokeDexIDs": "672",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 32)"
@@ -9446,7 +9446,7 @@
         }
     },
     "Gogoat": {
-        "SkPokeDexIDsdo": {
+        "Skiddo": {
             "PokeDexIDs": "672",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 32)"
@@ -9608,7 +9608,7 @@
         "Inkay": {
             "PokeDexIDs": "686",
             "EvolutionStage": 0,
-            "HowToEvolve": "(Level 30, holding console upsPokeDexIDse down)"
+            "HowToEvolve": "(Level 30, holding console upside down)"
         },
         "Malamar": {
             "PokeDexIDs": "687",
@@ -9620,7 +9620,7 @@
         "Inkay": {
             "PokeDexIDs": "686",
             "EvolutionStage": 0,
-            "HowToEvolve": "(Level 30, holding console upsPokeDexIDse down)"
+            "HowToEvolve": "(Level 30, holding console upside down)"
         },
         "Malamar": {
             "PokeDexIDs": "687",
@@ -9986,7 +9986,7 @@
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 34)"
         },
-        "DecPokeDexIDsueye": {
+        "Decidueye": {
             "PokeDexIDs": "724",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
@@ -10003,13 +10003,13 @@
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 34)"
         },
-        "DecPokeDexIDsueye": {
+        "Decidueye": {
             "PokeDexIDs": "724",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
         }
     },
-    "DecPokeDexIDsueye": {
+    "Decidueye": {
         "Rowlet": {
             "PokeDexIDs": "722",
             "EvolutionStage": 0,
@@ -10020,7 +10020,7 @@
             "EvolutionStage": 1,
             "HowToEvolve": "(Level 34)"
         },
-        "DecPokeDexIDsueye": {
+        "Decidueye": {
             "PokeDexIDs": "724",
             "EvolutionStage": 2,
             "HowToEvolve": "Final Form"
@@ -10307,17 +10307,17 @@
             "PokeDexIDs": "744",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Lycanroc (MPokeDexIDsday Form)": "Level 25, Daytime, in Pokémon Sun or Ultra Sun",
-                "Lycanroc (MPokeDexIDsnight Form)": "Level 25, Nighttime, in Pokémon Moon or Ultra Moon",
+                "Lycanroc (Midday Form)": "Level 25, Daytime, in Pokémon Sun or Ultra Sun",
+                "Lycanroc (Midnight Form)": "Level 25, Nighttime, in Pokémon Moon or Ultra Moon",
                 "Lycanroc (Dusk Form)": "Level 25, Dusk 5-6pm, in Ultra Sun/Moon (Only if it is a Own Tempo Rockruff)"
             }
         },
-        "Lycanroc (MPokeDexIDsday Form)": {
+        "Lycanroc (Midday Form)": {
             "PokeDexIDs": "745",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Lycanroc (MPokeDexIDsnight Form)": {
+        "Lycanroc (Midnight Form)": {
             "PokeDexIDs": "745",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -10333,17 +10333,17 @@
             "PokeDexIDs": "744",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Lycanroc (MPokeDexIDsday Form)": "Level 25, Daytime, in Pokémon Sun or Ultra Sun",
-                "Lycanroc (MPokeDexIDsnight Form)": "Level 25, Nighttime, in Pokémon Moon or Ultra Moon",
+                "Lycanroc (Midday Form)": "Level 25, Daytime, in Pokémon Sun or Ultra Sun",
+                "Lycanroc (Midnight Form)": "Level 25, Nighttime, in Pokémon Moon or Ultra Moon",
                 "Lycanroc (Dusk Form)": "Level 25, Dusk 5-6pm, in Ultra Sun/Moon (Only if it is a Own Tempo Rockruff)"
             }
         },
-        "Lycanroc (MPokeDexIDsday Form)": {
+        "Lycanroc (Midday Form)": {
             "PokeDexIDs": "745",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Lycanroc (MPokeDexIDsnight Form)": {
+        "Lycanroc (Midnight Form)": {
             "PokeDexIDs": "745",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -10402,25 +10402,25 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "DewpPokeDexIDser": {
-        "DewpPokeDexIDser": {
+    "Dewpider": {
+        "Dewpider": {
             "PokeDexIDs": "751",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 22)"
         },
-        "AraquanPokeDexIDs": {
+        "Araquanid": {
             "PokeDexIDs": "752",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         }
     },
-    "AraquanPokeDexIDs": {
-        "DewpPokeDexIDser": {
+    "Araquanid": {
+        "Dewpider": {
             "PokeDexIDs": "751",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 22)"
         },
-        "AraquanPokeDexIDs": {
+        "Araquanid": {
             "PokeDexIDs": "752",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -11029,8 +11029,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "RookPokeDexIDsee": {
-        "RookPokeDexIDsee": {
+    "Rookidee": {
+        "Rookidee": {
             "PokeDexIDs": "821",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
@@ -11047,7 +11047,7 @@
         }
     },
     "Corvisquire": {
-        "RookPokeDexIDsee": {
+        "Rookidee": {
             "PokeDexIDs": "821",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
@@ -11064,7 +11064,7 @@
         }
     },
     "Corviknight": {
-        "RookPokeDexIDsee": {
+        "Rookidee": {
             "PokeDexIDs": "821",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 18)"
@@ -11573,8 +11573,8 @@
             "HowToEvolve": "Final Form"
         }
     },
-    "ImpPokeDexIDsimp": {
-        "ImpPokeDexIDsimp": {
+    " Impidimp": {
+        " Impidimp": {
             "PokeDexIDs": "859",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 32)"
@@ -11591,7 +11591,7 @@
         }
     },
     "Morgrem": {
-        "ImpPokeDexIDsimp": {
+        " Impidimp": {
             "PokeDexIDs": "859",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 32)"
@@ -11608,7 +11608,7 @@
         }
     },
     "Grimmsnarl": {
-        "ImpPokeDexIDsimp": {
+        " Impidimp": {
             "PokeDexIDs": "859",
             "EvolutionStage": 0,
             "HowToEvolve": "(Level 32)"
@@ -11777,7 +11777,7 @@
             "EvolutionStage": 0,
             "HowToEvolve": {
                 "Urshifu (Single Strike Style)": "Interact with the Scroll of Darkness",
-                "Urshifu (RapPokeDexIDs Strike Style)": "Interact with the Scroll of Waters"
+                "Urshifu (Rapid Strike Style)": "Interact with the Scroll of Waters"
             }
         },
         "Urshifu (Single Strike Style)": {
@@ -11785,7 +11785,7 @@
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Urshifu (RapPokeDexIDs Strike Style)": {
+        "Urshifu (Rapid Strike Style)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
@@ -11797,7 +11797,7 @@
             "EvolutionStage": 0,
             "HowToEvolve": {
                 "Urshifu (Single Strike Style)": "Interact with the Scroll of Darkness",
-                "Urshifu (RapPokeDexIDs Strike Style)": "Interact with the Scroll of Waters"
+                "Urshifu (Rapid Strike Style)": "Interact with the Scroll of Waters"
             }
         },
         "Urshifu (Single Strike Style)": {
@@ -11805,7 +11805,7 @@
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Urshifu (RapPokeDexIDs Strike Style)": {
+        "Urshifu (Rapid Strike Style)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"

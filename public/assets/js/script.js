@@ -200,7 +200,7 @@ function EvolutionLine(PokemonName){
             console.log(Key)
             DivWrapper = document.createElement('div');
             DivWrapper.className = "pokemon-evo";
-            PokemonWrapper = document.createElement('div')
+            PokemonWrapper = document.createElement('div');
             PokemonWrapper.className = "EvoPokemon";
 
             ImgTag = document.createElement('img');
@@ -215,7 +215,7 @@ function EvolutionLine(PokemonName){
             }else{
                 ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png";
             }
-            
+
             ImgTag.alt = EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png";
             PokemonWrapper.appendChild(ImgTag);
 
@@ -247,7 +247,15 @@ function EvolutionLine(PokemonName){
                 EvoMethod.appendChild(EvoMethodPTag);
                 DivWrapper.appendChild(PokemonWrapper)
                 DivWrapper.appendChild(EvoMethod)
-            }         
+            } 
+            
+            ImgTag.dataset.pokemonimg = ImgTag.src;
+            ImgTag.dataset.pokemonname = Key;
+            ImgTag.dataset.dexid = EvolutionData[PokemonName][Key]["PokeDexIDs"];
+            PTag.dataset.pokemonimg = ImgTag.src;
+            PTag.dataset.pokemonname = Key;
+            PTag.dataset.dexid = EvolutionData[PokemonName][Key]["PokeDexIDs"];
+            
             Stage = "Stage" + EvolutionData[PokemonName][Key]["EvolutionStage"]
             document.getElementById(Stage).append(DivWrapper)
 
@@ -275,7 +283,7 @@ function InsertPokemonData(PokemonName){
     }else if(PokemonName === "Urshifu (Rapid Strike)"){
         PokemonNameForLink = "urshifu-rapid-strike";
     }else{
-        PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f")
+        PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace("'","").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f")
     }
     if(PokemonNameForLink.includes('Alolan')){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("alolan-","") + "-alola"
@@ -461,5 +469,18 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
             InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1));
             ShowHideWrapper('show', 'hide', 'hide', 'show');
         }
+    }
+})
+
+document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
+    console.log(e.target)
+    if(e.target.tagName === "P" || e.target.tagName === "IMG" ){
+        document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
+        document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
+        InsertPokemonData(e.target.dataset.pokemonname);
+        ShowHideWrapper('show', 'hide', 'hide', 'show');
+        console.log(document.getElementById('pokemonImage').style.backgroundImage)
+        console.log(e.target.dataset.pokemonimg)
+        console.log(e.target.dataset.pokemonname)
     }
 })

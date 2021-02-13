@@ -191,13 +191,11 @@ function search(){
 }
 
 function EvolutionLine(PokemonName){
-    console.log(EvolutionData[PokemonName])
     document.getElementById("Stage0").innerHTML = "";
     document.getElementById("Stage1").innerHTML = "";
     document.getElementById("Stage2").innerHTML = "";
     if(EvolutionData[PokemonName] != undefined){
         for (Key in EvolutionData[PokemonName]){
-            console.log(Key)
             DivWrapper = document.createElement('div');
             DivWrapper.className = "pokemon-evo";
             PokemonWrapper = document.createElement('div');
@@ -255,7 +253,7 @@ function EvolutionLine(PokemonName){
             PTag.dataset.pokemonimg = ImgTag.src;
             PTag.dataset.pokemonname = Key;
             PTag.dataset.dexid = EvolutionData[PokemonName][Key]["PokeDexIDs"];
-            
+
             Stage = "Stage" + EvolutionData[PokemonName][Key]["EvolutionStage"]
             document.getElementById(Stage).append(DivWrapper)
 
@@ -289,7 +287,6 @@ function InsertPokemonData(PokemonName){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("alolan-","") + "-alola"
     }else if(PokemonNameForLink.includes('Galarian')){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("galarian-","")  + "-galar"
-        console.log(PokemonNameForLink)
     }else{
         if(!Number(PokemonData[PokemonNameForLink.toLowerCase()]) === NaN){
             var endpoint = Number(PokemonData[PokemonNameForLink.toLowerCase()])
@@ -327,8 +324,8 @@ function InsertPokemonData(PokemonName){
               
             typeIcon.style.backgroundColor = TypeColorData[obj["types"][i]["type"]["name"]];
             typeName.innerHTML = capitalizeFirstLetter(obj["types"][i]["type"]["name"]);
-
-            var stats = ["HP", "Attack", "Defense", "Special-Attack", "Special-Defense", "Speed"];
+        }
+        var stats = ["HP", "Attack", "Defense", "Special-Attack", "Special-Defense", "Speed"];
             for(i = 0; i < stats.length; i++){
                 if(stats[i] === "HP"){
                     document.getElementById(stats[i] + "-stat").innerHTML = obj["stats"][0]['base_stat'];
@@ -362,7 +359,6 @@ function InsertPokemonData(PokemonName){
             }
             document.getElementById("Total-stat").innerHTML = obj["stats"][0]['base_stat'] + obj["stats"][1]['base_stat'] + obj["stats"][2]['base_stat'] + obj["stats"][3]['base_stat'] + obj["stats"][4]['base_stat'] + obj["stats"][5]['base_stat']
             EvolutionLine(PokemonName.replace("-"," "));
-        }
     })
     .catch(() => {
         if(Variants[PokemonName] != undefined){
@@ -473,14 +469,10 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
 })
 
 document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
-    console.log(e.target)
     if(e.target.tagName === "P" || e.target.tagName === "IMG" ){
         document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
         document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
         InsertPokemonData(e.target.dataset.pokemonname);
         ShowHideWrapper('show', 'hide', 'hide', 'show');
-        console.log(document.getElementById('pokemonImage').style.backgroundImage)
-        console.log(e.target.dataset.pokemonimg)
-        console.log(e.target.dataset.pokemonname)
     }
 })

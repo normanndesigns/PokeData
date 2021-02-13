@@ -470,9 +470,12 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
 
 document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
     if(e.target.tagName === "P" || e.target.tagName === "IMG" ){
-        document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
-        document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
-        InsertPokemonData(e.target.dataset.pokemonname);
-        ShowHideWrapper('show', 'hide', 'hide', 'show');
+        if(e.target.className != "EvoSteps"){
+            document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
+            document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
+            InsertPokemonData(e.target.dataset.pokemonname);
+            ShowHideWrapper('show', 'hide', 'hide', 'show');
+            document.getElementById("pokemonImage").scrollTo(0,0)
+        }
     }
 })

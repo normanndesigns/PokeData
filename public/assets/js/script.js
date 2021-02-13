@@ -111,7 +111,13 @@ function createListEntry(src, dom, file){
                 image.alt = file.replace(".png","-Alolan.png");;
             }else if(element.includes('Galarian')){
                 image.src = src.replace(".png","-Galarian.png");
-                image.alt = file.replace(".png","-Galarian.png");;
+                image.alt = file.replace(".png","-Galarian.png");
+            }else if(element.includes('Single Strike')){
+                image.src = src.replace(".png","-(Single-Strike).png");
+                image.alt = file.replace(".png","-(Single-Strike).png");
+            }else if(element.includes('Rapid Strike')){
+                image.src = src.replace(".png","-(Rapid-Strike).png");
+                image.alt = file.replace(".png","-(Rapid-Strike).png");
             }else{
                 image.src = src;
                 image.alt = file;
@@ -168,6 +174,12 @@ function search(){
             }else if(tempArray[i - 1].includes('galarian')){
                 document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-Galarian" + ".png";
                 document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-Galarian" + '.png';
+            }else if(tempArray[i - 1].includes('single')){
+                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-(Single-Strike)" + ".png";
+                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-(Single-Strike)" + '.png';
+            }else if(tempArray[i - 1].includes('rapid')){
+                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-(Rapid-Strike)" + ".png";
+                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-(Rapid-Strike)" + '.png';
             }
             else{
                 document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + ".png";
@@ -179,12 +191,10 @@ function search(){
 }
 
 function EvolutionLine(PokemonName){
+    console.log(EvolutionData[PokemonName])
     document.getElementById("Stage0").innerHTML = "";
     document.getElementById("Stage1").innerHTML = "";
     document.getElementById("Stage2").innerHTML = "";
-    if(PokemonName === "Type Null"){
-        PokemonName = "Type: Null";
-    }
     if(EvolutionData[PokemonName] != undefined){
         for (Key in EvolutionData[PokemonName]){
             console.log(Key)
@@ -198,6 +208,10 @@ function EvolutionLine(PokemonName){
                 ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-Alolan.png";
             }else if(Key.includes("Galarian")){
                 ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-Galarian.png";
+            }else if(Key.includes("Single")){
+                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-(Single-Strike).png";
+            }else if(Key.includes("Rapid")){
+                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-(Rapid-Strike).png";
             }else{
                 ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png";
             }
@@ -256,11 +270,17 @@ function InsertPokemonData(PokemonName){
         "Meloetta": "Aria"
     }
     DexID = PokemonData[PokemonName.toLowerCase()]
-    PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace(' ',"-").replace("♂", "-m").replace("♀", "-f")
+    if(PokemonName === "Urshifu (Single Strike)"){
+        PokemonNameForLink = "urshifu-single-strike";
+    }else if(PokemonName === "Urshifu (Rapid Strike)"){
+        PokemonNameForLink = "urshifu-rapid-strike";
+    }else{
+        PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f")
+    }
     if(PokemonNameForLink.includes('Alolan')){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("alolan-","") + "-alola"
     }else if(PokemonNameForLink.includes('Galarian')){
-        var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace(" ", "-").replace("galarian-","")  + "-galar"
+        var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("galarian-","")  + "-galar"
         console.log(PokemonNameForLink)
     }else{
         if(!Number(PokemonData[PokemonNameForLink.toLowerCase()]) === NaN){

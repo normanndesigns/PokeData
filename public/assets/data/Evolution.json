@@ -11776,36 +11776,56 @@
             "PokeDexIDs": "891",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Urshifu (Single Strike Style)": "Interact with the Scroll of Darkness",
-                "Urshifu (Rapid Strike Style)": "Interact with the Scroll of Waters"
+                "Urshifu (Single Strike)": "Interact with the Scroll of Darkness",
+                "Urshifu (Rapid Strike)": "Interact with the Scroll of Waters"
             }
         },
-        "Urshifu (Single Strike Style)": {
+        "Urshifu (Single Strike)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Urshifu (Rapid Strike Style)": {
+        "Urshifu (Rapid Strike)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         }
     },
-    "Urshifu": {
+    "Urshifu (Single Strike)": {
         "Kubfu": {
             "PokeDexIDs": "891",
             "EvolutionStage": 0,
             "HowToEvolve": {
-                "Urshifu (Single Strike Style)": "Interact with the Scroll of Darkness",
-                "Urshifu (Rapid Strike Style)": "Interact with the Scroll of Waters"
+                "Urshifu (Single Strike)": "Interact with the Scroll of Darkness",
+                "Urshifu (Rapid Strike)": "Interact with the Scroll of Waters"
             }
         },
-        "Urshifu (Single Strike Style)": {
+        "Urshifu (Single Strike)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"
         },
-        "Urshifu (Rapid Strike Style)": {
+        "Urshifu (Rapid Strike)": {
+            "PokeDexIDs": "892",
+            "EvolutionStage": 1,
+            "HowToEvolve": "Final Form"
+        }
+    },
+    "Urshifu (Rapid Strike)": {
+        "Kubfu": {
+            "PokeDexIDs": "891",
+            "EvolutionStage": 0,
+            "HowToEvolve": {
+                "Urshifu (Single Strike)": "Interact with the Scroll of Darkness",
+                "Urshifu (Rapid Strike)": "Interact with the Scroll of Waters"
+            }
+        },
+        "Urshifu (Single Strike)": {
+            "PokeDexIDs": "892",
+            "EvolutionStage": 1,
+            "HowToEvolve": "Final Form"
+        },
+        "Urshifu (Rapid Strike)": {
             "PokeDexIDs": "892",
             "EvolutionStage": 1,
             "HowToEvolve": "Final Form"

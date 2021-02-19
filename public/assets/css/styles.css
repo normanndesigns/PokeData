@@ -6,6 +6,10 @@
 	font-family: OpenSans;
 	src: url(../font/OpenSans-Light.ttf);
 } 
+@keyframes loading {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+  }
 *{
 	outline: none;
 }
@@ -14,6 +18,20 @@
 }
 .flex{
 	display: flex !important; 
+}
+#loading{
+	width: 100%;
+    min-height: calc(100vh - 220px);
+    justify-content: center;
+    align-items: center;
+}
+#loading > img{
+	width: 50px;
+    transform: rotate(0deg);
+	animation-name: loading;
+	animation-duration: 1.33s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
 }
 .global-wrapper{
 	position: absolute;
@@ -451,6 +469,9 @@
 }
 .EvoPokemon > p{
 	text-align: center;
+}
+.EvoPokemon:hover{
+	cursor: pointer;
 }
 .EvoSteps{
 	display: flex;

@@ -1,64 +1,20 @@
 const {remote} = require('electron'); 
+const { read } = require('fs');
 const fs = require('electron').remote.require('fs')
 const fetch = require('node-fetch');
 const path = require('electron').remote.require('path')
-var PokemonFile = fs.readFileSync('public/assets/data/Pokedex.json', 'utf8')
-var PokemonData = JSON.parse(PokemonFile);
-var PokemonDataKeys = Object.keys(PokemonData);
-var ColorFile = fs.readFileSync('public/assets/data/ColorData.json', 'utf8')
-var ColorData = JSON.parse(ColorFile);
-var EvolutionFile = fs.readFileSync('public/assets/data/Evolution.json', 'utf8')
-var EvolutionData = JSON.parse(EvolutionFile);
-var TypeColorFile = fs.readFileSync('public/assets/data/TypeColor.json', 'utf8')
-var TypeColorData = JSON.parse(TypeColorFile);
-var close = document.getElementById('closeBTN').addEventListener('click', closeWindow)
-var minimize = document.getElementById('minimizeBTN').addEventListener('click', minimizeWindow)
-var maximize = document.getElementById('maximizeBTN').addEventListener('click', maximizeWindow)
+const PokemonFile = fs.readFileSync('public/assets/data/Pokedex.json', 'utf8')
+const PokemonData = JSON.parse(PokemonFile);
+const PokemonDataKeys = Object.keys(PokemonData);
+const EvolutionFile = fs.readFileSync('public/assets/data/Evolution.json', 'utf8')
+const EvolutionData = JSON.parse(EvolutionFile);
+const TypeColorFile = fs.readFileSync('public/assets/data/TypeColor.json', 'utf8')
+const TypeColorData = JSON.parse(TypeColorFile);
+
+document.getElementById('closeBTN').addEventListener('click', closeWindow)
+document.getElementById('minimizeBTN').addEventListener('click', minimizeWindow)
+document.getElementById('maximizeBTN').addEventListener('click', maximizeWindow)
 document.getElementById('search').addEventListener('keyup', search)
-
-function RGBtoHex(r,g,b) {
-    var hex = r.toString(16);
-    red = hex.length == 1 ? "0" + hex : hex;
-
-    var hex = g.toString(16);
-    green = hex.length == 1 ? "0" + hex : hex;
-
-    var hex = b.toString(16);
-    blue = hex.length == 1 ? "0" + hex : hex;
-
-    return "#" + red + green + blue;
-}
-
-function lightOrDark(color) {
-    var r, g, b, hsp;
-    if (color.match(/^rgb/)) {
-        color = color.match(/^rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*(\d+(?:\.\d+)?))?\)$/);
-        
-        r = color[1];
-        g = color[2];
-        b = color[3];
-    } 
-    else {
-        color = +("0x" + color.slice(1).replace( 
-        color.length < 5 && /./g, '$&$&'));
-
-        r = color >> 16;
-        g = color >> 8 & 255;
-        b = color & 255;
-    }
-    hsp = Math.sqrt(
-    0.299 * (r * r) +
-    0.587 * (g * g) +
-    0.114 * (b * b)
-    );
-    
-    if (hsp>127.5) {
-        return 'light';
-    } 
-    else {
-        return 'dark';
-    }
-}
 
 function FlexNone(display, object, extraClasses = ""){
     if(display == 'hide'){
@@ -69,15 +25,15 @@ function FlexNone(display, object, extraClasses = ""){
 }   
 
 function closeWindow(){
-    var window = remote.getCurrentWindow();
+    let window = remote.getCurrentWindow();
     window.close();
 }
 function minimizeWindow(){
-    var window = remote.getCurrentWindow();
+    let window = remote.getCurrentWindow();
     window.minimize();
 }
 function maximizeWindow(){
-    var window = remote.getCurrentWindow();
+    let window = remote.getCurrentWindow();
     if(screen.availWidth === window.getSize()[0] && screen.availHeight === window.getSize()[1]){
         window.setSize(Size[0], Size[1]);
     }else{
@@ -94,8 +50,8 @@ function capitalizeFirstLetter(str) {
 }
 
 function createListEntry(src, dom, file){
-        var PokemonName = []
-        for (var key in PokemonData) {
+        let PokemonName = []
+        for (let key in PokemonData) {
             if (PokemonData.hasOwnProperty(key)) {
                 if(PokemonData[key] == removeExtension(file)){
                     PokemonName.push(capitalizeFirstLetter(key))
@@ -142,11 +98,12 @@ function emptySearch(){
     search();
 }
 
-function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper, circleWrapper){
+function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper, circleWrapper, loading){
     FlexNone(pokemonImage, document.getElementById('pokemonImage'))
     FlexNone(mainWrapper, document.getElementById('mainWrapper'), 'pokedex-wrapper')
     FlexNone(searchWrapper, document.getElementById('searchWrapper'), 'search-wrapper')
     FlexNone(circleWrapper, document.getElementById('circle-wrapper'), 'circle-wrapper')
+    FlexNone(loading, document.getElementById('loading'))
 }
 
 function search(){
@@ -191,6 +148,13 @@ function search(){
 }
 
 function EvolutionLine(PokemonName){
+    var Variants = {
+        "Darmanitan Standard": "Darmanitan",
+        "Galarian Darmanitan Standard": "Galarian Darmanitan"
+    }
+    if(Variants[PokemonName] != undefined){
+        PokemonName = Variants[PokemonName];
+    }
     document.getElementById("Stage0").innerHTML = "";
     document.getElementById("Stage1").innerHTML = "";
     document.getElementById("Stage2").innerHTML = "";
@@ -223,7 +187,7 @@ function EvolutionLine(PokemonName){
 
             if(typeof EvolutionData[PokemonName][Key]["HowToEvolve"] === 'object' && EvolutionData[PokemonName][Key]["HowToEvolve"] !== null){
                 MethodWrapper = document.createElement('div');
-                for (var [key, value] of Object.entries(EvolutionData[PokemonName][Key]["HowToEvolve"])) {
+                for (let [key, value] of Object.entries(EvolutionData[PokemonName][Key]["HowToEvolve"])) {
                     if(EvolutionData[PokemonName][Key]["HowToEvolve"] != "Final Form"){
                         EvoMethod = document.createElement('div');
                         EvoMethodPTag = document.createElement('p');
@@ -261,14 +225,15 @@ function EvolutionLine(PokemonName){
     }
 }
 
-function InsertPokemonData(PokemonName){
+async function InsertPokemonData(PokemonName){
+    ShowHideWrapper("hide", "hide", "hide", "hide", "show")
     var Variants = {
         "Deoxys": "Normal",
         "Giratina": "Altered",
         "Shaymin": "Land",
         "Basculin": "Red-Striped",
         "Darmanitan": "Standard",
-        "Galarian darmanitan": "Standard",
+        "Galarian Darmanitan": "Standard",
         "Tornadus": "Incarnate",
         "Thundurus": "Incarnate",
         "Landorus": "Incarnate",
@@ -276,6 +241,11 @@ function InsertPokemonData(PokemonName){
         "Meloetta": "Aria"
     }
     DexID = PokemonData[PokemonName.toLowerCase()]
+    OriginalPokemonName = "";
+    if(Variants[PokemonName] != undefined){
+        OriginalPokemonName = PokemonName;
+        PokemonName = PokemonName + " " + Variants[PokemonName];
+    }
     if(PokemonName === "Urshifu (Single Strike)"){
         PokemonNameForLink = "urshifu-single-strike";
     }else if(PokemonName === "Urshifu (Rapid Strike)"){
@@ -284,6 +254,9 @@ function InsertPokemonData(PokemonName){
         PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace("'","").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f")
     }
     if(PokemonNameForLink.includes('Alolan')){
+        if(Variants[PokemonName] != undefined){
+            PokemonName = PokemonName + " " + Variants[PokemonName];
+        }
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("alolan-","") + "-alola"
     }else if(PokemonNameForLink.includes('Galarian')){
         var endpoint = PokemonNameForLink.toLowerCase().replace("'","").replace("galarian-","")  + "-galar"
@@ -295,21 +268,23 @@ function InsertPokemonData(PokemonName){
         }
     }
     console.log('https://pokeapi.co/api/v2/pokemon/' + endpoint)
-    fetch('https://pokeapi.co/api/v2/pokemon/' + endpoint)
-    .then(res => res.json())
-    .then(data => obj = data)
-    .then(() => {
-        document.getElementById('name').innerHTML = PokemonName;
+    response = await fetch('https://pokeapi.co/api/v2/pokemon/' + endpoint)
+    obj = await response.json();
+        if(OriginalPokemonName === ""){
+            document.getElementById('name').innerHTML = PokemonName;
+        }else{
+            document.getElementById('name').innerHTML = OriginalPokemonName;
+        }
         document.getElementById('name').style.color = "#000000";
         document.getElementById('DexID').innerHTML = "#" + document.getElementById("pokemonImage").getAttribute("data-dexid").replace(/[^0-9]/g, "");
         document.getElementById('DexID').style.color = TypeColorData[obj["types"][0]["type"]["name"]];
         document.getElementById("st0").style.fill = TypeColorData[obj["types"][0]["type"]["name"]];
         document.getElementById("type-wrapper").innerHTML = "";
         for (i = 0; i < obj["types"].length; i++) {
-            var type = document.createElement("div"); 
-            var typeIcon = document.createElement("div"); 
-            var TypeIconImage = document.createElement("img"); 
-            var typeName = document.createElement("span"); 
+            let type = document.createElement("div"); 
+            let typeIcon = document.createElement("div"); 
+            let TypeIconImage = document.createElement("img"); 
+            let typeName = document.createElement("span"); 
 
             type.className = "type"
             typeIcon.className = "type-icon";
@@ -325,7 +300,7 @@ function InsertPokemonData(PokemonName){
             typeIcon.style.backgroundColor = TypeColorData[obj["types"][i]["type"]["name"]];
             typeName.innerHTML = capitalizeFirstLetter(obj["types"][i]["type"]["name"]);
         }
-        var stats = ["HP", "Attack", "Defense", "Special-Attack", "Special-Defense", "Speed"];
+        let stats = ["HP", "Attack", "Defense", "Special-Attack", "Special-Defense", "Speed"];
             for(i = 0; i < stats.length; i++){
                 if(stats[i] === "HP"){
                     document.getElementById(stats[i] + "-stat").innerHTML = obj["stats"][0]['base_stat'];
@@ -359,15 +334,9 @@ function InsertPokemonData(PokemonName){
             }
             document.getElementById("Total-stat").innerHTML = obj["stats"][0]['base_stat'] + obj["stats"][1]['base_stat'] + obj["stats"][2]['base_stat'] + obj["stats"][3]['base_stat'] + obj["stats"][4]['base_stat'] + obj["stats"][5]['base_stat']
             EvolutionLine(PokemonName.replace("-"," "));
-    })
-    .catch(() => {
-        if(Variants[PokemonName] != undefined){
-            InsertPokemonData(PokemonName + " " + Variants[PokemonName])
-        }
-    });
-    document.getElementById("st0").style.fill = "#fff";
+            ShowHideWrapper("show", "hide", "hide", "show", "hide")
+            document.getElementById("loading").className = "none";
 }
-
 window.addEventListener('load', function() {
     SpatialNavigation.init();
     SpatialNavigation.add({
@@ -387,15 +356,15 @@ fs.readdir(__dirname + "/assets/media/", (err, files) => {
 
 document.getElementById('searchBTN').addEventListener('click', () => {
     emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show', 'hide')
+    ShowHideWrapper('hide', 'hide', 'show', 'hide', "hide")
 })
 document.getElementById('pokedexBTN').addEventListener('click', () => {
     emptySearch()
-    ShowHideWrapper('hide', 'show', 'hide', 'hide')
+    ShowHideWrapper('hide', 'show', 'hide', 'hide', 'hide')
 })
 document.getElementById('backBTN').addEventListener('click', () => {
     emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show', 'hide')
+    ShowHideWrapper('hide', 'hide', 'show', 'hide', 'hide')
 })
 
 document.getElementById('searchResults').addEventListener('click', (e) => {
@@ -405,17 +374,14 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + ')';
                 document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[1].alt.replace(".png", "");
                 InsertPokemonData(capitalizeFirstLetter(e.target.parentNode.childNodes[3].innerHTML));
-                ShowHideWrapper('show', 'hide', 'hide', 'show');
             }else if(e.target.tagName === 'IMG'){
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.alt + ')';
                 document.getElementById('pokemonImage').dataset.dexid = e.target.alt.replace(".png", "");
                 InsertPokemonData(capitalizeFirstLetter(e.target.parentNode.childNodes[3].innerHTML));
-                ShowHideWrapper('show', 'hide', 'hide', 'show');
             }else{
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + ')';
                 document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[1].alt.replace(".png", "");
                 InsertPokemonData(capitalizeFirstLetter(e.target.childNodes[3].innerHTML));
-                ShowHideWrapper('show', 'hide', 'hide', 'show');
             }
             
         }
@@ -423,14 +389,13 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
 })
 
 document.getElementById('searchResults').addEventListener('keypress', (e) => {
-    var key = e.which || e.keyCode;
+    let key = e.which || e.keyCode;
     if (key === 13) {
         if(e.target !== document.getElementById('searchResults')){
             if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
                 document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + ')';
                 document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[1].alt.replace(".png", "");
                 InsertPokemonData(capitalizeFirstLetter(e.target.childNodes[3].innerHTML));
-                ShowHideWrapper('show', 'hide', 'hide', 'show');
             }
         }
     }
@@ -441,29 +406,25 @@ document.getElementById('mainWrapper').addEventListener('click', (e) => {
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + ')';
         document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[0].alt;
         InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1));
-        ShowHideWrapper('show', 'hide', 'hide', 'show');
     }
     else if(e.target.tagName === "IMG"){
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + ')';
         document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[0].alt;
         InsertPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1));
-        ShowHideWrapper('show', 'hide', 'hide', 'show');
     }
     else if(e.target.tagName === "P"){
         document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + ')';
         document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[0].alt;
         InsertPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1));
-        ShowHideWrapper('show', 'hide', 'hide', 'show')
     }
 })
 document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
-    var key = e.which || e.keyCode;
+    let key = e.which || e.keyCode;
     if (key === 13) {
         if(e.target.tagName === "LI"){
             document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + ')';
             document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[0].alt.replace(".png", "");
             InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1));
-            ShowHideWrapper('show', 'hide', 'hide', 'show');
         }
     }
 })
@@ -473,9 +434,8 @@ document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
         if(e.target.className != "EvoSteps"){
             document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
             document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
-            InsertPokemonData(e.target.dataset.pokemonname);
-            ShowHideWrapper('show', 'hide', 'hide', 'show');
             document.getElementById("pokemonImage").scrollTo(0,0)
+            InsertPokemonData(e.target.dataset.pokemonname);
         }
     }
 })

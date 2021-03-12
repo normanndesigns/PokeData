@@ -1,15 +1,12 @@
-const {remote} = require('electron'); 
-const { read } = require('fs');
-const fs = require('electron').remote.require('fs')
-const fetch = require('node-fetch');
-const path = require('electron').remote.require('path')
-const PokemonFile = fs.readFileSync('public/assets/data/Pokedex.json', 'utf8')
-const PokemonData = JSON.parse(PokemonFile);
+const { ipcRenderer } = require('electron')
+const configsData = JSON.parse(ipcRenderer.sendSync('LoadConfig'));
+const LoadVariantsData = JSON.parse(ipcRenderer.sendSync('LoadVariants'));
+const PokemonData = JSON.parse(ipcRenderer.sendSync('LoadPokedex'));
 const PokemonDataKeys = Object.keys(PokemonData);
-const EvolutionFile = fs.readFileSync('public/assets/data/Evolution.json', 'utf8')
-const EvolutionData = JSON.parse(EvolutionFile);
-const TypeColorFile = fs.readFileSync('public/assets/data/TypeColor.json', 'utf8')
-const TypeColorData = JSON.parse(TypeColorFile);
+const EvolutionData = JSON.parse(ipcRenderer.sendSync('LoadEvolution'));
+const TypeColorData = JSON.parse(ipcRenderer.sendSync('LoadTypeColor'));
+
+document.getElementById("NorR").value = configsData.Dextype;
 
 document.getElementById('closeBTN').addEventListener('click', closeWindow)
 document.getElementById('minimizeBTN').addEventListener('click', minimizeWindow)
@@ -25,22 +22,13 @@ function FlexNone(display, object, extraClasses = ""){
 }   
 
 function closeWindow(){
-    let window = remote.getCurrentWindow();
-    window.close();
+    ipcRenderer.send('CloseWindow')
 }
 function minimizeWindow(){
-    let window = remote.getCurrentWindow();
-    window.minimize();
+    ipcRenderer.send('MinimizeWindow')
 }
 function maximizeWindow(){
-    let window = remote.getCurrentWindow();
-    if(screen.availWidth === window.getSize()[0] && screen.availHeight === window.getSize()[1]){
-        window.setSize(Size[0], Size[1]);
-    }else{
-        Position = [window.getPosition[0], window.getPosition[1]]
-        Size = [window.getSize()[0], window.getSize()[1]]
-        window.maximize();
-    }
+    ipcRenderer.send('MaximizeWindow')
 }
 
 function capitalizeFirstLetter(str) {
@@ -48,49 +36,73 @@ function capitalizeFirstLetter(str) {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
     });
 }
-
-function createListEntry(src, dom, file){
-        let PokemonName = []
-        for (let key in PokemonData) {
-            if (PokemonData.hasOwnProperty(key)) {
-                if(PokemonData[key] == removeExtension(file)){
-                    PokemonName.push(capitalizeFirstLetter(key))
-                }
-            }
-        }
-        PokemonName.forEach(element => {
-            div = document.createElement("li");
-            div.className = 'pokemon navigate'
-            image = document.createElement("img");
-            if(element.includes('Alolan')){
-                image.src = src.replace(".png","-Alolan.png");
-                image.alt = file.replace(".png","-Alolan.png");;
-            }else if(element.includes('Galarian')){
-                image.src = src.replace(".png","-Galarian.png");
-                image.alt = file.replace(".png","-Galarian.png");
-            }else if(element.includes('Single Strike')){
-                image.src = src.replace(".png","-(Single-Strike).png");
-                image.alt = file.replace(".png","-(Single-Strike).png");
-            }else if(element.includes('Rapid Strike')){
-                image.src = src.replace(".png","-(Rapid-Strike).png");
-                image.alt = file.replace(".png","-(Rapid-Strike).png");
-            }else{
-                image.src = src;
-                image.alt = file;
-            }
-            text = document.createElement('p');
-            text.innerHTML = element;
-            div.appendChild(image)
-            div.appendChild(text)
-            dom.appendChild(div) 
-        });
+function imageGeneration(ImageNumber){
+    if(parseInt(ImageNumber) <= 151){
+        return "gen1";
+    }else if(parseInt(ImageNumber) <= 251){
+        return "gen2";
+    }else if(parseInt(ImageNumber) <= 386){
+        return "gen3";
+    }else if(parseInt(ImageNumber) <= 493){
+        return "gen4";
+    }else if(parseInt(ImageNumber) <= 649){
+        return "gen5";
+    }else if(parseInt(ImageNumber) <= 721){
+        return "gen6";
+    }else if(parseInt(ImageNumber) <= 807){
+        return "gen7";
+    }else if(parseInt(ImageNumber) <= 898){
+        return "gen8";
+    }      
 }
-
-function removeExtension(file){
-    tempFile = file.replace(".png", "")
-    //outputFile = tempFile.replace('.svg', "")
-    //return outputFile
-    return tempFile
+function createListEntry(src, dom, file, Name, PokeDexType){
+    div = Object.assign(document.createElement("li"), {className: "pokemon navigate"})
+    image = document.createElement("img");
+    if(Name.includes("-") && Name != "jangmo-o" && Name != "hakamo-o" && Name != "kommo-o"){
+        if(Name === "porygon-z" || Name === "ho-oh"){
+            NameArray = Name.split("-")
+            for (let i = 0; i < NameArray.length; i++) {
+                NameArray[i] = NameArray[i][0].toUpperCase() + NameArray[i].substr(1);
+            }
+            PokemonName = NameArray.join("-")
+        }
+    }else if(Name.includes(" ")){
+        NameArray = Name.split(" ")
+        for (let i = 0; i < NameArray.length; i++) {
+            NameArray[i] = NameArray[i][0].toUpperCase() + NameArray[i].substr(1);
+        }
+        PokemonName = NameArray.join(" ");
+    }else{
+        PokemonName = capitalizeFirstLetter(Name)
+    }
+    if(PokeDexType === "national"){
+        GenerationsOBJ = {
+            "001": "Generation 1",
+            "152": "Generation 2",
+            "252": "Generation 3",
+            "387": "Generation 4",
+            "494": "Generation 5",
+            "650": "Generation 6",
+            "722": "Generation 7",
+            "808": "Generation 8"
+        }
+        if(GenerationsOBJ[PokemonData[Name.toLowerCase()]] != undefined){
+            Header2 = Object.assign(document.createElement("h2"), {className: "GenerationHeaders", innerHTML: GenerationsOBJ[PokemonData[Name.toLowerCase()]]})
+            dom.appendChild(Header2)
+        }
+    }
+    if(ImageFileArray.includes(src)){
+        image.src = src;
+    }else if(ImageFileArray.includes(src.replace(".png", "-FemaleVersion.png"))){
+        image.src = src.replace(".png", "-FemaleVersion.png");
+    }else if(ImageFileArray.includes(file.replace(".png", "-MaleVersion.png"))){
+        image.src = src.replace(".png", "-MaleVersion.png")
+    }
+    text = Object.assign(document.createElement("p"), {innerHTML: PokemonName})
+    image.alt = file;
+    div.appendChild(image)
+    div.appendChild(text)
+    dom.appendChild(div) 
 }
 
 function emptySearch(){
@@ -98,7 +110,8 @@ function emptySearch(){
     search();
 }
 
-function ShowHideWrapper(pokemonImage, mainWrapper, searchWrapper, circleWrapper, loading){
+function ShowHideWrapper(pokemonImage, settingsWrapper, mainWrapper, searchWrapper, circleWrapper, loading){
+    FlexNone(settingsWrapper, document.getElementById('settingsWrapper'), "settings-wrapper")
     FlexNone(pokemonImage, document.getElementById('pokemonImage'))
     FlexNone(mainWrapper, document.getElementById('mainWrapper'), 'pokedex-wrapper')
     FlexNone(searchWrapper, document.getElementById('searchWrapper'), 'search-wrapper')
@@ -110,9 +123,7 @@ function search(){
     tempArray = []
     searchValue = document.getElementById('search').value.toLowerCase()
     PokemonDataKeys.forEach(function(element){
-        if(element.startsWith(searchValue)){
-            tempArray.push(element)
-        }else if(element.toLowerCase().startsWith(searchValue)){
+        if(element.toLowerCase().startsWith(searchValue)){
             tempArray.push(element)
         }
     })
@@ -125,74 +136,35 @@ function search(){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1];
-            if(tempArray[i - 1].includes('alolan')){
-                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-Alolan" +  ".png";
-                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-Alolan" + '.png';
-            }else if(tempArray[i - 1].includes('galarian')){
-                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-Galarian" + ".png";
-                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-Galarian" + '.png';
-            }else if(tempArray[i - 1].includes('single')){
-                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-(Single-Strike)" + ".png";
-                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-(Single-Strike)" + '.png';
-            }else if(tempArray[i - 1].includes('rapid')){
-                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + "-(Rapid-Strike)" + ".png";
-                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + "-(Rapid-Strike)" + '.png';
-            }
-            else{
-                document.getElementById('imageresult' + i).src = "assets/media/" + PokemonData[tempArray[i - 1]] + ".png";
-                document.getElementById('imageresult' + i).alt = PokemonData[tempArray[i - 1]] + '.png';
-            }
+            document.getElementById('imageresult' + i).src = "assets/media/" + imageGeneration(PokemonData[tempArray[i - 1]]) + "/" + MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);
+            document.getElementById('imageresult' + i).alt = MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);
             FlexNone('show', document.getElementById('result' + i))
         }
     }
 }
 
-function EvolutionLine(PokemonName){
-    var Variants = {
-        "Darmanitan Standard": "Darmanitan",
-        "Galarian Darmanitan Standard": "Galarian Darmanitan"
-    }
-    if(Variants[PokemonName] != undefined){
-        PokemonName = Variants[PokemonName];
-    }
-    document.getElementById("Stage0").innerHTML = "";
-    document.getElementById("Stage1").innerHTML = "";
-    document.getElementById("Stage2").innerHTML = "";
+function EvolutionLine(PokemonName, form){
     if(EvolutionData[PokemonName] != undefined){
+        document.getElementsByClassName("section-title")[0].className = "section-title flex";
         for (Key in EvolutionData[PokemonName]){
-            DivWrapper = document.createElement('div');
-            DivWrapper.className = "pokemon-evo";
-            PokemonWrapper = document.createElement('div');
-            PokemonWrapper.className = "EvoPokemon";
-
-            ImgTag = document.createElement('img');
-            if(Key.includes("Alolan")){
-                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-Alolan.png";
-            }else if(Key.includes("Galarian")){
-                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-Galarian.png";
-            }else if(Key.includes("Single")){
-                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-(Single-Strike).png";
-            }else if(Key.includes("Rapid")){
-                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + "-(Rapid-Strike).png";
-            }else{
-                ImgTag.src = "assets/media/" + EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png";
-            }
-
-            ImgTag.alt = EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png";
+            let DivWrapper = Object.assign(document.createElement('div'), {className: 'pokemon-evo'});
+            let PokemonWrapper = Object.assign(document.createElement('div'), {className: 'EvoPokemon'});
+            let ImgTag = Object.assign(document.createElement('img'), {
+                src: "assets/media/" + imageGeneration(PokemonData[Key.toLowerCase()]) + "/" + MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + ".png", Key),
+                alt: EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png", 
+            });
+            ImgTag.dataset.pokemonimg = MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + ".png", Key);
             PokemonWrapper.appendChild(ImgTag);
-
-            PTag = document.createElement('p');
-            PTag.innerHTML = Key;
+            let PTag = Object.assign(document.createElement('p'), {innerHTML: Key});
             PokemonWrapper.appendChild(PTag);
 
             if(typeof EvolutionData[PokemonName][Key]["HowToEvolve"] === 'object' && EvolutionData[PokemonName][Key]["HowToEvolve"] !== null){
-                MethodWrapper = document.createElement('div');
+                MethodWrapper = Object.assign(document.createElement("div"))
+
                 for (let [key, value] of Object.entries(EvolutionData[PokemonName][Key]["HowToEvolve"])) {
                     if(EvolutionData[PokemonName][Key]["HowToEvolve"] != "Final Form"){
-                        EvoMethod = document.createElement('div');
-                        EvoMethodPTag = document.createElement('p');
-                        EvoMethodPTag.className = "EvoSteps";
-                        EvoMethodPTag.innerHTML = value;
+                        let EvoMethod = Object.assign(document.createElement('div'));
+                        let EvoMethodPTag = Object.assign(document.createElement('p'), {className: "EvoSteps", innerHTML: value});
                         EvoMethod.appendChild(EvoMethodPTag);
                         MethodWrapper.appendChild(EvoMethod)
                     }
@@ -200,9 +172,8 @@ function EvolutionLine(PokemonName){
                 DivWrapper.appendChild(PokemonWrapper)
                 DivWrapper.appendChild(MethodWrapper)
             }else{
-                EvoMethod = document.createElement('div');
-                EvoMethodPTag = document.createElement('p');
-                EvoMethodPTag.className = "EvoSteps";
+                let EvoMethod = Object.assign(document.createElement('div'));
+                let EvoMethodPTag = Object.assign(document.createElement('p'), {className: "EvoSteps"});
                 if(EvolutionData[PokemonName][Key]["HowToEvolve"].toLowerCase() != "final form"){
                     EvoMethodPTag.innerHTML = EvolutionData[PokemonName][Key]["HowToEvolve"];
                 }
@@ -211,22 +182,22 @@ function EvolutionLine(PokemonName){
                 DivWrapper.appendChild(EvoMethod)
             } 
             
-            ImgTag.dataset.pokemonimg = ImgTag.src;
             ImgTag.dataset.pokemonname = Key;
             ImgTag.dataset.dexid = EvolutionData[PokemonName][Key]["PokeDexIDs"];
-            PTag.dataset.pokemonimg = ImgTag.src;
+            PTag.dataset.pokemonimg = ImgTag.dataset.pokemonimg;
             PTag.dataset.pokemonname = Key;
             PTag.dataset.dexid = EvolutionData[PokemonName][Key]["PokeDexIDs"];
 
-            Stage = "Stage" + EvolutionData[PokemonName][Key]["EvolutionStage"]
+            Stage = "Stage" + EvolutionData[PokemonName][Key]["EvolutionStage"];
             document.getElementById(Stage).append(DivWrapper)
-
         }
+    }else{
+        document.getElementsByClassName("section-title")[0].className = "section-title none";
     }
 }
 
 async function InsertPokemonData(PokemonName){
-    ShowHideWrapper("hide", "hide", "hide", "hide", "show")
+    ShowHideWrapper("hide", "hide", "hide", "hide", "hide", "show")
     var Variants = {
         "Deoxys": "Normal",
         "Giratina": "Altered",
@@ -238,21 +209,24 @@ async function InsertPokemonData(PokemonName){
         "Thundurus": "Incarnate",
         "Landorus": "Incarnate",
         "Keldeo": "Ordinary",
-        "Meloetta": "Aria"
+        "Meloetta": "Aria",
+        "Zacian Hero": "",
+        "Zacian crowned": "",
+        "Zamazenta Hero": "",
+        "Zamazenta crowned": "",
+        "Urshifu (Single Strike)": "",
+        "Urshifu (Rapid Strike)": ""
     }
     DexID = PokemonData[PokemonName.toLowerCase()]
     OriginalPokemonName = "";
     if(Variants[PokemonName] != undefined){
         OriginalPokemonName = PokemonName;
-        PokemonName = PokemonName + " " + Variants[PokemonName];
+        if(Variants[PokemonName] != ""){
+            PokemonName = PokemonName + " " + Variants[PokemonName];
+        }
     }
-    if(PokemonName === "Urshifu (Single Strike)"){
-        PokemonNameForLink = "urshifu-single-strike";
-    }else if(PokemonName === "Urshifu (Rapid Strike)"){
-        PokemonNameForLink = "urshifu-rapid-strike";
-    }else{
-        PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace("'","").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f")
-    }
+
+    PokemonNameForLink = PokemonName.replace('.',"").replace(':',"").replace("'","").replaceAll(' ',"-").replace("♂", "-m").replace("♀", "-f").replace('(', '').replace(')', '')
     if(PokemonNameForLink.includes('Alolan')){
         if(Variants[PokemonName] != undefined){
             PokemonName = PokemonName + " " + Variants[PokemonName];
@@ -267,16 +241,16 @@ async function InsertPokemonData(PokemonName){
             endpoint = PokemonNameForLink.toLowerCase();
         }
     }
-    console.log('https://pokeapi.co/api/v2/pokemon/' + endpoint)
-    response = await fetch('https://pokeapi.co/api/v2/pokemon/' + endpoint)
-    obj = await response.json();
+    ipcRenderer.send('PokemonData', endpoint)
+    ipcRenderer.on('PokemonDataReply', (event, obj) => {
         if(OriginalPokemonName === ""){
             document.getElementById('name').innerHTML = PokemonName;
         }else{
             document.getElementById('name').innerHTML = OriginalPokemonName;
         }
         document.getElementById('name').style.color = "#000000";
-        document.getElementById('DexID').innerHTML = "#" + document.getElementById("pokemonImage").getAttribute("data-dexid").replace(/[^0-9]/g, "");
+        
+        document.getElementById('DexID').innerHTML = "#" + document.getElementById("pokemonImage").getAttribute("data-imagefilename").replace(/[^0-9]/g, "");
         document.getElementById('DexID').style.color = TypeColorData[obj["types"][0]["type"]["name"]];
         document.getElementById("st0").style.fill = TypeColorData[obj["types"][0]["type"]["name"]];
         document.getElementById("type-wrapper").innerHTML = "";
@@ -289,7 +263,7 @@ async function InsertPokemonData(PokemonName){
             type.className = "type"
             typeIcon.className = "type-icon";
             typeName.className = "type-name";
-            TypeIconImage.src = "../public/assets/static/" + capitalizeFirstLetter(obj["types"][i]["type"]["name"]) + ".svg"
+            TypeIconImage.src = "assets/static/" + capitalizeFirstLetter(obj["types"][i]["type"]["name"]) + ".svg"
 
             type.appendChild(typeIcon)
             typeIcon.appendChild(TypeIconImage)
@@ -333,10 +307,22 @@ async function InsertPokemonData(PokemonName){
                 }
             }
             document.getElementById("Total-stat").innerHTML = obj["stats"][0]['base_stat'] + obj["stats"][1]['base_stat'] + obj["stats"][2]['base_stat'] + obj["stats"][3]['base_stat'] + obj["stats"][4]['base_stat'] + obj["stats"][5]['base_stat']
-            EvolutionLine(PokemonName.replace("-"," "));
-            ShowHideWrapper("show", "hide", "hide", "show", "hide")
+            for(i = 0; i < 3; i++){
+                document.getElementsByClassName('evolution-wrapper')[i].childNodes[1].innerHTML = "";
+                document.getElementsByClassName('evolution-wrapper')[i].childNodes[3].innerHTML = "";
+                document.getElementsByClassName('evolution-wrapper')[i].childNodes[5].innerHTML = "";
+            }
+
+            if(!PokemonName === "Jangmo-o" || !PokemonName === "Hakamo-o" || !PokemonName === "Kommo-o"){
+                EvolutionLine(PokemonName.replace("-"," "));
+            }else{
+                EvolutionLine(PokemonName);
+            }
+            ShowHideWrapper("show", "hide", "hide", "hide", "show", "hide")
             document.getElementById("loading").className = "none";
+    })    
 }
+
 window.addEventListener('load', function() {
     SpatialNavigation.init();
     SpatialNavigation.add({
@@ -344,87 +330,151 @@ window.addEventListener('load', function() {
     });
     SpatialNavigation.makeFocusable();
 });
+ImageFileArray = ipcRenderer.sendSync('LoadImages')
+if(configsData.Dextype === "regional"){
+    const RegionalDexData = JSON.parse(ipcRenderer.sendSync('LoadRegionalDex'));
+    for (const [Region, Dex] of Object.entries(RegionalDexData)) {
+        if(Region === "Central Kalos" || Region === "Costal Kalos" || Region === "Mountain Kalos"){
+            if(Region === "Central Kalos"){
+                document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Kalos", className: 'GenerationHeaders'}));
+            }
+            document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: 'GenerationHeaders3'}));
+        }else if(Region === "Melemele" || Region === "Akala" || Region === "Ula'ula" ||Region === "Poni"){
+            if(Region === "Melemele"){
+                document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Alola", className: 'GenerationHeaders'}));
+            }
+            document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
 
-fs.readdir(__dirname + "/assets/media/", (err, files) => {
-    for(i = 0; i < files.length; i++){
-        tempImageFileArray = files[i].split('-');
-        if(!files[i].includes('-')){
-            createListEntry("../public/assets/media/" + files[i], document.getElementById('mainWrapper'), files[i])
+        }else if(Region === "Isle of Armor" || Region === "Crown Tundra" || Region === "Other"){
+            document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
+        }else{
+            document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: Region, className: "GenerationHeaders"}));
         }
+        for (const [key, value] of Object.entries(Dex)) {
+            createListEntry("assets/media/" + imageGeneration(PokemonData[key]) + "/" + PokemonData[key] + ".png", document.getElementById('mainWrapper'), PokemonData[key] + ".png", key, "regional")
+        }  
+    }   
+}else if(configsData.Dextype === "national"){
+    ImageFileArray.forEach(element => {
+        for (let [key, value] of Object.entries(PokemonData)) {
+            if(element.replace(/\D/g,'').substring(1) === value){
+                createListEntry(element, document.getElementById('mainWrapper'), element.slice(element.lastIndexOf("/")).replace("/", ""), key, "national")
+            }
+        }
+    });
+}
+
+function shakeAnimation(element, timeInSec) {
+    element.style.animation = "shake " + timeInSec + "s";
+    setTimeout(() => {
+        element.style = ""; 
+    }, timeInSec*1000)
+}
+document.getElementById('settingsBTN').addEventListener('click', () => {
+    document.getElementById(configsData.Dextype).setAttribute('selected', 'selected')
+    emptySearch()
+    ShowHideWrapper('hide', "show", 'hide', 'hide', 'hide', "hide")
+})
+document.getElementById('searchBTN').addEventListener('click', () => {
+    if(document.getElementById("NorR").value != configsData.Dextype){
+        shakeAnimation(document.getElementById("saveSettings"), 0.5)
+    }else{
+        emptySearch()
+        ShowHideWrapper('hide', "hide", 'hide', 'show', 'hide', "hide")
+    }
+})
+document.getElementById('pokedexBTN').addEventListener('click', () => {
+    if(document.getElementById("NorR").value != configsData.Dextype){
+        shakeAnimation(document.getElementById("saveSettings"), 0.5)
+    }else{
+        emptySearch()
+        ShowHideWrapper('hide', "hide", 'show', 'hide', 'hide', 'hide')   
+    }
+})
+document.getElementById('backBTN').addEventListener('click', () => {
+    if(document.getElementById("NorR").value != configsData.Dextype){
+        shakeAnimation(document.getElementById("saveSettings"), 0.5)
+    }else{
+        emptySearch()
+        ShowHideWrapper('hide', "hide", 'hide', 'show', 'hide', 'hide')
     }
 })
 
-document.getElementById('searchBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show', 'hide', "hide")
+document.getElementById("saveSettings").addEventListener("click", (e) => {
+    e.preventDefault();
+    document.getElementById("ConfirmBTN").className = "flex";
+    document.getElementById("ConfirmBTNText").innerHTML = "Pokedex needs to restart to apply changes";
 })
-document.getElementById('pokedexBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'show', 'hide', 'hide', 'hide')
+
+document.getElementById("OkayBTN").addEventListener('click', () => {
+    let jsonData = '{"Dextype": "' + document.getElementById("NorR").value + '"}'
+    ipcRenderer.send('SaveConfig', jsonData)
+    ipcRenderer.on('SaveConfigReply', (event, reply) => {
+        if(reply === true){
+            ipcRenderer.send('RestartApp');
+        }
+    })
 })
-document.getElementById('backBTN').addEventListener('click', () => {
-    emptySearch()
-    ShowHideWrapper('hide', 'hide', 'show', 'hide', 'hide')
+
+document.getElementById("CancelBTN").addEventListener('click', () => {
+    document.getElementById("ConfirmBTN").className = "none";
 })
+function MaleOrFemaleVersion(FileName, PokemonName){
+    if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName) === false){
+        if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-FemaleVersion.png"))){
+            return FileName.replace(".png", "-FemaleVersion.png");
+        }else if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-MaleVersion.png"))){
+            return FileName.replace(".png", "-MaleVersion.png");
+        }
+    }else{
+        return FileName
+    }
+}
+
+function PreparePokemonPage(FileName, PokemonName){
+    document.getElementById('pokemonImage').style.backgroundImage = 'url("assets/media/'+ imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + MaleOrFemaleVersion(FileName, PokemonName) + '")';
+    document.getElementById('pokemonImage').dataset.imagefilename = FileName;
+    InsertPokemonData(capitalizeFirstLetter(PokemonName));
+}
 
 document.getElementById('searchResults').addEventListener('click', (e) => {
     if(e.target !== document.getElementById('searchResults')){
         if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
             if(e.target.tagName === 'DIV'){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[1].alt + ')';
-                document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[1].alt.replace(".png", "");
-                InsertPokemonData(capitalizeFirstLetter(e.target.parentNode.childNodes[3].innerHTML));
+                PreparePokemonPage(e.target.parentNode.childNodes[1].alt, e.target.parentNode.childNodes[3].innerHTML)
             }else if(e.target.tagName === 'IMG'){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.alt + ')';
-                document.getElementById('pokemonImage').dataset.dexid = e.target.alt.replace(".png", "");
-                InsertPokemonData(capitalizeFirstLetter(e.target.parentNode.childNodes[3].innerHTML));
+                PreparePokemonPage(e.target.alt, e.target.parentNode.childNodes[3].innerHTML)
             }else{
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + ')';
-                document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[1].alt.replace(".png", "");
-                InsertPokemonData(capitalizeFirstLetter(e.target.childNodes[3].innerHTML));
+                PreparePokemonPage(e.target.childNodes[1].alt, e.target.childNodes[3].innerHTML)
             }
-            
         }
     }
 })
 
 document.getElementById('searchResults').addEventListener('keypress', (e) => {
-    let key = e.which || e.keyCode;
-    if (key === 13) {
+    if (e.code === "Enter" ) {
         if(e.target !== document.getElementById('searchResults')){
             if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
-                document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[1].alt + ')';
-                document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[1].alt.replace(".png", "");
-                InsertPokemonData(capitalizeFirstLetter(e.target.childNodes[3].innerHTML));
+                PreparePokemonPage(e.target.childNodes[1].alt, e.target.childNodes[3].innerHTML)
             }
         }
     }
 })
-
 document.getElementById('mainWrapper').addEventListener('click', (e) => {
     if(e.target.tagName === "LI"){
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + ')';
-        document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[0].alt;
-        InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1));
+        PreparePokemonPage(e.target.childNodes[0].alt, e.target.childNodes[1].innerHTML)
     }
     else if(e.target.tagName === "IMG"){
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + ')';
-        document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[0].alt;
-        InsertPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1));
+        PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
     }
     else if(e.target.tagName === "P"){
-        document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.parentNode.childNodes[0].alt + ')';
-        document.getElementById('pokemonImage').dataset.dexid = e.target.parentNode.childNodes[0].alt;
-        InsertPokemonData(e.target.parentNode.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.parentNode.childNodes[1].innerHTML.slice(1));
+        PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
     }
 })
 document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
-    let key = e.which || e.keyCode;
-    if (key === 13) {
+    if (e.code === "Enter" ) {
         if(e.target.tagName === "LI"){
-            document.getElementById('pokemonImage').style.backgroundImage = 'url(assets/media/' + e.target.childNodes[0].alt + ')';
-            document.getElementById('pokemonImage').dataset.dexid = e.target.childNodes[0].alt.replace(".png", "");
-            InsertPokemonData(e.target.childNodes[1].innerHTML.charAt(0).toUpperCase() + e.target.childNodes[1].innerHTML.slice(1));
+            PreparePokemonPage(e.target.childNodes[0].alt, e.target.childNodes[1].innerHTML)
         }
     }
 })
@@ -432,10 +482,8 @@ document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
 document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
     if(e.target.tagName === "P" || e.target.tagName === "IMG" ){
         if(e.target.className != "EvoSteps"){
-            document.getElementById('pokemonImage').style.backgroundImage = "url(" + e.target.dataset.pokemonimg + ")";
-            document.getElementById('pokemonImage').dataset.dexid = e.target.dataset.dexid;
             document.getElementById("pokemonImage").scrollTo(0,0)
-            InsertPokemonData(e.target.dataset.pokemonname);
+            PreparePokemonPage(e.target.dataset.pokemonimg, e.target.dataset.pokemonname)
         }
     }
 })

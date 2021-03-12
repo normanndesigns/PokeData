@@ -30,9 +30,29 @@
     </div>
     <div class="menu">
       <ul>
+        <li id="settingsBTN"></li>
         <li id="searchBTN"></li>
         <li id="pokedexBTN"></li>
       </ul>
+    </div>
+    <div class="settings-wrapper none" id="settingsWrapper">
+      <form>
+        <div class="dextype">
+          <label for="NorR">Dextype:</label>
+          <select name="NorR" id="NorR">
+            <option value="national" id="national">National Dex</option>
+            <option value="regional" selected="selected" id="regional">Regional Dex</option>
+          </select>
+        </div>
+        <input type="submit" value="Save" id="saveSettings">
+      </form>
+      <div id="ConfirmBTN" class="none">
+        <h2 id="ConfirmBTNText"></h2>
+        <div class="ConfirmBTNWrapper">
+          <p id="OkayBTN">Okay</p>
+          <p id="CancelBTN">Cancel</p>
+        </div>
+      </div>
     </div>
     <div class="pokedex-wrapper none" id="mainWrapper"></div>
     <div class="search-wrapper" id="searchWrapper">
@@ -120,9 +140,21 @@
           </div>
           <h2 class="section-title">Evolution</h2>
           <div id="evolution-wrapper">
-            <div id="Stage0"></div>
-            <div id="Stage1"></div>
-            <div id="Stage2"></div>
+            <div class="evolution-wrapper">
+              <div id="Stage0"></div>
+              <div id="Stage1"></div>
+              <div id="Stage2"></div>
+            </div>
+            <div class="evolution-wrapper">
+              <div id="Stage00"></div>
+              <div id="Stage11"></div>
+              <div id="Stage22"></div>
+            </div>
+            <div class="evolution-wrapper">
+              <div id="Stage000"></div>
+              <div id="Stage111"></div>
+              <div id="Stage222"></div>
+            </div>
           </div>
         </div>
       </div>

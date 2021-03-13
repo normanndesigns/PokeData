@@ -55,8 +55,43 @@ function imageGeneration(ImageNumber){
         return "gen8";
     }      
 }
-function createListEntry(src, dom, file, Name, PokeDexType){
-    div = Object.assign(document.createElement("li"), {className: "pokemon navigate"})
+function MaleOrFemaleVersion(FileName, PokemonName, Shiny=false){
+    FileName = FileName.replace("-Shiny", "");
+    if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName) === false){
+        if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-FemaleVersion.png"))){
+            if(Shiny === true){
+                return FileName.replace(".png", "-FemaleVersion-Shiny.png");
+            }else{
+                return FileName.replace(".png", "-FemaleVersion.png");
+            }
+        }else if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-MaleVersion.png"))){
+            if(Shiny === true){
+                return FileName.replace(".png", "-MaleVersion-Shiny.png");
+            }else{
+                return FileName.replace(".png", "-MaleVersion.png");
+            }
+        }
+    }else{
+        if(Shiny === true){
+            return FileName.replace(".png", "-Shiny.png");
+        }else{
+            return FileName
+        }
+    }
+}
+
+function PreparePokemonPage(FileName, PokemonName){
+    if(FileName.includes("Shiny")){
+        document.getElementById('pokemonImage').style.backgroundImage = 'url("assets/media/'+ imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/shiny/' + MaleOrFemaleVersion(FileName, PokemonName, true) + '")';
+    }else{
+        document.getElementById('pokemonImage').style.backgroundImage = 'url("assets/media/'+ imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + MaleOrFemaleVersion(FileName, PokemonName) + '")';
+    }
+    document.getElementById('pokemonImage').dataset.pokemonname = PokemonName;
+    document.getElementById('pokemonImage').dataset.imagefilename = FileName;
+    InsertPokemonData(capitalizeFirstLetter(PokemonName));
+}
+function createListEntry(src, dom, file, Name, PokeDexType, display="flex"){
+    div = Object.assign(document.createElement("li"), {className: "pokemon navigate " + display})
     image = document.createElement("img");
     if(Name.includes("-") && Name != "jangmo-o" && Name != "hakamo-o" && Name != "kommo-o"){
         if(Name === "porygon-z" || Name === "ho-oh"){
@@ -97,6 +132,13 @@ function createListEntry(src, dom, file, Name, PokeDexType){
         image.src = src.replace(".png", "-FemaleVersion.png");
     }else if(ImageFileArray.includes(file.replace(".png", "-MaleVersion.png"))){
         image.src = src.replace(".png", "-MaleVersion.png")
+    }else if(src.includes("shiny")){
+        image.src = src;
+        if(ImageFileArray.includes(src.replace("shiny/", "").replace("-Shiny", "").replace(".png", "-FemaleVersion.png"))){
+            image.src = src.replace("-Shiny", "").replace(".png", "-FemaleVersion-Shiny.png");
+        }else if(ImageFileArray.includes(src.replace("shiny/", "").replace("-Shiny", "").replace(".png", "-MaleVersion.png"))){
+            image.src = src.replace("-Shiny", "").replace(".png", "-MaleVersion-Shiny.png")
+        }
     }
     text = Object.assign(document.createElement("p"), {innerHTML: PokemonName})
     image.alt = file;
@@ -110,10 +152,11 @@ function emptySearch(){
     search();
 }
 
-function ShowHideWrapper(pokemonImage, settingsWrapper, mainWrapper, searchWrapper, circleWrapper, loading){
+function ShowHideWrapper(pokemonImage, settingsWrapper, mainWrapper, mainWrapperShiny, searchWrapper, circleWrapper, loading){
     FlexNone(settingsWrapper, document.getElementById('settingsWrapper'), "settings-wrapper")
     FlexNone(pokemonImage, document.getElementById('pokemonImage'))
     FlexNone(mainWrapper, document.getElementById('mainWrapper'), 'pokedex-wrapper')
+    FlexNone(mainWrapperShiny, document.getElementById('mainWrapperShiny'), 'pokedex-wrapper')
     FlexNone(searchWrapper, document.getElementById('searchWrapper'), 'search-wrapper')
     FlexNone(circleWrapper, document.getElementById('circle-wrapper'), 'circle-wrapper')
     FlexNone(loading, document.getElementById('loading'))
@@ -136,8 +179,13 @@ function search(){
             FlexNone('hide', document.getElementById('result' + i))
         }else{
             document.getElementById('Showresult' + i).innerHTML = tempArray[i - 1];
-            document.getElementById('imageresult' + i).src = "assets/media/" + imageGeneration(PokemonData[tempArray[i - 1]]) + "/" + MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);
-            document.getElementById('imageresult' + i).alt = MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);
+            if(document.getElementById("shinyBTN").className === "ShowShiny"){
+                document.getElementById('imageresult' + i).src = "assets/media/" + imageGeneration(PokemonData[tempArray[i - 1]]) + "/shiny/" + MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1], true);
+                document.getElementById('imageresult' + i).alt = MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1], true);    
+            }else{
+                document.getElementById('imageresult' + i).src = "assets/media/" + imageGeneration(PokemonData[tempArray[i - 1]]) + "/" + MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);
+                document.getElementById('imageresult' + i).alt = MaleOrFemaleVersion(PokemonData[tempArray[i - 1]] + ".png", tempArray[i - 1]);    
+            }
             FlexNone('show', document.getElementById('result' + i))
         }
     }
@@ -149,10 +197,18 @@ function EvolutionLine(PokemonName, form){
         for (Key in EvolutionData[PokemonName]){
             let DivWrapper = Object.assign(document.createElement('div'), {className: 'pokemon-evo'});
             let PokemonWrapper = Object.assign(document.createElement('div'), {className: 'EvoPokemon'});
-            let ImgTag = Object.assign(document.createElement('img'), {
-                src: "assets/media/" + imageGeneration(PokemonData[Key.toLowerCase()]) + "/" + MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + ".png", Key),
-                alt: EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png", 
-            });
+            if(document.getElementById("shinyBTN").className === "ShowShiny"){
+                var ImgTag = Object.assign(document.createElement('img'), {
+                    src: "assets/media/" + imageGeneration(PokemonData[Key.toLowerCase()]) + "/shiny/" + MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + "-Shiny.png", Key, true),
+                    alt: EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png", 
+                });  
+            }else{
+                var ImgTag = Object.assign(document.createElement('img'), {
+                    src: "assets/media/" + imageGeneration(PokemonData[Key.toLowerCase()]) + "/" + MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + ".png", Key),
+                    alt: EvolutionData[PokemonName][Key]["PokeDexIDs"] + ".png", 
+                });
+            }
+            
             ImgTag.dataset.pokemonimg = MaleOrFemaleVersion(PokemonData[Key.toLowerCase()] + ".png", Key);
             PokemonWrapper.appendChild(ImgTag);
             let PTag = Object.assign(document.createElement('p'), {innerHTML: Key});
@@ -197,7 +253,7 @@ function EvolutionLine(PokemonName, form){
 }
 
 async function InsertPokemonData(PokemonName){
-    ShowHideWrapper("hide", "hide", "hide", "hide", "hide", "show")
+    ShowHideWrapper("hide", "hide", "hide", "hide", "hide", "hide", "show")
     var Variants = {
         "Deoxys": "Normal",
         "Giratina": "Altered",
@@ -318,7 +374,7 @@ async function InsertPokemonData(PokemonName){
             }else{
                 EvolutionLine(PokemonName);
             }
-            ShowHideWrapper("show", "hide", "hide", "hide", "show", "hide")
+            ShowHideWrapper("show", "hide", "hide", "hide", "hide", "show", "hide")
             document.getElementById("loading").className = "none";
     })    
 }
@@ -337,21 +393,28 @@ if(configsData.Dextype === "regional"){
         if(Region === "Central Kalos" || Region === "Costal Kalos" || Region === "Mountain Kalos"){
             if(Region === "Central Kalos"){
                 document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Kalos", className: 'GenerationHeaders'}));
+                document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Kalos", className: 'GenerationHeaders'}));
             }
             document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: 'GenerationHeaders3'}));
+            document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: 'GenerationHeaders3'}));
         }else if(Region === "Melemele" || Region === "Akala" || Region === "Ula'ula" ||Region === "Poni"){
             if(Region === "Melemele"){
                 document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Alola", className: 'GenerationHeaders'}));
+                document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h2'),{innerHTML: "Alola", className: 'GenerationHeaders'}));
             }
             document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
+            document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
 
         }else if(Region === "Isle of Armor" || Region === "Crown Tundra" || Region === "Other"){
             document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
+            document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h3'),{innerHTML: Region, className: "GenerationHeaders3"}));
         }else{
             document.getElementById("mainWrapper").appendChild(Object.assign(document.createElement('h2'),{innerHTML: Region, className: "GenerationHeaders"}));
+            document.getElementById("mainWrapperShiny").appendChild(Object.assign(document.createElement('h2'),{innerHTML: Region, className: "GenerationHeaders"}));
         }
         for (const [key, value] of Object.entries(Dex)) {
             createListEntry("assets/media/" + imageGeneration(PokemonData[key]) + "/" + PokemonData[key] + ".png", document.getElementById('mainWrapper'), PokemonData[key] + ".png", key, "regional")
+            createListEntry("assets/media/" + imageGeneration(PokemonData[key]) + "/shiny/" + PokemonData[key] + "-Shiny.png", document.getElementById('mainWrapperShiny'), PokemonData[key] + "-Shiny.png", key, "regional", "flex")
         }  
     }   
 }else if(configsData.Dextype === "national"){
@@ -370,17 +433,65 @@ function shakeAnimation(element, timeInSec) {
         element.style = ""; 
     }, timeInSec*1000)
 }
+
+document.getElementById('shinyBTN').addEventListener('click', () => {
+    if(document.getElementById("mainWrapper").className === "flex pokedex-wrapper" || document.getElementById("mainWrapperShiny").className === "flex pokedex-wrapper"){
+        if(document.getElementById("shinyBTN").className === "HideShiny"){   
+            document.getElementById("shinyBTN").className = "ShowShiny";
+            document.getElementById("mainWrapper").className = "none pokedex-wrapper";
+            document.getElementById("mainWrapperShiny").className = "flex pokedex-wrapper";
+        }else if(document.getElementById("shinyBTN").className === "ShowShiny"){
+            document.getElementById("shinyBTN").className = "HideShiny";
+            document.getElementById("mainWrapper").className = "flex pokedex-wrapper";
+            document.getElementById("mainWrapperShiny").className = "none pokedex-wrapper";
+        }
+    }else if(document.getElementById("pokemonImage").className === "flex "){
+        if(document.getElementById("shinyBTN").className === "HideShiny"){   
+            document.getElementById("shinyBTN").className = "ShowShiny";
+            for (let Pokemon of document.getElementsByClassName("pokemon-evo")) {
+                let DexID = Pokemon.getElementsByTagName("img")[0].alt.replace(".png", "")
+                let FileName = Pokemon.getElementsByTagName("img")[0].alt.replace(".png", "-Shiny.png")
+                let PokemonName = Pokemon.getElementsByTagName("img")[0].dataset.pokemonname
+                Pokemon.getElementsByTagName("img")[0].src = "assets/media/" + imageGeneration(DexID) + "/shiny/" + MaleOrFemaleVersion(FileName, PokemonName, true);
+            }
+            let DexID = document.getElementById("pokemonImage").dataset.imagefilename.replace(".png", "").replace("-Shiny", "")
+            let FileName = document.getElementById("pokemonImage").dataset.imagefilename
+            let PokemonName = document.getElementById("pokemonImage").dataset.pokemonname
+            document.getElementById("pokemonImage").style.backgroundImage = "url(assets/media/" + imageGeneration(DexID) + "/shiny/" + MaleOrFemaleVersion(FileName, PokemonName, true) + ")";
+        }else if(document.getElementById("shinyBTN").className === "ShowShiny"){
+            for (let Pokemon of document.getElementsByClassName("pokemon-evo")) {
+                let DexID = Pokemon.getElementsByTagName("img")[0].alt.replace(".png", "")
+                let FileName = Pokemon.getElementsByTagName("img")[0].alt.replace(".png", "-Shiny.png")
+                let PokemonName = Pokemon.getElementsByTagName("img")[0].dataset.pokemonname
+                Pokemon.getElementsByTagName("img")[0].src = "assets/media/" + imageGeneration(DexID) + "/" + MaleOrFemaleVersion(FileName, PokemonName, false);
+            }
+            let DexID = document.getElementById("pokemonImage").dataset.imagefilename.replace(".png", "").replace("-Shiny", "");
+            let FileName = document.getElementById("pokemonImage").dataset.imagefilename.replace("-Shiny", "");
+            let PokemonName = document.getElementById("pokemonImage").dataset.pokemonname
+            document.getElementById("pokemonImage").style.backgroundImage = "url(assets/media/" + imageGeneration(DexID) + "/" + MaleOrFemaleVersion(FileName, PokemonName, false) + ")"
+            document.getElementById("shinyBTN").className = "HideShiny";
+        }
+    }else if(document.getElementById("searchWrapper").className === "flex search-wrapper" || document.getElementById("searchWrapper").className === "search-wrapper"){
+        if(document.getElementById("shinyBTN").className === "HideShiny"){   
+            document.getElementById("shinyBTN").className = "ShowShiny";
+        }else if(document.getElementById("shinyBTN").className === "ShowShiny"){
+            document.getElementById("shinyBTN").className = "HideShiny";
+        }
+    }
+    emptySearch()
+})
+/*          Menu            */
 document.getElementById('settingsBTN').addEventListener('click', () => {
     document.getElementById(configsData.Dextype).setAttribute('selected', 'selected')
     emptySearch()
-    ShowHideWrapper('hide', "show", 'hide', 'hide', 'hide', "hide")
+    ShowHideWrapper('hide', "show", 'hide', 'hide', 'hide', 'hide', "hide")
 })
 document.getElementById('searchBTN').addEventListener('click', () => {
     if(document.getElementById("NorR").value != configsData.Dextype){
         shakeAnimation(document.getElementById("saveSettings"), 0.5)
     }else{
         emptySearch()
-        ShowHideWrapper('hide', "hide", 'hide', 'show', 'hide', "hide")
+        ShowHideWrapper('hide', "hide", 'hide', 'hide', 'show', 'hide', "hide")
     }
 })
 document.getElementById('pokedexBTN').addEventListener('click', () => {
@@ -388,7 +499,11 @@ document.getElementById('pokedexBTN').addEventListener('click', () => {
         shakeAnimation(document.getElementById("saveSettings"), 0.5)
     }else{
         emptySearch()
-        ShowHideWrapper('hide', "hide", 'show', 'hide', 'hide', 'hide')   
+        if(document.getElementById("shinyBTN").className ==="ShowShiny"){
+            ShowHideWrapper('hide', "hide", "hide", 'show', 'hide', 'hide', 'hide')   
+        }else if(document.getElementById("shinyBTN").className === "HideShiny"){
+            ShowHideWrapper('hide', "hide", "show", 'hide', 'hide', 'hide', 'hide')   
+        }
     }
 })
 document.getElementById('backBTN').addEventListener('click', () => {
@@ -396,16 +511,17 @@ document.getElementById('backBTN').addEventListener('click', () => {
         shakeAnimation(document.getElementById("saveSettings"), 0.5)
     }else{
         emptySearch()
-        ShowHideWrapper('hide', "hide", 'hide', 'show', 'hide', 'hide')
+        ShowHideWrapper('hide', "hide", 'hide', 'hide', 'show', 'hide', 'hide')
     }
 })
+/*          Menu            */
 
+/*          Settings            */
 document.getElementById("saveSettings").addEventListener("click", (e) => {
     e.preventDefault();
     document.getElementById("ConfirmBTN").className = "flex";
     document.getElementById("ConfirmBTNText").innerHTML = "Pokedex needs to restart to apply changes";
 })
-
 document.getElementById("OkayBTN").addEventListener('click', () => {
     let jsonData = '{"Dextype": "' + document.getElementById("NorR").value + '"}'
     ipcRenderer.send('SaveConfig', jsonData)
@@ -415,28 +531,12 @@ document.getElementById("OkayBTN").addEventListener('click', () => {
         }
     })
 })
-
 document.getElementById("CancelBTN").addEventListener('click', () => {
     document.getElementById("ConfirmBTN").className = "none";
 })
-function MaleOrFemaleVersion(FileName, PokemonName){
-    if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName) === false){
-        if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-FemaleVersion.png"))){
-            return FileName.replace(".png", "-FemaleVersion.png");
-        }else if(ImageFileArray.includes("assets/media/" + imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + FileName.replace(".png", "-MaleVersion.png"))){
-            return FileName.replace(".png", "-MaleVersion.png");
-        }
-    }else{
-        return FileName
-    }
-}
+/*          Settings            */
 
-function PreparePokemonPage(FileName, PokemonName){
-    document.getElementById('pokemonImage').style.backgroundImage = 'url("assets/media/'+ imageGeneration(PokemonData[PokemonName.toLowerCase()]) + '/' + MaleOrFemaleVersion(FileName, PokemonName) + '")';
-    document.getElementById('pokemonImage').dataset.imagefilename = FileName;
-    InsertPokemonData(capitalizeFirstLetter(PokemonName));
-}
-
+/*          Search            */
 document.getElementById('searchResults').addEventListener('click', (e) => {
     if(e.target !== document.getElementById('searchResults')){
         if(e.target.tagName === 'LI' || e.target.tagName === 'IMG' || e.target.tagName === 'DIV'){
@@ -450,7 +550,6 @@ document.getElementById('searchResults').addEventListener('click', (e) => {
         }
     }
 })
-
 document.getElementById('searchResults').addEventListener('keypress', (e) => {
     if (e.code === "Enter" ) {
         if(e.target !== document.getElementById('searchResults')){
@@ -460,30 +559,37 @@ document.getElementById('searchResults').addEventListener('keypress', (e) => {
         }
     }
 })
-document.getElementById('mainWrapper').addEventListener('click', (e) => {
-    if(e.target.tagName === "LI"){
-        PreparePokemonPage(e.target.childNodes[0].alt, e.target.childNodes[1].innerHTML)
-    }
-    else if(e.target.tagName === "IMG"){
-        PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
-    }
-    else if(e.target.tagName === "P"){
-        PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
-    }
-})
-document.getElementById('mainWrapper').addEventListener('keypress', (e) => {
-    if (e.code === "Enter" ) {
+NormalAndShinyWrapper = ["mainWrapper", "mainWrapperShiny"]
+NormalAndShinyWrapper.forEach(element => {
+    document.getElementById(element).addEventListener('click', (e) => {
         if(e.target.tagName === "LI"){
             PreparePokemonPage(e.target.childNodes[0].alt, e.target.childNodes[1].innerHTML)
         }
-    }
-})
+        else if(e.target.tagName === "IMG"){
+            PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
+        }
+        else if(e.target.tagName === "P"){
+            PreparePokemonPage(e.target.parentNode.childNodes[0].alt, e.target.parentNode.childNodes[1].innerHTML)
+        }
+    })
+    document.getElementById(element).addEventListener('keypress', (e) => {
+        if (e.code === "Enter" ) {
+            if(e.target.tagName === "LI"){
+                PreparePokemonPage(e.target.childNodes[0].alt, e.target.childNodes[1].innerHTML)
+            }
+        }
+    })
+});
 
 document.getElementById("evolution-wrapper").addEventListener('click', (e) => {
     if(e.target.tagName === "P" || e.target.tagName === "IMG" ){
         if(e.target.className != "EvoSteps"){
             document.getElementById("pokemonImage").scrollTo(0,0)
-            PreparePokemonPage(e.target.dataset.pokemonimg, e.target.dataset.pokemonname)
+            if(document.getElementById("shinyBTN").className === "ShowShiny"){
+                PreparePokemonPage(e.target.dataset.pokemonimg.replace(".png", "-Shiny.png"), e.target.dataset.pokemonname)
+            }else{
+                PreparePokemonPage(e.target.dataset.pokemonimg, e.target.dataset.pokemonname)
+            }
         }
     }
 })

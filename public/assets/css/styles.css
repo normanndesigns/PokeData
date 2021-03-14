@@ -172,14 +172,6 @@
 .HideShiny{
 	background-image: url('../static/Shiny-BW.svg');
 }
-.ShowShiny:hover{
-	animation: fadein 0.5s;
-	background-image: url('../static/Shiny-BW.svg');
-}
-.HideShiny:hover{
-	animation: fadein 0.5s;
-	background-image: url('../static/Shiny.svg');
-}
 .menu ul li:nth-of-type(1){
 	background-size: 25px;
 	background-repeat: no-repeat;

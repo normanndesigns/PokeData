@@ -106,6 +106,22 @@ ipcMain.on('LoadImages', (event) => {
   });
   event.returnValue = ImageFileArray;
 })
+
+ipcMain.on('LoadImagesVariants', (event) => {
+  GenerationsArray = ["1", "2", "3", "4", "5", "6", "7", "8"];
+  ImageFileArray = [];
+  GenerationsArray.forEach(Generation => {
+    fs.readdirSync("public/assets/media/gen" + Generation + "/variants/").forEach(File => {
+      ImageFileArray.push("assets/media/gen" + Generation + "/variants/" + File);
+      FileWithoutGenderVariant = File.replace(".png", "").split("-", 1);
+      if(File.includes("-MaleVersion") && ImageFileArray[ImageFileArray.length - 2] === "assets/media/gen" + Generation + "/variants/" + FileWithoutGenderVariant[0] + "-FemaleVersion.png"){
+          ImageFileArray.pop();
+      }
+    });
+  });
+  event.returnValue = ImageFileArray;
+})
+
 ipcMain.on('PokemonData', async (event, arg) => {
   response = await fetch('https://pokeapi.co/api/v2/pokemon/' + arg)
   obj = await response.json();

@@ -1,11 +1,11 @@
 @font-face {
-	font-family: Raleway;
-	src: url(../font/Raleway-Light.ttf);
-  }
+	font-family: 'Roboto-Thin';
+	src: url(../font/Roboto-Thin.ttf) format('truetype');
+}
 @font-face {
-	font-family: OpenSans;
-	src: url(../font/OpenSans-Light.ttf);
-} 
+	font-family: 'Roboto';
+	src: url(../font/Roboto-Regular.ttf) format('truetype');
+}
 @keyframes loading {
 	from {transform: rotate(0deg);}
 	to {transform: rotate(360deg);}
@@ -25,6 +25,11 @@
 }
 *{
 	outline: none;
+	font-family: 'Roboto';
+	color: #575757;
+}
+h1, h2, h3, h4, h5, h6, label{
+	font-family: 'Roboto-Thin';
 }
 .none{
 	display: none !important; 
@@ -53,8 +58,7 @@
 	min-height: calc(100vh - 240px);
 	display: flex;
 	background-color: #DE6463;
-    font-family: 'Raleway', sans-serif;
-    border-top-left-radius: 10px;
+	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	flex-direction: column;
 	padding: 0px 20px 20px 20px;
@@ -230,7 +234,6 @@
 }
 .search-wrapper form label{
 	font-size: 45px;
-	font-family: Raleway;
 }
 .search-wrapper form input{
 	border: 0px;
@@ -279,7 +282,7 @@
 	overflow-x: auto;
 	background-color: #F2F5F8;
 	z-index: 5;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 }
 .dextype{
@@ -356,7 +359,7 @@
 	overflow-x: auto;
 	background-color: #F2F5F8;
 	z-index: 5;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 }
 /* width */
@@ -384,15 +387,13 @@
 	width: 100%;
     padding: 30px 0px;
     margin: 0px 30px;
-    font-weight: bold;
     font-size: 32px;
-    border-bottom: 1px solid #bdc3c7;
+	border-bottom: 1px solid #bdc3c7;
 }
 .GenerationHeaders3{
 	width: 100%;
     padding: 30px 0px;
     margin: 0px 50px;
-    font-weight: bold;
     font-size: 22px;
 	border-bottom: 1px solid #E6E9EC;
 }
@@ -480,10 +481,14 @@
 	font-size: 60px;
 }
 #DexID{
-	font-family: 'OpenSans', sans-serif;
 	font-size: 30px;
     margin-top: 30px;
 }
+#Abilities{
+	font-size: 20px;
+    margin-top: 20px;
+}
+
 #type-wrapper{
     display: flex;
 	width: 100%;
@@ -500,7 +505,6 @@
     justify-content: center;
     display: flex;
     color: #ffffff;
-    font-weight: bold;
     font-size: 17px;
     padding: 0px 10px;
 }
@@ -604,7 +608,7 @@
     text-align: center;
     font-size: 12px;
 }
-#circle-wrapper{
+#circleWrapper{
 	display: none;
 	position: fixed;
     bottom: calc(0% + 20px);

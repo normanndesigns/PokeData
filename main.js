@@ -6,14 +6,12 @@ const fetch = require('node-fetch')
 const { app, BrowserWindow, screen } = electron
 const { ipcMain } = require('electron')
 
-
 let win = null
 function createWindow () {
   win = new BrowserWindow({ width: 1200, minWidth: 1200, height: 765, minHeight: 765, frame: false, transparent: true, webPreferences: {nodeIntegration: true, enableRemoteModule: true, contextIsolation: false}})
   win.loadFile(path.join(__dirname, 'public/index.html'))
 }
 app.on('ready', createWindow)
-
 
 ipcMain.on('CloseWindow', async (event) => {
   win.close();
@@ -32,7 +30,6 @@ ipcMain.on('MaximizeWindow', async (event) => {
       win.maximize();
   }
 })
-
 
 ipcMain.on('LoadConfig', (event) => {
   try {
@@ -112,10 +109,13 @@ ipcMain.on('LoadImagesVariants', (event) => {
   ImageFileArray = [];
   GenerationsArray.forEach(Generation => {
     fs.readdirSync("public/assets/media/gen" + Generation + "/variants/").forEach(File => {
-      ImageFileArray.push("assets/media/gen" + Generation + "/variants/" + File);
+      ImageFileArray.push(File);
       FileWithoutGenderVariant = File.replace(".png", "").split("-", 1);
       if(File.includes("-MaleVersion") && ImageFileArray[ImageFileArray.length - 2] === "assets/media/gen" + Generation + "/variants/" + FileWithoutGenderVariant[0] + "-FemaleVersion.png"){
           ImageFileArray.pop();
+      }
+      if(File.includes("-Zen")){
+        ImageFileArray.pop();
       }
     });
   });
@@ -124,6 +124,10 @@ ipcMain.on('LoadImagesVariants', (event) => {
 
 ipcMain.on('PokemonData', async (event, arg) => {
   response = await fetch('https://pokeapi.co/api/v2/pokemon/' + arg)
-  obj = await response.json();
-  event.reply('PokemonDataReply', obj)
+  if(response.ok){
+    data = await response.json();
+    event.reply('PokemonDataReply', data);
+  } else {
+    event.reply('PokemonDataReply', "Error");
+  }
 })

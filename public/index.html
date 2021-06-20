@@ -95,53 +95,74 @@
       <div id="backBTN"></div>
       <div class="information-wrapper">
         <div class="information">
-          <h3 id="DexID"></h3>
-          <h2 id="name"></h2>
-          <h4 id="Abilities">Test</h4>
+          <div class="flex">
+            <h3 id="DexID"></h3>
+          </div>
+          <div class="flex">
+            <h2 id="Name"></h2>
+          </div>
+          <div class="flex">
+            <h4 id="Species"></h4>
+          </div>
           <div id="type-wrapper"></div>
+          <div class="flex">
+            <p id="Abilities"></p>
+          </div>
+          <div id="size-wrapper">
+            <div id="Height"><h4></h4></div>
+            <div id="Weight"><h4></h4></div>
+          </div>
           <div class="stats-wrapper">
             <div class="progress-wrapper">
-              <div class="base-stats"><p>HP:</p><p id="HP-stat"></p></div>
+              <div class="base-stats"><p><b>HP:</b></p><p id="HP-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="HP-stat-bar"></div></div>
               <div class="min-max-stats"><p id="HP-min-stat"></p><p id="HP-max-stat"></p></div>
             </div>
             <div class="progress-wrapper">
-              <div class="base-stats"><p>Attack:</p><p id="Attack-stat"></p></div>
+              <div class="base-stats"><p><b>Attack:</b></p><p id="Attack-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="Attack-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Attack-min-stat"></p><p id="Attack-max-stat"></p></div>
             </div>
             <div class="progress-wrapper">
-              <div class="base-stats"><p>Defense:</p><p id="Defense-stat"></p></div>
+              <div class="base-stats"><p><b>Defense:</b></p><p id="Defense-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="Defense-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Defense-min-stat"></p><p id="Defense-max-stat"></p></div>
             </div>
             <div class="progress-wrapper">
-              <div class="base-stats"><p>Sp. Atk:</p><p id="Special-Attack-stat"></p></div>
+              <div class="base-stats"><p><b>Sp. Atk:</b></p><p id="Special-Attack-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="Special-Attack-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Special-Attack-min-stat"></p><p id="Special-Attack-max-stat"></p></div>
             </div>
             <div class="progress-wrapper">
-              <div class="base-stats"><p>Sp. Def:</p><p id="Special-Defense-stat"></p></div>
+              <div class="base-stats"><p><b>Sp. Def:</b></p><p id="Special-Defense-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="Special-Defense-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Special-Defense-min-stat"></p><p id="Special-Defense-max-stat"></p></div>
             </div>
             <div class="progress-wrapper">
-              <div class="base-stats"><p>Speed:</p><p id="Speed-stat"></p></div>
+              <div class="base-stats"><p><b>Speed:</b></p><p id="Speed-stat"></p></div>
               <div class="progress-bar"><div class="progress" id="Speed-stat-bar"></div></div>
               <div class="min-max-stats"><p id="Speed-min-stat"></p><p id="Speed-max-stat"></p></div>
             </div>
             <div class="total-stats">
               <div class="base-stats">
-                <p>Total:</p>
+                <p><b>Total:</b></p>
                 <p id="Total-stat"></p>
               </div>
               <div class="min-max-text">
-                <p>Min</p>
-                <p>Max</p>
+                <p><b>Min</b></p>
+                <p><b>Max</b></p>
               </div>
             </div>
           </div>
-          <h2 class="section-title">Evolution</h2>
+          <div style="display: flex; width: 80px;">
+            <h2 class="section-title"><b>Training</b></h2>
+          </div>
+          <div id="training-wrapper">
+
+          </div>
+          <div style="display: flex; width: 80px;">
+            <h2 class="section-title"><b>Evolution</b></h2>
+          </div>
           <div id="evolution-wrapper">
             <div class="evolution-wrapper">
               <div id="Stage0"></div>
@@ -172,5 +193,4 @@
     <script src="assets/js/spatial_navigation.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
-
 </html>

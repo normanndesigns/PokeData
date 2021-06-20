@@ -2,6 +2,8 @@ const electron = require('electron')
 const path = require('path')
 const fs = require('fs')
 const fetch = require('node-fetch')
+var PokedexPromiseV2 = require('pokedex-promise-v2');
+var Pokedex = new PokedexPromiseV2();
 
 const { app, BrowserWindow, screen } = electron
 const { ipcMain } = require('electron')
@@ -123,20 +125,16 @@ ipcMain.on('LoadImagesVariants', (event) => {
 })
 
 ipcMain.on('PokemonData', async (event, arg) => {
-  response = await fetch('https://pokeapi.co/api/v2/pokemon/' + arg)
-  if(response.ok){
-    data = await response.json();
-    if(data.species != {}){
-      SpeciesFetch = await fetch(data.species.url) 
-      if(SpeciesFetch.ok){
-        Species = await SpeciesFetch.json();
-      }else{
-        event.reply('PokemonDataReply', "Error fetching Pokemon species information");
-      }
-    }
-    data.PokemonSpecies = Species;
-    event.reply('PokemonDataReply', data);
-  } else {
-    event.reply('PokemonDataReply', "Error fetching PokeAPI Data for Pokemon: " + arg);
-  }
+  Pokedex.getPokemonByName(arg)
+  .then(function(response) {
+    Pokedex.resource(response.species.url)
+    .then(function(SpeciesResponse) {
+      response.PokemonSpecies = SpeciesResponse;
+
+    });
+    event.reply('PokemonDataReply', response);
+  })
+  .catch(function(error) {
+    event.reply('PokemonDataReply', error);
+  });
 })

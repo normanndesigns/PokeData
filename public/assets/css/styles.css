@@ -598,6 +598,37 @@ h1, h2, h3, h4, h5, h6, label{
 .stats-green{
 	background-color: #a0e515;
 }
+.EVYield{
+	margin: 10px 0px 0px 10px;
+}
+.EVYield > ul{
+	margin-top: 5px;
+}
+.EVYield > ul > li{
+	display: inline-flex;
+    padding: 3px 5px;
+    border-radius: 6px;
+    margin-right: 5px;
+	color: #080808;
+}
+.EVYield > ul > li:nth-of-type(1){
+	background-color: #FF5959;
+}
+.EVYield > ul > li:nth-of-type(2){
+	background-color: #F5AC78;
+}
+.EVYield > ul > li:nth-of-type(3){
+	background-color: #FAE078;
+}
+.EVYield > ul > li:nth-of-type(4){
+	background-color: #9DB7F5;
+}
+.EVYield > ul > li:nth-of-type(5){
+	background-color: #A7DB8D;
+}
+.EVYield > ul > li:nth-of-type(6){
+	background-color: #FA92B2;
+}
 .evolution-wrapper{
 	display: flex;
 	align-items: center;

@@ -479,8 +479,11 @@ function InsertPokemonData(PokemonName, ApiData){
         GenerateStats(Stats[i], ApiData.stats[i].base_stat);
         document.getElementById("Total-stat").innerHTML = ApiData.stats[0].base_stat + ApiData.stats[1].base_stat + ApiData.stats[2].base_stat + ApiData.stats[3].base_stat + ApiData.stats[4].base_stat + ApiData.stats[5].base_stat;
     };
-    console.log(ApiData)
-    //document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>EV yield:</b> <span>" + ApiData + "</span>", className: 'EVYield'}));
+    EVYieldElement = "<ul><li> HP: " + ApiData.stats[0].effort + "</li><li> Atk: " + ApiData.stats[1].effort + "</li><li> Def: " + ApiData.stats[2].effort + "</li><li> Sp. Atk: " + ApiData.stats[3].effort + "</li><li> Sp. Def: " + ApiData.stats[4].effort + "</li><li> Spe: " + ApiData.stats[5].effort + "</li></ul>";
+    document.getElementById("training-wrapper").innerHTML = "";
+    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>EV yield:</b>" + EVYieldElement, className: 'EVYield'}));
+    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Experience: </b>" + "<p>" + ApiData.base_experience + "</p>", className: 'EVYield'}));
+    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Happiness: </b>" + "<p>" + ApiData.PokemonSpecies.base_happiness + "</p>", className: 'EVYield'}));
 
     for(i = 0; i < 3; i++){
         document.getElementsByClassName('evolution-wrapper')[i].childNodes[1].innerHTML = "";

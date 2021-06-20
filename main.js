@@ -130,9 +130,8 @@ ipcMain.on('PokemonData', async (event, arg) => {
     Pokedex.resource(response.species.url)
     .then(function(SpeciesResponse) {
       response.PokemonSpecies = SpeciesResponse;
-
+      event.reply('PokemonDataReply', response);
     });
-    event.reply('PokemonDataReply', response);
   })
   .catch(function(error) {
     event.reply('PokemonDataReply', error);

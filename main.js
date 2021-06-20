@@ -126,8 +126,17 @@ ipcMain.on('PokemonData', async (event, arg) => {
   response = await fetch('https://pokeapi.co/api/v2/pokemon/' + arg)
   if(response.ok){
     data = await response.json();
+    if(data.species != {}){
+      SpeciesFetch = await fetch(data.species.url) 
+      if(SpeciesFetch.ok){
+        Species = await SpeciesFetch.json();
+      }else{
+        event.reply('PokemonDataReply', "Error fetching Pokemon species information");
+      }
+    }
+    data.PokemonSpecies = Species;
     event.reply('PokemonDataReply', data);
   } else {
-    event.reply('PokemonDataReply', "Error");
+    event.reply('PokemonDataReply', "Error fetching PokeAPI Data for Pokemon: " + arg);
   }
 })

@@ -477,22 +477,19 @@ h1, h2, h3, h4, h5, h6, label{
 .information{
 	margin-top: 55px;
 }
-#name{
+#Name{
 	font-size: 60px;
+}
+#Species{
+	margin-top: 5px;
 }
 #DexID{
 	font-size: 30px;
-    margin-top: 30px;
 }
-#Abilities{
-	font-size: 20px;
-    margin-top: 20px;
-}
-
 #type-wrapper{
     display: flex;
 	width: 100%;
-	padding: 20px 20px 20px 0px;
+	margin: 20px 20px 20px 0px;
 }
 .type{
 	display: flex;
@@ -520,6 +517,30 @@ h1, h2, h3, h4, h5, h6, label{
 .type-icon > img{
     height: 100%;
     margin-left: 5px;
+}
+.AbilitiesH2{
+	font-size: 25px;
+	margin: 20px 0px 10px 0px;
+}
+#Abilities{
+	display: inline-flex;
+	margin-bottom: 15px;
+}
+#Abilities > span{
+    display: flex;
+	margin: 0px 0px 5px 5px;
+}
+#size-wrapper{
+	display: inline-flex;
+    flex-direction: column;
+	margin-bottom: 15px;
+}
+#size-wrapper > div{
+    display: flex;
+	margin: 0px 0px 5px 0px;
+}
+#size-wrapper > div > p:first-of-type{
+    margin-right: 15px;
 }
 .stats-wrapper{
 	font-size: 15px;

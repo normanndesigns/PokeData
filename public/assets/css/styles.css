@@ -545,6 +545,7 @@ h1, h2, h3, h4, h5, h6, label{
 .stats-wrapper{
 	font-size: 15px;
 	width: 100%;
+	margin-left: 10px;
 }
 .base-stats{
 	display: inline-flex;
@@ -574,6 +575,7 @@ h1, h2, h3, h4, h5, h6, label{
 }
 .section-title{
 	margin-top: 20px;
+	margin-bottom: 10px;
     font-size: 25px;
 }
 .progress-wrapper{
@@ -599,17 +601,20 @@ h1, h2, h3, h4, h5, h6, label{
 	background-color: #a0e515;
 }
 .EVYield{
-	margin: 10px 0px 0px 10px;
+	margin: 0px 0px 0px 10px;
 }
 .EVYield > ul{
 	margin-top: 5px;
+	display: flex;
 }
 .EVYield > ul > li{
-	display: inline-flex;
+	display: flex;
+    flex-direction: column;
     padding: 3px 5px;
     border-radius: 6px;
     margin-right: 5px;
-	color: #080808;
+    width: 5vw;
+    text-align: center;
 }
 .EVYield > ul > li:nth-of-type(1){
 	background-color: #FF5959;
@@ -628,6 +633,70 @@ h1, h2, h3, h4, h5, h6, label{
 }
 .EVYield > ul > li:nth-of-type(6){
 	background-color: #FA92B2;
+}
+.TrainingWrapper{
+	display: flex;
+    flex-wrap: wrap;
+}
+.TrainingWrapper > p{
+	width: 45%;
+	display: flex;
+	margin: 10px 0px 0px 10px;
+}
+.TrainingWrapper > p > p{
+	margin-left: 10px;
+}
+.gender-progress-bar{
+	width: 75%;
+	display: flex;
+	justify-content: space-between;
+	margin-left: 10px;
+	align-items: center;
+}
+#Gender-Bar-Female{
+	background-color: #ff6bce;
+	display: flex;
+	margin: 0;
+	width: 55%;
+}
+#Gender-Bar-Male{
+	background-color: #3273dc;
+	display: flex;
+}
+#Gender-Female-Tag{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #ff6bce;
+}
+#Gender-Male-Tag{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #3273dc;
+}
+#Gender-Female-Tag > span{
+	color: #ff6bce;
+}
+#Gender-Male-Tag > span{
+	color: #3273dc;
+}
+#Genderless-Wrapper{
+	justify-content: unset;
+}
+#Genderless-Tag{
+	color: #C0C0C0;
+}
+#Genderless-Bar{
+	width: 55%;
+	background-color: #C0C0C0;
+}
+.Egg-Wrapper{
+	display: flex;
+	flex-wrap: wrap;
+}
+.Egg-Wrapper > div > p{
+	margin: 10px 20px 0px 10px;
 }
 .evolution-wrapper{
 	display: flex;

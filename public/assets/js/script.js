@@ -385,11 +385,14 @@ async function GatherPokemonDataFromAPI(PokemonName){
     }
 
     ipcRenderer.send('PokemonData', endpoint);
-    ipcRenderer.on('PokemonDataReply', (event, Data) => {
-        if(Data === "Error"){
+    ipcRenderer.on('PokemonDataReply', (event, response) => {
+        if(response === "Error"){
             return "Error";
         }
         else{
+            let Data = response[0];
+            Data["species"] = response[1];
+
             if(PokemonName != Element && PokemonNameWithoutSpecialCharacters != Element){
                 let VariantName = " (" + Element.replace(PokemonName + "-", "").replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase()).replaceAll("-", " ") + ")";
                 InsertPokemonData(PokemonName + VariantName.replace(" galar", "").replace(" alola", ""), Data);
@@ -428,7 +431,7 @@ function InsertPokemonData(PokemonName, ApiData){
         var PokemonNameWithoutVariation = PokemonName.split(" (")[0];
     }
     document.getElementById('Name').innerHTML = Data.PokemonName;
-    ApiData.PokemonSpecies.genera.forEach(element => {
+    ApiData.species.genera.forEach(element => {
         if(element.language.name === "en"){
             document.getElementById('Species').innerHTML = element.genus;
         }
@@ -479,11 +482,31 @@ function InsertPokemonData(PokemonName, ApiData){
         GenerateStats(Stats[i], ApiData.stats[i].base_stat);
         document.getElementById("Total-stat").innerHTML = ApiData.stats[0].base_stat + ApiData.stats[1].base_stat + ApiData.stats[2].base_stat + ApiData.stats[3].base_stat + ApiData.stats[4].base_stat + ApiData.stats[5].base_stat;
     };
-    EVYieldElement = "<ul><li> HP: " + ApiData.stats[0].effort + "</li><li> Atk: " + ApiData.stats[1].effort + "</li><li> Def: " + ApiData.stats[2].effort + "</li><li> Sp. Atk: " + ApiData.stats[3].effort + "</li><li> Sp. Def: " + ApiData.stats[4].effort + "</li><li> Spe: " + ApiData.stats[5].effort + "</li></ul>";
+    let EVYieldElement = "<ul><li><span>" + ApiData.stats[0].effort + "</span>HP</li><li><span>" + ApiData.stats[1].effort + "</span>Atk</li><li><span>" + ApiData.stats[2].effort + "</span>Def</li><li><span>" + ApiData.stats[3].effort + "</span>Sp. Atk</li><li><span>" + ApiData.stats[4].effort + "</span>Sp. Def</li><li><span>" + ApiData.stats[5].effort + "</span>Spe</li></ul>";
     document.getElementById("training-wrapper").innerHTML = "";
-    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>EV yield:</b>" + EVYieldElement, className: 'EVYield'}));
-    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Experience: </b>" + "<p>" + ApiData.base_experience + "</p>", className: 'EVYield'}));
-    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Happiness: </b>" + "<p>" + ApiData.PokemonSpecies.base_happiness + "</p>", className: 'EVYield'}));
+    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>EV yield: </b>" + EVYieldElement, className: 'EVYield'}));
+    document.getElementById("training-wrapper").appendChild(Object.assign(document.createElement('div'),{innerHTML: "", className: 'TrainingWrapper'}));
+    document.getElementsByClassName('TrainingWrapper')[0].appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Catch Rate: </b>" + "<p>" + ApiData.species.capture_rate + "</p>", className: 'CatchRate'}));
+    document.getElementsByClassName('TrainingWrapper')[0].appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Growth Rate: </b>" + "<p>" + capitalizeFirstLetter(ApiData.species.growth_rate.name) + "</p>", className: 'GrowthRate'}));
+    document.getElementsByClassName('TrainingWrapper')[0].appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Experience: </b>" + "<p>" + ApiData.base_experience + "</p>", className: 'BaseExperience'}));
+    document.getElementsByClassName('TrainingWrapper')[0].appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Base Friendship: </b>" + "<p>" + ApiData.species.base_happiness + "</p>", className: 'BaseHappiness'}));
+
+    if(ApiData.species.gender_rate != -1){
+        document.getElementById("Gender-Male-Tag").innerHTML = "Male <span>" + (100 - ((ApiData.species.gender_rate/8)*100)) + "%</span>";
+        document.getElementById("Gender-Female-Tag").innerHTML = "Female <span>" + (ApiData.species.gender_rate/8)*100 + "%</span>";
+        document.getElementById("Gender-Bar-Male").style.width = 100 - ((ApiData.species.gender_rate/8)*100) + "%";
+        document.getElementById("Genderless-Wrapper").className = "gender-progress-bar none";
+        document.getElementById("Gender-Wrapper").className = "gender-progress-bar flex";
+    }else{
+        document.getElementById("Genderless-Wrapper").className = "gender-progress-bar flex";
+        document.getElementById("Gender-Wrapper").className = "gender-progress-bar none";
+    }
+    let EggGroups = []
+    ApiData.species.egg_groups.forEach(element => {
+        EggGroups.push(capitalizeFirstLetter(element.name))
+    });
+    document.getElementById("EggGroups").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Groups: </b>" + EggGroups.join(", "), className: 'EggGroups'}));
+    document.getElementById("EggSteps").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Cycles: </b>" + ApiData.species.hatch_counter + " (" + (257*ApiData.species.hatch_counter) + " steps)", className: 'EggCycles'}));
 
     for(i = 0; i < 3; i++){
         document.getElementsByClassName('evolution-wrapper')[i].childNodes[1].innerHTML = "";

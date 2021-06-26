@@ -125,15 +125,11 @@ ipcMain.on('LoadImagesVariants', (event) => {
 })
 
 ipcMain.on('PokemonData', async (event, arg) => {
-  Pokedex.getPokemonByName(arg)
+  Pokedex.resource(["https://pokeapi.co/api/v2/pokemon/" + arg,"https://pokeapi.co/api/v2/pokemon-species/" + arg])
   .then(function(response) {
-    Pokedex.resource(response.species.url)
-    .then(function(SpeciesResponse) {
-      response.PokemonSpecies = SpeciesResponse;
-      event.reply('PokemonDataReply', response);
-    });
+    event.reply('PokemonDataReply', response);
   })
   .catch(function(error) {
     event.reply('PokemonDataReply', error);
   });
-})
+});

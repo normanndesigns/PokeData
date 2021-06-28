@@ -92,7 +92,6 @@
       <img src="assets/static/pokeball.svg" alt="Pokeball loading animation">
     </div>
     <div class="none" id="pokemonImage">
-      <div id="backBTN"></div>
       <div class="information-wrapper">
         <div class="information">
           <div class="flex">
@@ -149,6 +148,7 @@
                 <p><b>Total:</b></p>
                 <p id="Total-stat"></p>
               </div>
+              <div class="progress-bar"><div class="progress"></div></div>
               <div class="min-max-text">
                 <p><b>Min</b></p>
                 <p><b>Max</b></p>
@@ -180,7 +180,7 @@
             </div>
           </div>
           <div style="display: flex; width: 80px;">
-            <h2 class="section-title"><b>Evolution</b></h2>
+            <h2 class="section-title" id="EvolutionTitle"><b>Evolution</b></h2>
           </div>
           <div id="evolution-wrapper">
             <div class="evolution-wrapper">
@@ -202,11 +202,13 @@
         </div>
       </div>
     </div>
-    <div id="circleWrapper">
-      <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
-      <path id="st0" d="M500,131.99V0C223.86,0,0,223.86,0,500h131.99C131.99,296.75,296.75,131.99,500,131.99z"/>
-      </svg>
+    <div>
+      <div id="circleWrapper">
+        <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          viewBox="0 0 500 500" style="enable-background:new 0 0 500 500;" xml:space="preserve">
+        <path id="st0" d="M500,131.99V0C223.86,0,0,223.86,0,500h131.99C131.99,296.75,296.75,131.99,500,131.99z"/>
+        </svg>
+      </div>
     </div>
   </div>
     <script src="assets/js/spatial_navigation.js"></script>

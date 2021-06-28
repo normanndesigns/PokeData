@@ -289,10 +289,12 @@ function EvolutionLine(PokemonName){
     }
     document.getElementsByClassName("section-title")[0].className = "section-title flex";
     if(EvolutionData[PokemonName] != undefined){
+        document.getElementById("EvolutionTitle").className = "section-title";
         for (Key in EvolutionData[PokemonName]){
             let Data = GetPokemonDataFromName(Key)
             var DivWrapper = Object.assign(document.createElement('div'), {className: 'pokemon-evo'});
             var PokemonWrapper = Object.assign(document.createElement('div'), {className: 'EvoPokemon'});
+            var EvoImageWrapper = Object.assign(document.createElement('div'), {className: 'EvoImageWrapper'});
             let PTag = Object.assign(document.createElement('p'), {innerHTML: Key});
             if(document.getElementById("pokemonImage").dataset.shiny === "true"){
                 var ImgTag = Object.assign(document.createElement('img'), {
@@ -311,7 +313,8 @@ function EvolutionLine(PokemonName){
                 ImgTag.dataset.shiny = "false";
                 PTag.dataset.shiny = "false";
             }
-            PokemonWrapper.appendChild(ImgTag);
+            EvoImageWrapper.appendChild(ImgTag);
+            PokemonWrapper.appendChild(EvoImageWrapper);
             PokemonWrapper.appendChild(PTag);
 
             if(typeof EvolutionData[PokemonName][Key]["HowToEvolve"] === 'object' && EvolutionData[PokemonName][Key]["HowToEvolve"] !== null){
@@ -319,8 +322,8 @@ function EvolutionLine(PokemonName){
 
                 for (let [key, value] of Object.entries(EvolutionData[PokemonName][Key]["HowToEvolve"])) {
                     if(EvolutionData[PokemonName][Key]["HowToEvolve"] != "Final Form"){
-                        let EvoMethod = Object.assign(document.createElement('div'));
-                        let EvoMethodPTag = Object.assign(document.createElement('p'), {className: "EvoSteps", innerHTML: value});
+                        let EvoMethod = Object.assign(document.createElement('div'), {className: "EvoStepsWrapper"});
+                        let EvoMethodPTag = Object.assign(document.createElement('p'), {className: "EvoSteps", innerHTML: value.replace("(", "").replace(")", "")});
                         EvoMethod.appendChild(EvoMethodPTag);
                         MethodWrapper.appendChild(EvoMethod);
                     }
@@ -328,10 +331,10 @@ function EvolutionLine(PokemonName){
                 DivWrapper.appendChild(PokemonWrapper);
                 DivWrapper.appendChild(MethodWrapper);
             }else{
-                let EvoMethod = Object.assign(document.createElement('div'));
+                let EvoMethod = Object.assign(document.createElement('div'), {className: "EvoStepsWrapper"});
                 let EvoMethodPTag = Object.assign(document.createElement('p'), {className: "EvoSteps"});
                 if(EvolutionData[PokemonName][Key]["HowToEvolve"].toLowerCase() != "final form"){
-                    EvoMethodPTag.innerHTML = EvolutionData[PokemonName][Key]["HowToEvolve"];
+                    EvoMethodPTag.innerHTML = EvolutionData[PokemonName][Key]["HowToEvolve"].replace("(", "").replace(")", "");
                 }
                 EvoMethod.appendChild(EvoMethodPTag);
                 DivWrapper.appendChild(PokemonWrapper);
@@ -348,7 +351,7 @@ function EvolutionLine(PokemonName){
             document.getElementById(Stage).append(DivWrapper);
         }
     }else{
-        document.getElementsByClassName("section-title")[0].className = "section-title none";
+        document.getElementById("EvolutionTitle").className = "section-title none";
     }
 };
 async function GatherPokemonDataFromAPI(PokemonName){
@@ -505,6 +508,8 @@ function InsertPokemonData(PokemonName, ApiData){
     ApiData.species.egg_groups.forEach(element => {
         EggGroups.push(capitalizeFirstLetter(element.name))
     });
+    document.getElementById("EggGroups").innerHTML = "";
+    document.getElementById("EggSteps").innerHTML = "";
     document.getElementById("EggGroups").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Groups: </b>" + EggGroups.join(", "), className: 'EggGroups'}));
     document.getElementById("EggSteps").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Cycles: </b>" + ApiData.species.hatch_counter + " (" + (257*ApiData.species.hatch_counter) + " steps)", className: 'EggCycles'}));
 
@@ -691,14 +696,6 @@ document.getElementById('pokedexBTN').addEventListener('click', () => {
         }else if(document.getElementById("shinyBTN").className === "HideShiny"){
             ShowHideWrapper({"mainWrapper": "show"});
         }
-    }
-});
-document.getElementById('backBTN').addEventListener('click', () => {
-    if(document.getElementById("NorR").value != configsData.Dextype){
-        shakeAnimation(document.getElementById("saveSettings"), 0.5);
-    }else{
-        emptySearch();
-        ShowHideWrapper({"searchWrapper": "show"});
     }
 });
 /*          Menu            */

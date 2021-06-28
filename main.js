@@ -8,10 +8,29 @@ var Pokedex = new PokedexPromiseV2();
 const { app, BrowserWindow, screen } = electron
 const { ipcMain } = require('electron')
 
+let PreviousWindowInfo = {};
 let win = null
 function createWindow () {
-  win = new BrowserWindow({ width: 1200, minWidth: 1200, height: 765, minHeight: 765, frame: false, transparent: true, webPreferences: {nodeIntegration: true, enableRemoteModule: true, contextIsolation: false}})
+  const ScreenWidth = screen.getPrimaryDisplay().workAreaSize.width
+  const ScreenHeight = screen.getPrimaryDisplay().workAreaSize.height
+
+  TempPokedexWidth = (((ScreenWidth * 0.625)-50)/230)
+  if(TempPokedexWidth %= 0){
+    PokedexWidth = (((ScreenWidth * 0.625)-50)/230);
+  }else{
+      PokedexWidth = (230*(Math.round(((ScreenWidth*0.625)-50)/230)))+50;
+  }
+
+  TempPokedexHeight = (((ScreenHeight * 0.75)-220)/146)
+  if(TempPokedexHeight %= 0){
+    PokedexHeight = (((ScreenHeight * 0.75)-220)/146)
+  }else{
+    PokedexHeight = (146*(Math.round((((ScreenHeight * 0.75)-220)/146))))+220;
+  }
+
+  win = new BrowserWindow({ width: PokedexWidth, minWidth: PokedexWidth, height: PokedexHeight, minHeight: PokedexHeight, frame: false, transparent: true, webPreferences: {nodeIntegration: true, enableRemoteModule: true, contextIsolation: false}})
   win.loadFile(path.join(__dirname, 'public/index.html'))
+  PreviousWindowInfo = {width: PokedexWidth, height: PokedexHeight, x: win.getNormalBounds().x, y: win.getNormalBounds().y}
 }
 app.on('ready', createWindow)
 
@@ -24,12 +43,13 @@ ipcMain.on('MinimizeWindow', async (event) => {
 })
 
 ipcMain.on('MaximizeWindow', async (event) => {
-  if(screen.availWidth === win.getSize()[0] && screen.availHeight === win.getSize()[1]){
-    win.setSize(Size[0], Size[1]);
+  let [CurrentWidth, CurrentHeight] = win.getSize();
+  if(screen.getPrimaryDisplay().workAreaSize.width !=  CurrentWidth && screen.getPrimaryDisplay().workAreaSize.height !=  CurrentHeight){
+    PreviousWindowInfo = {width: CurrentWidth, height: CurrentHeight, x: win.getNormalBounds().x, y: win.getNormalBounds().y}
+    win.maximize();
   }else{
-      Position = [win.getPosition[0], win.getPosition[1]]
-      Size = [win.getSize()[0], win.getSize()[1]]
-      win.maximize();
+    win.setBounds({ x: PreviousWindowInfo.x, y: PreviousWindowInfo.y, width: PreviousWindowInfo.width, height: PreviousWindowInfo.height })
+    win.restore()
   }
 })
 

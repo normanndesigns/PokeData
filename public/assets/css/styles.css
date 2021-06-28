@@ -67,13 +67,14 @@ h1, h2, h3, h4, h5, h6, label{
 .toolbar{
 	width: 100%;
 	height: 25px;
-	margin-bottom: 25px;
+	padding-bottom: 25px;
 	background-color: #DE6463;
 	align-items: center;
     display: flex;
     justify-content: flex-end;
 	border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+	z-index: 5;
 }
 .toolbar ul{
     display: flex;
@@ -104,7 +105,7 @@ h1, h2, h3, h4, h5, h6, label{
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    z-index: 2;
+    z-index: 6;
 }
 .arch{
 	position: absolute;
@@ -117,15 +118,14 @@ h1, h2, h3, h4, h5, h6, label{
 	border-radius: 50% 50% 0 0;
 	background: rgb(255,255,255);
 	background: linear-gradient(180deg, rgba(52,44,41,1) 0%, rgba(52,44,41,1) 90%, rgba(222,100,99,1) 90%, rgba(222,100,99,1) 100%, rgba(255,0,0,1) 100%);
-	position: absolute;
   }
  .arch-bottom{
 	width: 175px;
-	height: 145px;
-	border-radius: 50% 50% 0 0;
-	background-color: #DE6463;
-	position: relative;
-	top: 100px;
+    height: 75px;
+    border-radius: 50% 50% 0 0;
+    background-color: #DE6463;
+    position: absolute;
+    top: 70px;
 }
 .eye{
 	width: 100px;
@@ -451,31 +451,11 @@ h1, h2, h3, h4, h5, h6, label{
   #pokemonImage::-webkit-scrollbar-thumb:hover {
 	background: #555; 
   }
-#backBTN{
-	width: 30px;
-	height: 30px;
-	border: 1px solid black;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 15px;
-	background-image: url('../static/back-arrow.svg');
-	background-size: 60%;
-	background-repeat: no-repeat;
-	background-position: center;
-	z-index: 200;
-}
-#backBTN:hover{
-	filter: invert(100%);
-	cursor: pointer;
-}
 .information-wrapper{
+	padding-left: 30px;
+	padding-top: 30px;
 	width: 50%;
     height: calc(100vh - 220px);
-}
-.information{
-	margin-top: 55px;
 }
 #Name{
 	font-size: 60px;
@@ -509,6 +489,7 @@ h1, h2, h3, h4, h5, h6, label{
 	margin-right: 35px;
 }
 .type-icon{
+	transform: translate(-1px, 0px);
 	width: 50px;
     height: 100%;
     border-radius: 7px 0px 0px 7px;
@@ -567,11 +548,11 @@ h1, h2, h3, h4, h5, h6, label{
 	display: inline-flex;
 }
 .min-max-text > p:first-of-type{
+	margin-left: 25px;
     margin-right: 20px;
 }
 .total-stats{
 	display: flex;
-    justify-content: space-between;
 }
 .section-title{
 	margin-top: 20px;
@@ -700,15 +681,23 @@ h1, h2, h3, h4, h5, h6, label{
 }
 .evolution-wrapper{
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
+}
+.evolution-wrapper > div{
+	width: 33%;
 }
 .Pokemon-evo{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+.EvoImageWrapper > img{
+    width: 100%;
+}
 .EvoPokemon{
 	padding: 10px;
+	width: 50%;
 }
 .EvoPokemon > img{
 	height: 100px;
@@ -719,25 +708,28 @@ h1, h2, h3, h4, h5, h6, label{
 .EvoPokemon:hover{
 	cursor: pointer;
 }
+.EvoStepsWrapper{
+    width: 50%
+}
 .EvoSteps{
 	display: flex;
     justify-content: center;
     align-items: center;
     padding: 10px;
-    height: 116px;
-    width: 100px;
     text-align: center;
     font-size: 12px;
 }
 #circleWrapper{
 	display: none;
 	position: fixed;
+	width: 40%;
     bottom: calc(0% + 20px);
     right: calc(0% + 20px);
 	z-index: 0;
+	justify-content: flex-end;
 }
 #circle{
-	width: 480px;
+	width: calc(100vh - 220px);
 }
 /*   Keyframes   */
 @keyframes fadein {

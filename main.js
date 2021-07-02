@@ -146,8 +146,19 @@ ipcMain.on('LoadImagesVariants', (event) => {
 
 ipcMain.on('PokemonData', async (event, arg) => {
   Pokedex.resource(["https://pokeapi.co/api/v2/pokemon/" + arg,"https://pokeapi.co/api/v2/pokemon-species/" + arg])
-  .then(function(response) {
-    event.reply('PokemonDataReply', response);
+  .then(function(Response) {
+    TypeURLArray = [];
+    for (i = 0; i < Response[0].types.length; i++) {
+      TypeURLArray.push("https://pokeapi.co/api/v2/type/" + Response[0].types[i].type.name + "/")
+    }
+    Pokedex.resource(TypeURLArray)
+    .then(function(TypeResponse) {
+      CombinedResponse = Response.concat([TypeResponse])
+      event.reply('PokemonDataReply', CombinedResponse);
+    })
+    .catch(function(error) {
+      event.reply('PokemonDataReply', error);
+    });
   })
   .catch(function(error) {
     event.reply('PokemonDataReply', error);

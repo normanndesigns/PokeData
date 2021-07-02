@@ -559,6 +559,10 @@ h1, h2, h3, h4, h5, h6, label{
 	margin-bottom: 10px;
     font-size: 25px;
 }
+.section-sub-title{
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
 .progress-wrapper{
 	display: flex;
 	margin: 0px 0px 5px 0px;
@@ -718,6 +722,46 @@ h1, h2, h3, h4, h5, h6, label{
     padding: 10px;
     text-align: center;
     font-size: 12px;
+}
+#Weakness-Wrapper{
+	display: flex;
+    flex-wrap: wrap;
+	flex-direction: column-reverse;
+	margin-left: 10px;
+}
+.EffectivenessWrapper{
+	font-size: 1.2em;
+	margin-bottom: 15px;
+	display: flex;
+    align-items: center;
+}
+.EffectivenessTypeWrapper{
+	display: flex;
+    flex-wrap: wrap;
+}
+.TypeWrapper{
+	width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+.quad_damage_from{
+	color: #73d216;
+}
+.double_damage_from{
+	color: #4e9a06;
+}
+.half_damage_from{
+	color: #a40000;
+}
+.quarter_damage_from{
+	color: #7c0000;
+}
+.no_damage_from{
+	color: #000000;
 }
 #circleWrapper{
 	display: none;

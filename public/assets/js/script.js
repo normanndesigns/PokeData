@@ -395,6 +395,7 @@ async function GatherPokemonDataFromAPI(PokemonName){
         else{
             let Data = response[0];
             Data["species"] = response[1];
+            Data["TypeEffectiveness"] = response[2];
 
             if(PokemonName != Element && PokemonNameWithoutSpecialCharacters != Element){
                 let VariantName = " (" + Element.replace(PokemonName + "-", "").replace(/(^\w{1})|(\s{1}\w{1})/g, match => match.toUpperCase()).replaceAll("-", " ") + ")";
@@ -427,6 +428,87 @@ function GenerateStats(StatType, Stat){
         document.getElementById(StatType + "-stat-bar").style.width = ((Stat/255)*100) + "%";
     }
 };
+
+function RemoveDuplicatedTypeEffectiveness (Array, FirstArrayName, SecondArrayName){
+	let ArrayToLoop = [...Array[FirstArrayName]];
+	let ArrayToRemoveDuplocationsIn = [...Array[SecondArrayName]];
+  
+  ArrayToLoop.forEach(element => {
+    if(ArrayToRemoveDuplocationsIn.includes(element)){
+      let index = ArrayToRemoveDuplocationsIn.indexOf(element);
+      ArrayToRemoveDuplocationsIn.splice(index, 1);
+    }
+  })
+   return (ArrayToRemoveDuplocationsIn)
+};
+
+function GatherPokemonTypeEffectiveness(Type, EffectivenessOBJ){
+    for (const [key, value] of Object.entries(EffectivenessOBJ)) {
+        if(value != ""){
+            if(value.includes(Type)){
+                return key;
+            }
+        }
+    }
+}
+
+function CreateTypeEffectivenessElements(EffectivenessOBJ){
+    document.getElementById("Weakness-Wrapper").innerHTML = "";
+    for (const [key, value] of Object.entries(EffectivenessOBJ)) {
+        if(value != ""){
+            let EffectivenessWrapper = document.createElement("div"); 
+            EffectivenessWrapper.className = "EffectivenessWrapper";
+
+            let EffectivenessHeader = document.createElement("h2");
+            switch (key){
+                case "quad_damage_from":
+                    var Multiplier = "4x";
+                    break;
+                case "double_damage_from":
+                    var Multiplier = "2x";
+                    break;
+                case "half_damage_from":
+                    var Multiplier = "½x";
+                    break;
+                case "quarter_damage_from":
+                    var Multiplier = "¼x";
+                    break;
+                case "no_damage_from":
+                    var Multiplier = "0x";
+                    break;
+              }
+
+            EffectivenessHeader.innerHTML = Multiplier;
+            EffectivenessHeader.className = "EffectivenessHeader " + key;
+
+            let EffectivenessTypeWrapper = document.createElement("div");
+            EffectivenessTypeWrapper.setAttribute("data-" + key, key);
+            EffectivenessTypeWrapper.className = "EffectivenessTypeWrapper";
+
+            EffectivenessWrapper.appendChild(EffectivenessHeader);
+            EffectivenessWrapper.appendChild(EffectivenessTypeWrapper);
+            document.getElementById("Weakness-Wrapper").prepend(EffectivenessWrapper);
+        }
+    }
+
+    let TypeArray = ["normal", "fire", "water", "electric", "grass", "ice", "fighting", "poison", "ground", "flying", "psychic", "bug", "rock", "ghost", "dragon", "dark", "steel", "fairy"]
+    for (i = 0; i < TypeArray.length; i++) {
+        let Effectiveness = GatherPokemonTypeEffectiveness(TypeArray[i], EffectivenessOBJ)
+        if(Effectiveness != undefined){
+            let TypeWrapper = document.createElement("div"); 
+            TypeWrapper.className = "TypeWrapper";
+            TypeWrapper.style.backgroundColor = TypeColorData[TypeArray[i]];
+    
+            let TypeIcon = document.createElement("img"); 
+            TypeIcon.src = "assets/static/" + capitalizeFirstLetter(TypeArray[i]) + ".svg";
+    
+            TypeWrapper.appendChild(TypeIcon)
+    
+            document.querySelectorAll("[data-" + Effectiveness + "]")[0].appendChild(TypeWrapper);
+        }
+          
+    }
+}
 
 function InsertPokemonData(PokemonName, ApiData){
     let Data = GetPokemonDataFromName(PokemonName);
@@ -512,6 +594,51 @@ function InsertPokemonData(PokemonName, ApiData){
     document.getElementById("EggSteps").innerHTML = "";
     document.getElementById("EggGroups").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Groups: </b>" + EggGroups.join(", "), className: 'EggGroups'}));
     document.getElementById("EggSteps").appendChild(Object.assign(document.createElement('p'),{innerHTML: "<b>Egg Cycles: </b>" + ApiData.species.hatch_counter + " (" + (257*ApiData.species.hatch_counter) + " steps)", className: 'EggCycles'}));
+
+    let TempArray = {
+        quad_damage_from: [],
+        double_damage_from: [],
+        half_damage_from: [],
+        quarter_damage_from: [],
+        no_damage_from: [],
+    }
+    ApiData.TypeEffectiveness.forEach(TypeEffectiveness => {
+        Object.keys(TypeEffectiveness.damage_relations).forEach(EffectivenessAmount => {
+            if(TempArray[EffectivenessAmount] != undefined){
+                TypeEffectiveness.damage_relations[EffectivenessAmount].forEach(element => {
+                    if(!TempArray[EffectivenessAmount].includes(element.name)){
+                        TempArray[EffectivenessAmount].push(element.name)
+                    }else{
+                        if(EffectivenessAmount === "double_damage_from"){
+                            TempArray[EffectivenessAmount] = TempArray[EffectivenessAmount].filter(item => item !== element.name)
+                            TempArray["quad_damage_from"].push(element.name)
+                        }else if(EffectivenessAmount === "half_damage_from"){
+                            TempArray[EffectivenessAmount] = TempArray[EffectivenessAmount].filter(item => item !== element.name)
+                            TempArray["quarter_damage_from"].push(element.name)
+                        }
+                    }
+                });
+            }
+        });    
+    });
+    Object.keys(TempArray).forEach(EffectivenessAmount => {
+        TempArray[EffectivenessAmount].forEach(element => {
+            if(TempArray["no_damage_from"].includes(element)){
+                if(EffectivenessAmount === "half_damage_from" || EffectivenessAmount === "double_damage_from"){
+                    TempArray[EffectivenessAmount].splice(TempArray[EffectivenessAmount].indexOf(element), 1)
+                }
+            }
+        })
+    })
+    const Effectiveness = {
+        quad_damage_from: TempArray.quad_damage_from,
+        double_damage_from: RemoveDuplicatedTypeEffectiveness(TempArray, "half_damage_from", "double_damage_from"),
+        half_damage_from: RemoveDuplicatedTypeEffectiveness(TempArray, "double_damage_from", "half_damage_from"),
+        quarter_damage_from: TempArray.quarter_damage_from,
+        no_damage_from: TempArray.no_damage_from,
+    }
+    document.getElementById("TypeEffectivenessSubHeader").innerHTML = "The effectiveness of each type on " + Data.PokemonName
+    CreateTypeEffectivenessElements(Effectiveness)
 
     for(i = 0; i < 3; i++){
         document.getElementsByClassName('evolution-wrapper')[i].childNodes[1].innerHTML = "";

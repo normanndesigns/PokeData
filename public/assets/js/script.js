@@ -1,6 +1,7 @@
 const { ipcRenderer } = require('electron');
 const configsData = JSON.parse(ipcRenderer.sendSync('LoadConfig'));
-const LoadVariantsData = JSON.parse(ipcRenderer.sendSync('LoadVariants'));
+const VariantsData = JSON.parse(ipcRenderer.sendSync('LoadVariants'));
+const RegionalSpeciesData = JSON.parse(ipcRenderer.sendSync('LoadRegionalSpeciesLocal'));
 const PokemonData = JSON.parse(ipcRenderer.sendSync('LoadPokedex'));
 const PokemonDataKeys = Object.keys(PokemonData);
 const EvolutionData = JSON.parse(ipcRenderer.sendSync('LoadEvolution'));
@@ -191,10 +192,10 @@ function search(){
     PokemonDataKeys.forEach(function(element){
         if(element.toLowerCase().startsWith(searchValue)){
             tempArray.push(element);
-            if(LoadVariantsData["alolan " + element] != undefined){
+            if(VariantsData["alolan " + element] != undefined){
                 tempArray.push(element + " alolan");
             }
-            if(LoadVariantsData["galarian " + element] != undefined){
+            if(VariantsData["galarian " + element] != undefined){
                 tempArray.push(element + " galarian");
             }
         }
@@ -243,12 +244,12 @@ function GetPokemonDataFromName(PokemonName){
         if(PokemonName.includes("alolan") || PokemonName.includes("galarian") || VariationsName != undefined){
             var ShinyFolderStructure = "/variants/shiny/";
             var FolderStructure = "/variants/";
-            if(LoadVariantsData[PokemonName]){
+            if(VariantsData[PokemonName]){
                 if(SpecialCases[PokemonName]){
                     FileName = SpecialCases[PokemonName] + ".png";    
                 }else{
                     Region = PokemonName.split(" ")[0];
-                    FileName = LoadVariantsData[PokemonName] + "-" + Region[0].toUpperCase() + Region.slice(1) + ".png";    
+                    FileName = VariantsData[PokemonName] + "-" + Region[0].toUpperCase() + Region.slice(1) + ".png";    
                 }
             }else if(VariationsName != undefined){
                 FileName = DexID + "-" + VariationsName.replace(" ", "-") + ".png";

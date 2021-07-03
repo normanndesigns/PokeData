@@ -1,0 +1,876 @@
+{
+    "rattata-alola": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mouse Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "raticate-alola": {
+        "base_happiness": 50,
+        "capture_rate": 127,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mouse Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "raichu-alola": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mouse Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "fairy",
+            "url": "https://pokeapi.co/api/v2/egg-group/6/"
+        }, {
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 10
+    },
+    "sandshrew-alola": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mouse Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "sandslash-alola": {
+        "base_happiness": 50,
+        "capture_rate": 90,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mouse Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "vulpix-alola": {
+        "base_happiness": 50,
+        "capture_rate": 190,
+        "gender_rate": 2,
+        "genera": [{
+            "genus": "Fox Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "ninetales-alola": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 2,
+        "genera": [{
+            "genus": "Fox Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "diglett-alola": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mole Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "dugtrio-alola": {
+        "base_happiness": 50,
+        "capture_rate": 50,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Mole Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "meowth-alola": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Scratch Cat Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "persian-alola": {
+        "base_happiness": 50,
+        "capture_rate": 90,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Classy Cat Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "geodude-alola": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Rock Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "mineral",
+            "url": "https://pokeapi.co/api/v2/egg-group/10/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "graveler-alola": {
+        "base_happiness": 50,
+        "capture_rate": 120,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Rock Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "mineral",
+            "url": "https://pokeapi.co/api/v2/egg-group/10/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "golem-alola": {
+        "base_happiness": 50,
+        "capture_rate": 45,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Megaton Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "mineral",
+            "url": "https://pokeapi.co/api/v2/egg-group/10/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "grimer-alola": {
+        "base_happiness": 50,
+        "capture_rate": 190,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Sludge Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "indeterminate",
+            "url": "https://pokeapi.co/api/v2/egg-group/11/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "muk-alola": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Sludge Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "indeterminate",
+            "url": "https://pokeapi.co/api/v2/egg-group/11/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "exeggutor-alola": {
+        "base_happiness": 50,
+        "capture_rate": 45,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Coconut Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "plant",
+            "url": "https://pokeapi.co/api/v2/egg-group/7/"
+        }],
+        "growth_rate": {
+            "name": "slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/1/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "marowak-alola": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Bone Keeper Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "monster",
+            "url": "https://pokeapi.co/api/v2/egg-group/1/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "darumaka-galar": {
+        "base_happiness": 50,
+        "capture_rate": 120,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Zen Charm Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "darmanitan-standard-galar": {
+        "base_happiness": 50,
+        "capture_rate": 60,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Zen Charm Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "darmanitan-zen-galar": {
+        "base_happiness": 50,
+        "capture_rate": 60,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Zen Charm Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium-slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/4/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "meowth-galar": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Scratch Cat Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "ponyta-galar": {
+        "base_happiness": 50,
+        "capture_rate": 190,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Unique Horn Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "rapidash-galar": {
+        "base_happiness": 50,
+        "capture_rate": 60,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Unique Horn Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "slowpoke-galar": {
+        "base_happiness": 50,
+        "capture_rate": 190,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Dopey Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "water1",
+                "url": "https://pokeapi.co/api/v2/egg-group/2/"
+            },
+            {
+                "name": "monster",
+                "url": "https://pokeapi.co/api/v2/egg-group/1/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "slowbro-galar": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Hermit Crab Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "water1",
+                "url": "https://pokeapi.co/api/v2/egg-group/2/"
+            },
+            {
+                "name": "monster",
+                "url": "https://pokeapi.co/api/v2/egg-group/1/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "slowking-galar": {
+        "base_happiness": 50,
+        "capture_rate": 70,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Hexpert Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "water1",
+                "url": "https://pokeapi.co/api/v2/egg-group/2/"
+            },
+            {
+                "name": "monster",
+                "url": "https://pokeapi.co/api/v2/egg-group/1/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "farfetchd-galar": {
+        "base_happiness": 50,
+        "capture_rate": 45,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Wild Duck Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "ground",
+                "url": "https://pokeapi.co/api/v2/egg-group/5/"
+            },
+            {
+                "name": "flying",
+                "url": "https://pokeapi.co/api/v2/egg-group/4/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "weezing-galar": {
+        "base_happiness": 50,
+        "capture_rate": 60,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Poison Gas Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "indeterminate",
+            "url": "https://pokeapi.co/api/v2/egg-group/11/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "mr-mime-galar": {
+        "base_happiness": 50,
+        "capture_rate": 45,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Dancing Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "humanshape",
+            "url": "https://pokeapi.co/api/v2/egg-group/8/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 25
+    },
+    "articuno-galar": {
+        "base_happiness": 35,
+        "capture_rate": 3,
+        "gender_rate": -1,
+        "genera": [{
+            "genus": "Cruel Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "no-eggs",
+            "url": "https://pokeapi.co/api/v2/egg-group/15/"
+        }],
+        "growth_rate": {
+            "name": "slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/1/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 120
+    },
+    "zapdos-galar": {
+        "base_happiness": 35,
+        "capture_rate": 3,
+        "gender_rate": -1,
+        "genera": [{
+            "genus": "Strong Legs Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "no-eggs",
+            "url": "https://pokeapi.co/api/v2/egg-group/15/"
+        }],
+        "growth_rate": {
+            "name": "slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/1/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 120
+    },
+    "moltres-galar": {
+        "base_happiness": 35,
+        "capture_rate": 3,
+        "gender_rate": -1,
+        "genera": [{
+            "genus": "Malevolent Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "no-eggs",
+            "url": "https://pokeapi.co/api/v2/egg-group/15/"
+        }],
+        "growth_rate": {
+            "name": "slow",
+            "url": "https://pokeapi.co/api/v2/growth-rate/1/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 120
+    },
+    "corsola-galar": {
+        "base_happiness": 50,
+        "capture_rate": 60,
+        "gender_rate": 2,
+        "genera": [{
+            "genus": "Coral Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "water1",
+                "url": "https://pokeapi.co/api/v2/egg-group/2/"
+            },
+            {
+                "name": "water3",
+                "url": "https://pokeapi.co/api/v2/egg-group/9/"
+            }
+        ],
+        "growth_rate": {
+            "name": "fast",
+            "url": "https://pokeapi.co/api/v2/growth-rate/3/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    },
+    "zigzagoon-galar": {
+        "base_happiness": 50,
+        "capture_rate": 255,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Tiny Raccoon Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "linoone-galar": {
+        "base_happiness": 50,
+        "capture_rate": 90,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Rushing Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+            "name": "ground",
+            "url": "https://pokeapi.co/api/v2/egg-group/5/"
+        }],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 15
+    },
+    "yamask-galar": {
+        "base_happiness": 50,
+        "capture_rate": 190,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Spirit Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "indeterminate",
+                "url": "https://pokeapi.co/api/v2/egg-group/11/"
+            },
+            {
+                "name": "mineral",
+                "url": "https://pokeapi.co/api/v2/egg-group/10/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 25
+    },
+    "stunfisk-galar": {
+        "base_happiness": 50,
+        "capture_rate": 75,
+        "gender_rate": 4,
+        "genera": [{
+            "genus": "Trap Pokémon",
+            "language": {
+                "name": "en",
+                "url": "https://pokeapi.co/api/v2/language/9/"
+            }
+        }],
+        "egg_groups": [{
+                "name": "indeterminate",
+                "url": "https://pokeapi.co/api/v2/egg-group/11/"
+            },
+            {
+                "name": "water1",
+                "url": "https://pokeapi.co/api/v2/egg-group/2/"
+            }
+        ],
+        "growth_rate": {
+            "name": "medium",
+            "url": "https://pokeapi.co/api/v2/growth-rate/5/"
+        },
+        "has_gender_differences": false,
+        "hatch_counter": 20
+    }
+}

@@ -4,6 +4,7 @@ const fs = require('fs')
 const fetch = require('node-fetch')
 var PokedexPromiseV2 = require('pokedex-promise-v2');
 var Pokedex = new PokedexPromiseV2();
+var RegionalPokemonSpeciesFile = fs.readFileSync('public/assets/data/RegionalPokemonSpecies.json', 'utf8')
 
 const { app, BrowserWindow, screen } = electron
 const { ipcMain } = require('electron')
@@ -145,8 +146,20 @@ ipcMain.on('LoadImagesVariants', (event) => {
 })
 
 ipcMain.on('PokemonData', async (event, arg) => {
-  Pokedex.resource(["https://pokeapi.co/api/v2/pokemon/" + arg,"https://pokeapi.co/api/v2/pokemon-species/" + arg])
+  PokeApi = ["https://pokeapi.co/api/v2/pokemon/" + arg]
+  if(!arg.includes("alola") && !arg.includes("galar")){
+    if(arg.includes("-standard") || arg.includes("-zen")){
+      arg = arg.replace("-standard","").replace("-zen","");
+    }
+    PokeApi.push("https://pokeapi.co/api/v2/pokemon-species/" + arg)
+  }
+
+  Pokedex.resource(PokeApi)
   .then(function(Response) {
+    if(arg.includes("alola") || arg.includes("galar")){
+      let RegionalPokemonSpeciesData = JSON.parse(RegionalPokemonSpeciesFile)
+      Response.push(RegionalPokemonSpeciesData[arg]);
+    }
     TypeURLArray = [];
     for (i = 0; i < Response[0].types.length; i++) {
       TypeURLArray.push("https://pokeapi.co/api/v2/type/" + Response[0].types[i].type.name + "/")

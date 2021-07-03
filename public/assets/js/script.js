@@ -1,7 +1,6 @@
 const { ipcRenderer } = require('electron');
 const configsData = JSON.parse(ipcRenderer.sendSync('LoadConfig'));
 const VariantsData = JSON.parse(ipcRenderer.sendSync('LoadVariants'));
-const RegionalSpeciesData = JSON.parse(ipcRenderer.sendSync('LoadRegionalSpeciesLocal'));
 const PokemonData = JSON.parse(ipcRenderer.sendSync('LoadPokedex'));
 const PokemonDataKeys = Object.keys(PokemonData);
 const EvolutionData = JSON.parse(ipcRenderer.sendSync('LoadEvolution'));

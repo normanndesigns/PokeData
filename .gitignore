@@ -1,7 +1,3 @@
-node_modules/
-Backup Files/
-public/assets/data/config.json
-desktop.ini
-Icon.ai
-Pokedex_Design.psd
-.vscode
+build/bin
+node_modules
+frontend/dist
